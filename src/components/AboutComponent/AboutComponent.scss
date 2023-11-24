@@ -1,0 +1,53 @@
+.flex-container {
+    height: auto;
+  }
+  
+.strip-height {
+    height: 100%;
+}
+  
+#heading {
+    font-size: 300%;
+    color: #DCB472;
+    font-weight: bold;
+}
+
+#desc {
+    color: white;
+    padding-right: 15rem;
+}
+
+#button {
+    color: #DCB472;
+    font-weight: bold;
+    border: 2px solid #DCB472;
+    border-radius: 0.50rem;
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+#button:hover {
+    background-color: #DCB472;
+    color: #674817;
+}
+
+#brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #DCB472;
+    border-radius: 0.5rem;
+    padding: 10px;
+    width: max-content;
+    margin: 0 auto;
+}
+  
+#brands h1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #DCB472;
+}
