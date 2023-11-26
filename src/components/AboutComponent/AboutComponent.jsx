@@ -30,12 +30,12 @@ const AboutComponent = () => {
         <a href="#"><button id="button" className="mt-5">READ MORE</button></a>
       </div>
     </div>
-      <div id="brands" className="container mt-5 mb-5">
-        <h1>BRAND</h1>
-        <h1>BRAND</h1>
-        <h1>BRAND</h1>
-        <h1>BRAND</h1>
-      </div>
+    <div id="brands" className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-5 mb-5">
+  <h1 className="sm:col-span-1 md:col-span-2">BRAND</h1>
+  <h1 className="sm:col-span-1 md:col-span-2">BRAND</h1>
+  <h1 className="sm:col-span-1 md:col-span-2">BRAND</h1>
+  <h1 className="sm:col-span-1 md:col-span-2">BRAND</h1>
+</div>
     </div>
   );
 };
