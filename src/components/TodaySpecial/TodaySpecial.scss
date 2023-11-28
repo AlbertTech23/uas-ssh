@@ -1,14 +1,17 @@
-.top img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.bottom {
+    background-image: url("src/components/TodaySpecial/Images/BottomImg.jpeg");
+    // min-height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba($color: #000000, $alpha: 0.65);
+    background-blend-mode: darken;
 }
 
-.bottom img{
+.top img {
     width: 100%;
-    // height: auto;
-    // object-fit: cover;
-    // overflow: hidden;
+    height: 100%;
+    object-position: center;
 }
 
 .service{
@@ -22,54 +25,142 @@
     flex-wrap: wrap;
 }
 
-.evenly {
+.serviceCard {
     display: flex;
     flex-direction: column;
     align-items: left;
     width: 100%;
-    max-width: 300px; 
+    max-width: 320px; 
     padding: 20px;
-    margin: 50px;
+    margin: 180px 60px 50px;
     // margin-left: 150px;
     
         
   
     .num {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
       color: rgb(220, 180, 114);
     }
   
     .title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
       color: white;
     }
   
     .description {
-      font-size: 16px; 
+      font-size: 18px; 
       margin-bottom: 20px;
       color: white;
     }
+
+    .arrow{
+      width: 30px;
+  }
   
 }
 
-.arrow{
-    width: 30px;
+.specialPosition {
+  width: 100%;
 }
+
+.specialContainer{
+  max-width: 390px;
+}
+
+
+
+.menuDesc {
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the desired darkness */
+  color: white;
+  border-bottom-left-radius: 4.5px;
+  border-bottom-right-radius: 4.5px;
+
+  .rating{
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  }
+
+  .ratingNum{
+  font-size: 20px;
+  }
+
+  .rating img{
+  width: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  }
+
+  .specialDesc{
+  width: 270px;
+  margin: 5px 10px 10px 10px;
+
+    .title{
+    font-size: 18px;
+    }
+
+    .description
+    {
+      font-size: 10px;
+    }  
+  }
+}
+
+.carousel{
+  width: 400px;
   
-@media (max-width: 768px) {
-  .bottom img {
-      width: 110%; // Adjust the percentage as needed
-      height: 100%;
-      max-width: none; // Remove max-width to allow the image to grow beyond its original size
-      max-height: none;
-      object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+
+  .service {
+      display: flex;
+      flex-wrap: wrap; /* Ensure the items are in a single row */
+      width: 100%; /* Set a specific width */
+      justify-content: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
   }
-  .top img{
-      width: 110%;
-      max-width: none;
+
+  .serviceCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left; /* Center the content horizontally */
+      max-width: 250px;
+      padding: 0px;
+      margin: 10px; /* Add margin for spacing between cards */
+
+      .num {
+          font-size: 14px; /* Adjust the font size */
+          font-weight: bold;
+          margin-bottom: 5px; /* Adjust the margin */
+          color: rgb(220, 180, 114);
+      }
+
+      .title {
+          font-size: 16px; /* Adjust the font size */
+          font-weight: bold;
+          margin-bottom: 5px; /* Adjust the margin */
+          color: white;
+      }
+
+      .description {
+          font-size: 10px; /* Adjust the font size */
+          margin-bottom: 10px; /* Adjust the margin */
+          color: white;
+      }
+
+      .arrow {
+          width: 20px; /* Adjust the arrow size */
+        
+      }
   }
+
+  
 }
