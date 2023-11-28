@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prociono&display=swap");
+
+.imageContainer {
+  position: relative;
+  min-height: 800px;
+  background-image: url("../../assets/Nasi Kuning.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(36, 36, 36, 0.9) 0%,
+    rgba(36, 36, 36, 0.9) 16%,
+    rgba(242, 196, 118, 0.8) 100%
+  );
+  z-index: -1;
+}
+
+.testi-container {
+  //   border: 5px black solid;
+  z-index: 1;
+}
+
+.testi-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-left {
+  color: #dcb472;
+  font-family: Poppins;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.testi-left button {
+  margin-top: 38px;
+  border-radius: 10px;
+  background: #dcb472;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  display: inline-flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  color: #674817;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Poppins;
+  cursor: pointer;
+}
+
+.testi-right {
+  font-family: Poppins;
+  font-weight: 200;
+}
+
+.testi-card {
+  width: 308px;
+  height: 284px;
+  flex-shrink: 0;
+  border: 3px solid #dcb472;
+  background: rgba(35, 35, 35, 0.8);
+}
+
+.testi-card-footer img {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.testi-card-body {
+  font-size: 20px;
+}
+
+.testi-card-header-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testi-card-header-lastname {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.testi-card-header-on {
+  font-size: 15px;
+  font-weight: 200;
+  font-style: italic;
+}
