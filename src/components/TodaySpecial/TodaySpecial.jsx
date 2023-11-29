@@ -25,6 +25,10 @@ const service = [
   },
 ];
 
+const media1024 = window.matchMedia("(max-width: 1024px)");
+const media768 = window.matchMedia("(max-width: 800px)");
+const media425 = window.matchMedia("(max-width: 450px)");
+
 const special = [
   {
     id: 1,
@@ -47,7 +51,7 @@ const special = [
     img: "src/components/TodaySpecial/Images/AddOns.png",
     title: "Add Ons",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
     rating: "4.7",
   },
 ];
@@ -85,10 +89,31 @@ function SpecialCard(props) {
     width: "400px",
   };
 
+  const menuStyle = {
+    display: "flex",
+    marginTop: "176px",
+  };
+
+  if (media1024.matches) {
+    cardStyle.width = "260px";
+    menuStyle.marginTop = "60px";
+  }
+
+  if (media768.matches) {
+    cardStyle.width = "280px";
+    menuStyle.marginTop = "60px";
+  }
+
+  if (media425.matches) {
+    cardStyle.width = "240px";
+    menuStyle.marginTop = "45px";
+    cardStyle.backgroundPosition = "bottom";
+  }
+
   return (
     <div className="specialContainer relative">
-      <div className="specialCard" style={cardStyle}>
-        <div className="menuDesc mt-44 flex">
+      <div className="specialCard " style={cardStyle}>
+        <div className="menuDesc" style={menuStyle}>
           <div className="specialDesc">
             <div className="title">{props.title}</div>
             <div className="description">{props.description}</div>
@@ -144,7 +169,7 @@ function Carousel() {
     return special.map(createSpecialCard).map((item, index) => (
       <div
         key={`slide${index + 1}`}
-        className={`carousel-item relative w-full ${
+        className={`carousel-item relative w-350px m-5 ${
           index + 1 === currentSlide ? "active" : ""
         }`}
       >
@@ -172,14 +197,38 @@ const TodaySpecial = () => {
     };
   }, []);
 
-  const isMobile = windowWidth <= 1024;
+  const isMobile = windowWidth <= 800;
+
+  const specialStyle = {
+    marginTop: "190px",
+  };
+
+  if (media1024.matches) {
+    specialStyle.marginTop = "140px";
+  }
+
+  if (media768.matches) {
+    specialStyle.marginTop = "73.5px";
+    specialStyle.width = "400px";
+    specialStyle.marginRight = "20px";
+  }
+
+  if (media425.matches) {
+    specialStyle.marginTop = "35px";
+    specialStyle.width = "360px";
+  }
 
   return (
     <div className="todaySpecial">
       <div className="top">
         <div className="specialPosition absolute">
-          <div className="special flex justify-evenly me-4 mt-52">
+          <div
+            className="special flex justify-evenly me-4"
+            style={specialStyle}
+          >
+            <button className="prev btn-circle">❮</button>
             {isMobile ? <Carousel /> : special.map(createSpecialCard)}
+            <button className="next btn-circle">❯</button>
           </div>
         </div>
         <img src="src/components/TodaySpecial/Images/TopImg.png" alt="" />
