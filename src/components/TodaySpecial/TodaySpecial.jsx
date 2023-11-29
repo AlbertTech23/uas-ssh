@@ -85,7 +85,7 @@ function SpecialCard(props) {
     backgroundSize: "cover",
     backgroundPosition: "bottom",
     borderRadius: "10px",
-    border: "6px solid #f6be61",
+    border: "4px solid #f6be61",
     width: "400px",
   };
 
@@ -111,7 +111,7 @@ function SpecialCard(props) {
   }
 
   return (
-    <div className="specialContainer relative">
+    <a href="#" className="specialContainer relative">
       <div className="specialCard " style={cardStyle}>
         <div className="menuDesc" style={menuStyle}>
           <div className="specialDesc">
@@ -124,7 +124,7 @@ function SpecialCard(props) {
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -209,13 +209,13 @@ const TodaySpecial = () => {
 
   if (media768.matches) {
     specialStyle.marginTop = "73.5px";
-    specialStyle.width = "400px";
+    specialStyle.width = "415px";
     specialStyle.marginRight = "20px";
   }
 
   if (media425.matches) {
     specialStyle.marginTop = "35px";
-    specialStyle.width = "360px";
+    specialStyle.width = "375px";
   }
 
   return (
@@ -231,7 +231,7 @@ const TodaySpecial = () => {
             <button className="next btn-circle">❯</button>
           </div>
         </div>
-        <img src="src/components/TodaySpecial/Images/TopImg.png" alt="" />
+        <img src="src/components/TodaySpecial/Images/TopImg.svg" alt="" />
       </div>
       <div className="bottom">
         <div className="serviceContainer flex flex-wrap justify-around pt-30  items-center">

@@ -1,6 +1,5 @@
 .bottom {
     background-image: url("src/components/TodaySpecial/Images/BottomImg.jpeg");
-    // min-height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -26,9 +25,7 @@
     width: 100%;
     max-width: 320px; 
     padding: 20px;
-    margin: 180px 60px 50px;
-    // margin-left: 150px;
-    
+    margin: 180px 60px 50px;    
         
   
     .num {
@@ -65,13 +62,21 @@
   max-width: 390px;
 }
 
+.specialCard {
+  transition: transform 0.3s ease-in-out;
+}
+
+.specialCard:hover {
+  transform: scale(1.05);
+}
+
 .special button{
   display: none;
 }
 
 .menuDesc {
   backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the desired darkness */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border-bottom-left-radius: 4.5px;
   border-bottom-right-radius: 4.5px;
@@ -250,11 +255,15 @@
   }
 
   .prev{
-    margin-right: 15px;
+    margin-right: 10px;
   }
 
   .next{
     margin-left: 15px;
+  }
+
+  .specialCard{
+    margin-left: 10px;
   }
 }
 
