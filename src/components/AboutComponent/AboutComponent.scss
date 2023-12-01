@@ -50,6 +50,17 @@
     width: 150px;
 }
 
+@font-face {
+    font-family: 'Forum-Regular';
+    src: local('Forum-Regular'), url('./fonts/Forum-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+#heading {
+    font-family: 'Forum-Regular', sans-serif;
+}
+
 @media (max-width: 768px) {
     .container {
     width: 100%;
