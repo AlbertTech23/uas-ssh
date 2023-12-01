@@ -1,19 +1,16 @@
-import { useState } from "react";
 import "./App.css";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
-import { AboutComponent } from "./components";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home, About } from "./pages";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      <AboutComponent />
-
-      {/* <Footer /> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
