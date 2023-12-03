@@ -1,5 +1,6 @@
 import "./Home.scss";
 import { AboutComponent } from "../../components";
+import { OurMenu } from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <AboutComponent />
+      
       <button
         className="sementara"
         onClick={() => {
@@ -15,6 +17,7 @@ const Home = () => {
       >
         GO TO ABOUT PAGE
       </button>
+      <OurMenu />
     </div>
   );
 };
