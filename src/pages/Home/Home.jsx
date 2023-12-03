@@ -1,13 +1,15 @@
 import "./Home.scss";
-import { AboutComponent, TodaySpecial } from "../../components";
+import { AboutComponent, TodaySpecial, Header, Footer } from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="home-page">
+      <Header />
       <AboutComponent />
       <TodaySpecial />
+      <Footer />
       <button
         className="sementara"
         onClick={() => {
