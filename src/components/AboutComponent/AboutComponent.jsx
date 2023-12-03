@@ -18,9 +18,9 @@ const AboutComponent = () => {
         <div className="flex-container mt-12">
           <div className="flex items-center">
             <img src={strip} className="h-20" alt="About Us Strip" />
-            <h1 id="heading" className="strip-height m-4">
+            <span id="heading" className="strip-height m-4">
               ABOUT US
-            </h1>
+            </span>
           </div>
           <p id="desc">
             Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
