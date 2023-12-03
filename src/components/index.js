@@ -1,5 +1,4 @@
-import { Navbar } from "./Navbar";
-import { Footer } from "./Footer";
+import { AboutComponent } from "./AboutComponent";
 import { TodaySpecial } from "./TodaySpecial";
 
-export { Navbar, Footer, TodaySpecial };
+export { Navbar, Footer, AboutComponent, TodaySpecial };
