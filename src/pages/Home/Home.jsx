@@ -11,7 +11,7 @@ const Home = () => {
       <TodaySpecial />
       <Footer />
       <button
-        className="sementara"
+        className="sementara absolute"
         onClick={() => {
           navigate("about");
         }}
