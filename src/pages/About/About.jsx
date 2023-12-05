@@ -1,6 +1,6 @@
-import { Testimonials } from "../../components";
 import "./About.scss";
 import { useNavigate } from "react-router-dom";
+import { OurStrength, Chef, Testimonials } from "../../components";
 
 const About = () => {
   const navigate = useNavigate();
@@ -8,7 +8,14 @@ const About = () => {
   return (
     <div className="about-page">
       <h1>About</h1>
-      <Testimonials />
+      
+
+
+     
+
+      <OurStrength />
+ <Chef />
+<Testimonials />
       <button
         className="sementara"
         onClick={() => {
