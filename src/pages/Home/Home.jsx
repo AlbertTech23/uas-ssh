@@ -7,17 +7,19 @@ const Home = () => {
   return (
     <div className="home-page">
       <Header />
-      <AboutComponent />
-      <TodaySpecial />
-      <Footer />
       <button
-        className="sementara"
+        className="sementara absolute"
         onClick={() => {
           navigate("about");
         }}
       >
         GO TO ABOUT PAGE
       </button>
+      <AboutComponent />
+
+      <TodaySpecial />
+
+      <Footer />
     </div>
   );
 };
