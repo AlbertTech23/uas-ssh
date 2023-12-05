@@ -5,6 +5,7 @@ import {
   Header,
   Footer,
   Stats,
+  BottomHome,
 } from "../../components";
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +17,7 @@ const Home = () => {
       <AboutComponent />
       <TodaySpecial />
       <Stats />
+      <BottomHome />
       <Footer />
       <button
         className="sementara"
