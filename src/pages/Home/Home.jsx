@@ -20,7 +20,7 @@ const Home = () => {
       <BottomHome />
       <Footer />
       <button
-        className="sementara"
+        className="sementara absolute"
         onClick={() => {
           navigate("about");
         }}
