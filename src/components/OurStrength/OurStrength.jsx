@@ -40,7 +40,7 @@ const OurStrength = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="cardContainer flex flex-col justify-center items-center md:ps-10 md:pe-10 pe-5 ps-5 lg:m-10 md:m-8 sm:m-5 m-3"
+            className="cardStrContainer flex flex-col justify-center items-center md:ps-10 md:pe-10 pe-5 ps-5 lg:m-10 md:m-8 sm:m-5 m-3"
           >
             <img src={item.image} alt="our-strength"></img>
             <span className="card-title mt-3">{item.title}</span>
