@@ -1,6 +1,6 @@
 import "./Stats.scss";
 import CountUp from "react-countup";
-// import { useCountUp } from "react-countup";
+import { useCountUp } from "react-countup";
 
 const statsData = [
   {
