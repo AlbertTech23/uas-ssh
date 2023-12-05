@@ -1,5 +1,11 @@
 import "./Home.scss";
-import { AboutComponent, TodaySpecial, Header, Footer } from "../../components";
+import {
+  AboutComponent,
+  TodaySpecial,
+  Header,
+  Footer,
+  Stats,
+} from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -9,6 +15,7 @@ const Home = () => {
       <Header />
       <AboutComponent />
       <TodaySpecial />
+      <Stats />
       <Footer />
       <button
         className="sementara"

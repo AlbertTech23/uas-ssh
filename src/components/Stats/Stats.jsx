@@ -1,6 +1,6 @@
 import "./Stats.scss";
 import CountUp from "react-countup";
-import { useCountUp } from "react-countup";
+// import { useCountUp } from "react-countup";
 
 const statsData = [
   {
@@ -21,12 +21,18 @@ const statsData = [
   },
 ];
 
-function statsMapping(header, subheader) {
+function statsMapping(header, subheader, index) {
   return (
-    <div className="stats-container text-center m-5">
+    <div key={index} className="stats-container text-center m-5">
       {/* <div className="stats-header">{header}</div> */}
       <div className="stats-header">
-        <CountUp end={header} duration={2.5} suffix="+" enableScrollSpy />
+        <CountUp
+          end={header}
+          duration={2.5}
+          suffix="+"
+          enableScrollSpy
+          scrollSpyDelay
+        />
       </div>
       <div className="stats-subheader">{subheader}</div>
     </div>
@@ -34,16 +40,18 @@ function statsMapping(header, subheader) {
 }
 
 const Stats = () => {
-  useCountUp({
-    ref: "counter",
-    // end: 1234567,
-    enableScrollSpy: true,
-    scrollSpyDelay: 1000,
-  });
+  // useCountUp({
+  //   ref: "counter",
+  //   end: 1234567,
+  //   enableScrollSpy: true,
+  //   scrollSpyDelay: 1000,
+  // });
 
   return (
     <div className="stats-parent p-6 flex justify-evenly align-middle flex-wrap">
-      {statsData.map((stat) => statsMapping(stat.header, stat.subheader))}
+      {statsData.map((stat, index) =>
+        statsMapping(stat.header, stat.subheader, index)
+      )}
     </div>
   );
 };
