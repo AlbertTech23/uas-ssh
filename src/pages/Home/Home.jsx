@@ -1,5 +1,12 @@
 import "./Home.scss";
-import { AboutComponent, TodaySpecial, Header, Footer } from "../../components";
+import {
+  AboutComponent,
+  TodaySpecial,
+  Header,
+  Footer,
+  Stats,
+  BottomHome,
+} from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -9,6 +16,8 @@ const Home = () => {
       <Header />
       <AboutComponent />
       <TodaySpecial />
+      <Stats />
+      <BottomHome />
       <Footer />
       <button
         className="sementara absolute"

@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prociono&display=swap");
+
+.imageContainer {
+  position: relative;
+  min-height: 1000px;
+  background-image: url("../../assets/Nasi Kuning.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(36, 36, 36, 0.9) 0%,
+    rgba(36, 36, 36, 0.9) 16%,
+    rgba(242, 196, 118, 0.8) 100%
+  );
+  z-index: -1;
+}
+
+.testi-container {
+  //   border: 5px black solid;
+  z-index: 1;
+}
+
+.testi-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-left {
+  color: #dcb472;
+  font-family: Poppins;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.testi-left button {
+  margin-top: 38px;
+  border-radius: 10px;
+  background: #dcb472;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  display: inline-flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  color: #674817;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Poppins;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s,
+    border 0.3s;
+}
+
+.testi-left button:hover {
+  background: rgba($color: #dcb472, $alpha: 0.1);
+  color: #dcb472;
+  border: 1px solid #dcb472;
+  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.testi-right {
+  font-family: Poppins;
+  font-weight: 200;
+}
+
+.testi-card {
+  width: 308px;
+  height: 284px;
+  flex-shrink: 0;
+  border: 3px solid #dcb472;
+  background: rgba(35, 35, 35, 0.8);
+}
+
+.testi-card-footer img {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.testi-card-body {
+  font-size: 20px;
+}
+
+.testi-card-header-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testi-card-header-lastname {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.testi-card-header-on {
+  font-size: 15px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+// bottom reservation
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Space+Mono&display=swap");
+
+.reservationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.leftRes {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  img {
+    border-radius: 10px 0px 0px 10px;
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+.rightRes {
+  font-family: "Forum", serif;
+  height: 400px;
+  width: 600px;
+  background: linear-gradient(180deg, #ffd38a 0%, rgba(210, 160, 77, 0.5) 100%);
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.buttonReservation {
+  color: #ffd38a;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  background: #423e37;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 247px;
+  height: 54px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.buttonReservation:hover {
+  background: #594f47;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.resText {
+  color: #423e37;
+  font-family: Forum;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  .popBold {
+    color: #423e37;
+    font-family: Poppins;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.rectRes {
+  position: absolute;
+}
+
+@media screen and (max-width: 1024px) {
+  // .imageContainer {
+  //   position: relative;
+  //   min-height: 500px;
+  //   background-image: url("../../assets/Nasi Kuning.png");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+  //   z-index: 0;
+  // }
+
+  // .imageContainer::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: linear-gradient(
+  //     180deg,
+  //     rgba(36, 36, 36, 0.9) 0%,
+  //     rgba(36, 36, 36, 0.9) 16%,
+  //     rgba(242, 196, 118, 0.8) 100%
+  //   );
+  //   z-index: -1;
+  // }
+
+  .reservationContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftRes {
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    img {
+      border-radius: 10px 10px 0px 0px;
+      width: 400px;
+      min-width: 400px;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+  .rightRes {
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(
+      180deg,
+      #ffd38a 0%,
+      rgba(210, 160, 77, 0.5) 100%
+    );
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+  .resText {
+    font-size: 60px;
+  }
+
+  .rectRes {
+    rotate: 90deg;
+  }
+
+  .buttonReservation {
+    margin-bottom: 30px;
+  }
+
+  // .cloud {
+  //   display: none;
+  // }
+}
