@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.text {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1050px;
+}
+
+.text h1 {
+  font-size: 56px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 9.6px;
+  font-weight: bold;
+}
+
+.coba-para {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.button {
+  width: 180px;
+  overflow: hidden;
+  margin-top: 30px;
+  background: none;
+  color: #dcb472;
+  border: 3px solid #dcb472;
+  padding: 11px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 0.4s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.btn1:hover {
+  color: white;
+  background: #dcb472;
+  transition: 0.8s;
+  border-radius: 10px;
+}
+
+.kiri,
+.kanan {
+  cursor: pointer;
+  opacity: calc(0.5);
+  padding-top: 50px;
+  margin: 0 75px;
+}
+
+.gambar {
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  position: relative;
+  filter: brightness(35%);
+}
+
+.fix-posisi {
+  margin-top: 55px;
+}
+
+#main-btn {
+  background-color: white;
+}
+
+#npc-btn {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media only screen and (max-width: 932px) {
+  .gambar {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    position: relative;
+    filter: brightness(50%);
+  }
+
+  .text h1 {
+    font-size: 20px;
+  }
+
+  .coba-para {
+    font-size: 11px;
+  }
+
+  .button {
+    margin-top: 30px;
+    background: none;
+    color: #dcb472;
+    border: 3px solid #dcb472;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.4s;
+    width: 130px;
+  }
+
+  .btn1:hover {
+    color: white;
+    background: #dcb472;
+    transition: 0.8s;
+    border-radius: 10px;
+  }
+}
