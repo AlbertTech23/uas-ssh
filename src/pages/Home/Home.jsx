@@ -14,11 +14,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Header />
-      <AboutComponent />
-      <TodaySpecial />
-      <Stats />
-      <BottomHome />
-          <button
+      <button
         className="sementara absolute"
         onClick={() => {
           navigate("about");
@@ -26,8 +22,11 @@ const Home = () => {
       >
         GO TO ABOUT PAGE
       </button>
+      <AboutComponent />
+      <TodaySpecial />
+      <Stats />
+      <BottomHome />
       <Footer />
-
     </div>
   );
 };

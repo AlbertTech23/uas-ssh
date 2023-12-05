@@ -36,7 +36,7 @@ const OurStrength = () => {
           alt="batik-cosmetics"
         ></img>
       </div>
-      <div className="contentContainer flex flex-wrap justify-center items-center xl:me-20 xl:ms-20 lg:me-3 lg:ms-3 md:me-5 md:ms-5 sm:me-0 sm:ms-0">
+      <div className="contentContainer flex flex-wrap justify-center items-center xl:me-20 xl:ms-20 lg:me-3 lg:ms-3 md:me-5 md:ms-5 sm:me-0 sm:ms-0 mb-16">
         {data.map((item, index) => (
           <div
             key={index}
