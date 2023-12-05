@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 } */
+
+.sementara {
+  background-color: orange;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+}

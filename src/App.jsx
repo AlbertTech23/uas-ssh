@@ -1,15 +1,19 @@
-// import { useState } from "react";
+
 import "./App.css";
-// import { Navbar } from "./components/Navbar";
-// import { Footer } from "./components/Footer";
-import { Stats } from "./components/Stats";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home, About } from "./pages";
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      <Stats />
-      {/* <Footer /> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
