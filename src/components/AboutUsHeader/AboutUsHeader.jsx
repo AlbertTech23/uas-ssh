@@ -6,7 +6,7 @@ import aboutusheader from "./assets/aboutusheader.png";
 const AboutUsHeader = () => {
   return (
     <div className="relative w-full">
-        <img src={ aboutusheader } className="w-full filter brightness-50" />
+        <img src={ aboutusheader } className="w-full filter brightness-[30%]" />
         <div className="text-center absolute transform -translate-y-1/2 left-5 right-5 top-1/2">
             <h1 id="subheading">- About Us -</h1>
             <h1 id="heading">BEHIND THE DISHES</h1>
