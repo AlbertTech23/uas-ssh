@@ -8,6 +8,7 @@ import { BottomHome } from "./BottomHome";
 import { Stats } from "./Stats";
 import { Testimonials } from "./Testimonials";
 import { WhoWeAre } from "./WhoWeAre";
+import { AboutUsHeader } from "./AboutUsHeader";
 import { TestiCard } from "./TestiCard";
 import { OurMenu } from "./OurMenu";
 
@@ -24,4 +25,5 @@ export {
   WhoWeAre,
   TestiCard,
   OurMenu,
+  AboutUsHeader,
 };

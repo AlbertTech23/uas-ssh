@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./MenuCard.scss";
 
@@ -21,3 +22,4 @@ function MenuCard(props) {
 }
 
 export default MenuCard;
+
