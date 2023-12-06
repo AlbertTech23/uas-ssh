@@ -7,5 +7,6 @@ import { OurStrength } from "./OurStrength";
 import { BottomHome } from "./BottomHome";
 import { Stats } from "./Stats";
 import { Testimonials } from "./Testimonials";
+import { WhoWeAre } from "./WhoWeAre";
 
-export { AboutComponent, TodaySpecial, Header, Footer, Stats, BottomHome, OurStrength, Chef, Testimonials };
+export { AboutComponent, TodaySpecial, Header, Footer, Stats, BottomHome, OurStrength, Chef, Testimonials, WhoWeAre };
