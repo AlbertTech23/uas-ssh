@@ -9,6 +9,7 @@ import { Stats } from "./Stats";
 import { Testimonials } from "./Testimonials";
 import { WhoWeAre } from "./WhoWeAre";
 import { TestiCard } from "./TestiCard";
+import { OurMenu } from "./OurMenu";
 
 export {
   AboutComponent,
@@ -22,5 +23,5 @@ export {
   Testimonials,
   WhoWeAre,
   TestiCard,
+  OurMenu,
 };
-
