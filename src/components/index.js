@@ -8,5 +8,7 @@ import { BottomHome } from "./BottomHome";
 import { Stats } from "./Stats";
 import { Testimonials } from "./Testimonials";
 import { WhoWeAre } from "./WhoWeAre";
+import { OurMenu } from "./OurMenu";
 
-export { AboutComponent, TodaySpecial, Header, Footer, BottomHome, Stats, OurStrength, Chef, Testimonials, WhoWeAre };
+export { AboutComponent, TodaySpecial, Header, Footer, BottomHome, Stats, OurStrength, Chef, Testimonials, WhoWeAre, OurMenu };
+

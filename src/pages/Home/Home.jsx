@@ -1,4 +1,5 @@
 import "./Home.scss";
+
 import {
   AboutComponent,
   TodaySpecial,
@@ -6,13 +7,16 @@ import {
   Footer,
   Stats,
   BottomHome,
+  OurMenu
 } from "../../components";
+
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="home-page">
+      <AboutComponent />
       <Header />
       <button
         className="sementara absolute"
@@ -22,11 +26,15 @@ const Home = () => {
       >
         GO TO ABOUT PAGE
       </button>
+
       <AboutComponent />
+          
       <TodaySpecial />
+          <OurMenu />
       <Stats />
       <BottomHome />
       <Footer />
+
     </div>
   );
 };
