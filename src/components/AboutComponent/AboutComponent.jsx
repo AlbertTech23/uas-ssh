@@ -4,7 +4,6 @@ import strip from "./assets/about-us-strip.png";
 import brand1 from "./assets/brand1.png";
 import brand2 from "./assets/brand2.png";
 import brand3 from "./assets/brand3.png";
-import brand4 from "./assets/brand4.png";
 import "./fonts/Forum-Regular.ttf";
 
 const AboutComponent = () => {
@@ -18,9 +17,9 @@ const AboutComponent = () => {
         <div className="flex-container mt-12">
           <div className="flex items-center">
             <img src={strip} className="h-20" alt="About Us Strip" />
-            <h1 id="heading" className="strip-height m-4">
+            <span id="heading" className="strip-height m-4">
               ABOUT US
-            </h1>
+            </span>
           </div>
           <p id="desc">
             Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
@@ -40,12 +39,10 @@ const AboutComponent = () => {
           </a>
         </div>
       </div>
-      {/* <div id="brands" className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-5 mb-5"> */}
       <div id="brands" className="flex flex-wrap container gap-4 mt-5 mb-5">
-        <img src={brand1} alt="Bamboe" />
-        <img src={brand2} alt="T-fal" />
-        <img src={brand3} alt="HelloFresh" />
-        <img src={brand4} alt="Sayurbox" />
+        <img src={brand1} alt="GoFood" />
+        <img src={brand2} alt="Indofood" />
+        <img src={brand3} alt="ShopeeFood" />
       </div>
     </div>
   );

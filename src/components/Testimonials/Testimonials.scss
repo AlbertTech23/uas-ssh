@@ -1,0 +1,23 @@
+.testi-container {
+  background: linear-gradient(
+      0deg,
+      rgba(35, 35, 35, 0.9) 0%,
+      rgba(35, 35, 35, 0.9) 100%
+    ),
+    url("src/assets/testimonials-bg.png"), lightgray 50%;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+.testi-title {
+  color: #f2c476;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

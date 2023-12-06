@@ -1,6 +1,14 @@
-import { Navbar } from "./Navbar";
-import { Footer } from "./Footer";
 import { AboutComponent } from "./AboutComponent";
+import { TodaySpecial } from "./TodaySpecial";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { Chef } from "./Chef";
+import { OurStrength } from "./OurStrength";
+import { BottomHome } from "./BottomHome";
+import { Stats } from "./Stats";
+import { Testimonials } from "./Testimonials";
+import { WhoWeAre } from "./WhoWeAre";
 import { OurMenu } from "./OurMenu";
 
-export { Navbar, Footer, AboutComponent, OurMenu };
+export { AboutComponent, TodaySpecial, Header, Footer, BottomHome, Stats, OurStrength, Chef, Testimonials, WhoWeAre, OurMenu };
+
