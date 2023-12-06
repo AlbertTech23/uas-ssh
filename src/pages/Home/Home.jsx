@@ -7,7 +7,7 @@ import {
   Footer,
   Stats,
   BottomHome,
-  OurMenu
+  OurMenu,
 } from "../../components";
 
 import { useNavigate } from "react-router-dom";
@@ -16,7 +16,6 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="home-page">
-      <AboutComponent />
       <Header />
       <button
         className="sementara absolute"
@@ -28,13 +27,12 @@ const Home = () => {
       </button>
 
       <AboutComponent />
-          
+
       <TodaySpecial />
-          <OurMenu />
+      <OurMenu />
       <Stats />
       <BottomHome />
       <Footer />
-
     </div>
   );
 };

@@ -33,7 +33,7 @@ const AboutComponent = () => {
             facilisis id.
           </p>
           <a href="#">
-            <button id="button" className="mt-5">
+            <button id="buttonAbt" className="mt-5">
               READ MORE
             </button>
           </a>
