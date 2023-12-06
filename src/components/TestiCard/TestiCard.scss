@@ -1,0 +1,114 @@
+.testi-right {
+  font-family: Poppins;
+  font-weight: 200;
+}
+
+.testi-card {
+  width: 308px;
+  height: 284px;
+  flex-shrink: 0;
+  border: 3px solid #dcb472;
+  background: rgba(35, 35, 35, 0.8);
+}
+
+.testi-card-footer img {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.testi-card-body {
+  font-size: 20px;
+}
+
+.testi-card-header-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testi-card-header-lastname {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.testi-card-header-on {
+  font-size: 15px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+@media screen and (max-width: 425px) {
+  .testi-card {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    border: 3px solid #dcb472;
+    background: rgba(35, 35, 35, 0.8);
+
+    .testi-card-body {
+      font-size: 18px;
+    }
+
+    .testi-card-header-name {
+      font-size: 18px;
+    }
+
+    .testi-card-header-lastname {
+      font-size: 18px;
+    }
+
+    .testi-card-header-on {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .testi-card {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    border: 3px solid #dcb472;
+    background: rgba(35, 35, 35, 0.8);
+
+    .testi-card-body {
+      font-size: 18px;
+    }
+
+    .testi-card-header-name {
+      font-size: 18px;
+    }
+
+    .testi-card-header-lastname {
+      font-size: 18px;
+    }
+
+    .testi-card-header-on {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .testi-card {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    border: 3px solid #dcb472;
+    background: rgba(35, 35, 35, 0.8);
+
+    .testi-card-body {
+      font-size: 17px;
+    }
+
+    .testi-card-header-name {
+      font-size: 16px;
+    }
+
+    .testi-card-header-lastname {
+      font-size: 16px;
+    }
+
+    .testi-card-header-on {
+      font-size: 12px;
+    }
+  }
+}
