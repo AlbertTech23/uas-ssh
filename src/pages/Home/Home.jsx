@@ -1,4 +1,5 @@
 import "./Home.scss";
+
 import {
   AboutComponent,
   TodaySpecial,
@@ -6,7 +7,9 @@ import {
   Footer,
   Stats,
   BottomHome,
+  OurMenu,
 } from "../../components";
+
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -22,8 +25,11 @@ const Home = () => {
       >
         GO TO ABOUT PAGE
       </button>
+
       <AboutComponent />
+
       <TodaySpecial />
+      <OurMenu />
       <Stats />
       <BottomHome />
       <Footer />
