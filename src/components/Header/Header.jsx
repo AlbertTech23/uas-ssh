@@ -8,15 +8,15 @@ function Header() {
   const [scroll, setScroll] = useState(false);
   const [activeButton, setActbttn] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [btnMenu, setBtnMenu] = useState(false)
+  const [btnMenu, setBtnMenu] = useState(false);
 
-  const menuRef = useRef()
+  const menuRef = useRef();
 
   useEffect(() => {
     const handleClickOutsideMenu = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setActbttn(false);
-        setBtnMenu(false)
+        setBtnMenu(false);
       }
     };
 
@@ -64,36 +64,121 @@ function Header() {
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>
-              <a className={windowWidth >= 768 ? "common" : activeButton ? "active" : "unactive"}>
+              <a
+                className={
+                  windowWidth >= 768
+                    ? "common"
+                    : activeButton
+                    ? "active"
+                    : "unactive"
+                }
+              >
                 HOME
               </a>
-              <a className={windowWidth >= 768 ? "common" : activeButton ? "active" : "unactive"}>
+              <a
+                className={
+                  windowWidth >= 768
+                    ? "common"
+                    : activeButton
+                    ? "active"
+                    : "unactive"
+                }
+              >
                 ABOUT
               </a>
-              <a role="button" onClick={() => setBtnMenu(!btnMenu)} className={windowWidth >= 768 ? "common" : activeButton ? btnMenu ? "active listActive" : "active" : "unactive"}>
+              <a
+                role="button"
+                onClick={() => setBtnMenu(!btnMenu)}
+                className={
+                  windowWidth >= 768
+                    ? "common"
+                    : activeButton
+                    ? btnMenu
+                      ? "active listActive"
+                      : "active"
+                    : "unactive"
+                }
+              >
                 MENU
               </a>
-              <div className={btnMenu ? scroll ? "listMenu-bg" : "listMenu" : "hide"}>
-                <a className={windowWidth >= 768 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+              <div
+                className={
+                  btnMenu ? (scroll ? "listMenu-bg" : "listMenu") : "hide"
+                }
+              >
+                <a
+                  className={
+                    windowWidth >= 768
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                >
                   <span>Appetizers</span>
                 </a>
-                <a className={windowWidth >= 768 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+                <a
+                  className={
+                    windowWidth >= 768
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                >
                   <span>Main Course</span>
                 </a>
-                <a className={windowWidth >= 768 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+                <a
+                  className={
+                    windowWidth >= 768
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                >
                   <span>Desserts</span>
                 </a>
-                <a className={windowWidth >= 768 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+                <a
+                  className={
+                    windowWidth >= 768
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                >
                   <span>Drinks</span>
                 </a>
               </div>
-              <a className={windowWidth >= 768 ? "reserva" : activeButton ? "r-active" : "r-unactive"}>
+              <a
+                className={
+                  windowWidth >= 768
+                    ? "reserva"
+                    : activeButton
+                    ? "r-active"
+                    : "r-unactive"
+                }
+              >
                 <span>RESERVATION</span>
               </a>
             </div>
             <div
-              className="tombol" onClick={() => { setActbttn(!activeButton) }}
-            ><RiMenu3Fill className="img-res-nav" /></div>
+              className="tombol"
+              onClick={() => {
+                setActbttn(!activeButton);
+              }}
+            >
+              <RiMenu3Fill className="img-res-nav" />
+            </div>
           </div>
         </div>
       </div>
