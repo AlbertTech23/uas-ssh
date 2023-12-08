@@ -1,67 +1,83 @@
-// import { useState } from "react";
 import "../Carousel/StyleCarousel.css";
 import { image } from "./data";
 import kiri from "../../assets/gambar/left.png";
 import kanan from "../../assets/gambar/right.png";
-// import nasi from '../../assets/gambar/nasi.jpg'
+import { useState } from "react";
 
 function Carousel() {
-  //   const [idImage, setIdIamge] = useState(0);
+    const [idImage, setIdImage] = useState(0)
+    const [arah, setArah] = useState(0)
 
-  //   const mystyle = {
-  //     backgroundImage: `url(${image[idImage].images})`,
-  //   };
+    const styleBGR = {
+        backgroundImage: `url(${image[idImage === 0 ? 0 : idImage - 1].images})`
+    }
 
-  return (
-    <div className="contain">
-      <div className="carousel w-full">
-        <div id="slide1" className="carousel-item relative w-full">
-          <img src={image[0].images} className="gambar" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mt-5">
-            <div className="fix-posisi">
-              <a href="#slide4" className="btn-neutral">
-                <img className="kiri" src={kiri} />
-              </a>
+    const styleBGL = {
+        backgroundImage: `url(${image[idImage === image.length - 1 ? image.length - 1 : idImage + 1].images})`
+    }
+
+    const setL = () => {
+        if (idImage === 0) {
+            setIdImage(0);
+        } else {
+            setIdImage(idImage - 1)
+        }
+        setArah(1)
+    }
+
+    const setR = () => {
+        if (idImage === image.length - 1) {
+            setIdImage(image.length - 1);
+        } else {
+            setIdImage(idImage + 1)
+        }
+        setArah(0)
+    }
+
+    const setIndikator = (num) => {
+        setIdImage(num)
+        if (arah === 1) {
+            styleBGL
+        } else {
+            styleBGR
+        }
+    }
+
+    return (
+        <div className="contain">
+            {image.map((val, indx) => {
+                return (
+                    <div className="bg-image" style={arah === 0 ? styleBGR : styleBGL}>
+                        <div className={idImage === indx ? arah === 0 ? "gambar slide-r" : "gambar slide-l" : "gambar hidden"} key={indx}>
+                            <img src={val.images} />
+                        </div>
+                        <div className={idImage === indx ? arah === 0 ? "text slide-r" : "text slide-l" : "text hidden"}>
+                            <h1>{val.nama}</h1>
+                            <span className="coba-para">{val.desk}</span>
+                            <button type="button" className="button btn1">
+                                <span>OUR MENU</span>
+                            </button>
+                        </div>
+                    </div>
+                )
+            })}
+
+            <span className="indicators">
+                {image.map((_, indx) => {
+                    return (
+                        <button key={indx} onClick={() => (indx <= image.length - 1 && indx >= 0) ? setIndikator(indx) : setIndikator(0)} className={idImage === indx ? "indicator" : "indicator notactv"} ><span>s</span></button>
+                    )
+                })}
+            </span>
+
+            <div className="kiri">
+                <img src={kiri} onClick={() => setL()} />
             </div>
-            <div className="text">
-              <h1>{image[0].nama}</h1>
-              <span className="coba-para">{image[0].desk}</span>
-              <button type="button" className="button btn1">
-                <span>OUR MENU</span>
-              </button>
+            <div className="kanan">
+                <img src={kanan} onClick={() => setR()} />
             </div>
-            <div className="fix-posisi">
-              <a href="#slide2" className="btn-neutral">
-                <img className="kanan" src={kanan} />
-              </a>
-            </div>
-          </div>
         </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          <img src={image[1].images} className="gambar" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <div className="fix-posisi">
-              <a href="#slide1" className="btn-neutral">
-                <img className="kiri" src={kiri} />
-              </a>
-            </div>
-            <div className="text">
-              <h1>{image[1].nama}</h1>
-              <span className="coba-para">{image[1].desk}</span>
-              <button type="button" className="button btn1">
-                OUR MENU
-              </button>
-            </div>
-            <div className="fix-posisi">
-              <a href="#slide3" className="btn-neutral">
-                <img className="kanan" src={kanan} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default Carousel;
