@@ -1,116 +1,252 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-.text {
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1050px;
+.contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
 }
 
+.bg-image {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1050px;
+    top: 35%;
+    left: 17%;
+    right: 17%;
+}
+
+
 .text h1 {
-  font-size: 56px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 9.6px;
-  font-weight: bold;
+    font-size: 56px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 9.6px;
+    font-weight: bold;
 }
 
 .coba-para {
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
 .button {
-  width: 180px;
-  overflow: hidden;
-  margin-top: 30px;
-  background: none;
-  color: #dcb472;
-  border: 3px solid #dcb472;
-  padding: 11px 30px;
-  border-radius: 10px;
-  font-size: 20px;
-  transition: 0.4s;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
-
-.btn1:hover {
-  color: white;
-  background: #dcb472;
-  transition: 0.8s;
-  border-radius: 10px;
-}
-
-.kiri,
-.kanan {
-  cursor: pointer;
-  opacity: calc(0.5);
-  padding-top: 50px;
-  margin: 0 75px;
-}
-
-.gambar {
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-  position: relative;
-  filter: brightness(35%);
-}
-
-.fix-posisi {
-  margin-top: 55px;
-}
-
-#main-btn {
-  background-color: white;
-}
-
-#npc-btn {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-@media only screen and (max-width: 932px) {
-  .gambar {
-    height: 600px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    position: relative;
-    filter: brightness(50%);
-  }
-
-  .text h1 {
-    font-size: 20px;
-  }
-
-  .coba-para {
-    font-size: 11px;
-  }
-
-  .button {
+    width: 180px;
+    overflow: hidden;
     margin-top: 30px;
     background: none;
     color: #dcb472;
     border: 3px solid #dcb472;
-    padding: 6px 10px;
+    padding: 11px 30px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 20px;
     transition: 0.4s;
-    width: 130px;
-  }
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
 
-  .btn1:hover {
+.btn1:hover {
     color: white;
     background: #dcb472;
     transition: 0.8s;
     border-radius: 10px;
-  }
+}
+
+.kiri,
+.kanan {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+}
+
+.kiri {
+    left: 80px;
+}
+
+.kanan {
+    right: 80px;
+}
+
+.gambar {
+    filter: brightness(35%);
+
+}
+
+.slide-r {
+    animation-duration: 0.9s;
+    animation-name: slider;
+}
+
+.slide-l {
+    animation-duration: 0.9s;
+    animation-name: slidel;
+}
+
+.gambar img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+@keyframes slider {
+    0% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidel {
+    0% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.indicators {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 3rem;
+}
+
+.indicator {
+    background-color: white;
+    height: 1rem;
+    width: 0.5rem;
+    padding: 4.5px;
+    margin: 0px 4px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+}
+
+.notactv {
+    background-color: gray;
+}
+
+.indicator span {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 1350px) {
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .coba-para {
+        font-size: 15px;
+    }
+
+    .button {
+        padding: 7px 18px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .text h1 {
+        font-size: 38px;
+    }
+
+    .coba-para {
+        font-size: 13px;
+    }
+
+    .button {
+        padding: 6px 15px;
+    }
+}
+
+@media only screen and (max-width: 932px) {
+    .gambar {
+        height: 100vh;
+        width: 100%;
+        filter: brightness(35%);
+    }
+
+    .indicator {
+        padding: 3px;
+        height: 0.8rem;
+    }
+
+    .kiri {
+        left: 20px;
+        width: 13px;
+        height: 17px;
+    }
+
+    .kanan {
+        right: 20px;
+        width: 13px;
+        height: 17px;
+    }
+
+    .text h1 {
+        font-size: 23px;
+    }
+
+    .coba-para {
+        font-size: 13px;
+    }
+
+    .button {
+        margin-top: 30px;
+        background: none;
+        color: #dcb472;
+        border: 3px solid #dcb472;
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 14px;
+        transition: 0.4s;
+        width: 130px;
+    }
+
+    .btn1:hover {
+        color: white;
+        background: #dcb472;
+        transition: 0.8s;
+        border-radius: 10px;
+    }
 }

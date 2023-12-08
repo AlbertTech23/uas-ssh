@@ -14,7 +14,7 @@ function Footer() {
     <div className="footer">
 
       <div className="foot-1">
-        <div className="text">
+        <div className="text-1">
           <p>Contacts</p>
         </div>
         <div className="list-kontak">
