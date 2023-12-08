@@ -41,7 +41,7 @@ const BottomHome = () => {
         </div>
         <div className="rightRes relative">
           <img
-            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[75px] lg:left-[-15px] top-[-75px] left-[150px]"
+            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[75px] lg:left-[-15px] md:top-[-75px] md:left-[150px]"
             src="src/assets/rectRes.png"
             alt="rectRes"
           />
