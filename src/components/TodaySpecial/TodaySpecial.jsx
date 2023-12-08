@@ -1,5 +1,5 @@
 import "./TodaySpecial.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const service = [
   {
@@ -101,6 +101,41 @@ function SpecialCard(props) {
 function Carousel() {
   const [current, setCurrent] = useState(0);
   const length = special.length;
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+
+    if (touchStartX.current && touchEndX.current) {
+      const deltaX = touchEndX.current - touchStartX.current;
+
+      if (current === 0 && deltaX > 0) {
+        touchEndX.current = touchStartX.current;
+      } else if (current === length - 1 && deltaX < 0) {
+        touchEndX.current = touchStartX.current;
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current && touchEndX.current) {
+      const deltaX = touchEndX.current - touchStartX.current;
+
+      if (deltaX > 50) {
+        prevSlide();
+      } else if (deltaX < -50) {
+        nextSlide();
+      }
+
+      touchStartX.current = null;
+      touchEndX.current = null;
+    }
+  };
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -115,43 +150,58 @@ function Carousel() {
   }
 
   return (
-    <div className="carouselContainer">
+    <div
+      className="carouselContainer"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="carousel flex items-center justify-center py-4">
-        <button className="leftArrow btn-circle left-5" onClick={prevSlide}>
+        <button
+          className="leftArrow btn-circle left-5"
+          onClick={prevSlide}
+          style={{ display: current === 0 ? "none" : "block" }}
+        >
           ❮
         </button>
-        {special.map((special, index) => {
-          return (
-            <div
-              className={index === current ? "slide active" : "slide"}
-              key={index}
-            >
-              {index === current && (
-                <a href="#" className="specialContainer relative">
-                  <div
-                    className="carouselCard"
-                    style={{ backgroundImage: `url(${special.img})` }}
-                  >
-                    <div className="menuDesc flex">
-                      <div className="specialDesc">
-                        <div className="title">{special.title}</div>
-                        <div className="description">{special.description}</div>
-                      </div>
-                      <div className="rating">
-                        <div className="ratingNum">{special.rating}</div>
-                        <img
-                          src="src/components/TodaySpecial/Images/Star.svg"
-                          alt="Star"
-                        />
-                      </div>
+        {special.map((special, index) => (
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+            style={{
+              transform: `translateX(${100 * (index - current)}%)`,
+              transition: "transform 0.5s ease",
+            }}
+          >
+            {index === current && (
+              <a href="#" className="specialContainer relative">
+                <div
+                  className="carouselCard"
+                  style={{ backgroundImage: `url(${special.img})` }}
+                >
+                  <div className="menuDesc flex">
+                    <div className="specialDesc">
+                      <div className="title">{special.title}</div>
+                      <div className="description">{special.description}</div>
+                    </div>
+                    <div className="rating">
+                      <div className="ratingNum">{special.rating}</div>
+                      <img
+                        src="src/components/TodaySpecial/Images/Star.svg"
+                        alt="Star"
+                      />
                     </div>
                   </div>
-                </a>
-              )}
-            </div>
-          );
-        })}
-        <button className="rightArrow btn-circle right-5" onClick={nextSlide}>
+                </div>
+              </a>
+            )}
+          </div>
+        ))}
+        <button
+          className="rightArrow btn-circle right-5"
+          onClick={nextSlide}
+          style={{ display: current === length - 1 ? "none" : "block" }}
+        >
           ❯
         </button>
       </div>
