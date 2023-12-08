@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@600;700&display=swap");
+
+.ourStrContainer {
+  // width: 1444px;
+  width: auto;
+  //   height: 1064px;
+  height: auto;
+  flex-shrink: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(243, 207, 145, 1) 0%,
+    rgba(197, 164, 108, 0.86) 39.06%,
+    #242424 100%
+  );
+  text-align: center;
+}
+
+.subtitle {
+  color: #2d2d2d;
+  text-align: center;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main-title {
+  color: #232323;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.batik-pattern {
+  width: 190px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+// .contentContainer {
+// }
+
+.cardStrContainer {
+  width: 510px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(94, 77, 51, 0.6) 0%, #373127 100%);
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+
+  .card-title {
+    color: #fff;
+    text-align: center;
+    font-family: Forum;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .card-description {
+    color: #ecc98e;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cardStrContainer {
+    width: 400px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(94, 77, 51, 0.6) 0%, #373127 100%);
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+
+    .card-title {
+      font-size: 20px;
+    }
+    .card-description {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardStrContainer {
+    width: 250px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(94, 77, 51, 0.6) 0%, #373127 100%);
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+
+    .card-title {
+      font-size: 20px;
+    }
+    .card-description {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cardStrContainer {
+    width: 150px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(94, 77, 51, 0.6) 0%, #373127 100%);
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+
+    img {
+      width: 75px;
+      height: 75px;
+    }
+
+    .card-title {
+      font-size: 14px;
+    }
+    .card-description {
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cardStrContainer {
+    width: 150px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(94, 77, 51, 0.6) 0%, #373127 100%);
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+
+    img {
+      width: 75px;
+      height: 75px;
+    }
+
+    .card-title {
+      font-size: 12px;
+    }
+    .card-description {
+      font-size: 8px;
+    }
+  }
+}

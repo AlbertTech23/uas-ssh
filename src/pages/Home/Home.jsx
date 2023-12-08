@@ -1,11 +1,15 @@
 import "./Home.scss";
+
 import {
   AboutComponent,
   TodaySpecial,
   Header,
   Footer,
   Stats,
+  BottomHome,
+  OurMenu,
 } from "../../components";
+
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -13,18 +17,22 @@ const Home = () => {
   return (
     <div className="home-page">
       <Header />
-      <AboutComponent />
-      <TodaySpecial />
-      <Stats />
-      <Footer />
       <button
-        className="sementara"
+        className="sementara absolute"
         onClick={() => {
           navigate("about");
         }}
       >
         GO TO ABOUT PAGE
       </button>
+
+      <AboutComponent />
+
+      <TodaySpecial />
+      <OurMenu />
+      <Stats />
+      <BottomHome />
+      <Footer />
     </div>
   );
 };
