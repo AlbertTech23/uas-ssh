@@ -16,7 +16,6 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="home-page">
-      <AboutComponent />
       <Header />
       <button
         className="sementara absolute"
