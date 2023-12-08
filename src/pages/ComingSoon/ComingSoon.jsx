@@ -2,6 +2,8 @@ import "./ComingSoon.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import logo from "../../assets/SSH - LOGO.svg";
+import batikpattern from "../../assets/comingsoonbatik.svg";
 
 const ComingSoon = () => {
   useEffect(() => {
@@ -19,7 +21,7 @@ const ComingSoon = () => {
       >
         <img
           className="logo-ssh-comingsoon mb-10"
-          src="src/assets/gambar/SSH_-_LOGO 1.png"
+          src={logo}
           alt="logo-ssh"
           data-aos="fade-up"
         />
@@ -40,7 +42,7 @@ const ComingSoon = () => {
         <img
           data-aos="fade-up"
           data-aos-delay="400"
-          src="src/assets/comingsoonbatik.svg"
+          src={batikpattern}
           alt="batik-pattern"
         />
         <span
