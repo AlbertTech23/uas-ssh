@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   z-index: 5;
   padding: 10px;
@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   z-index: 5;
   padding: 10px;
@@ -159,7 +159,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .logo {
     margin-left: -15px;
   }
@@ -187,11 +187,7 @@ body {
   .header-bg .res-nav,
   .header .res-nav {
     background-color: rgba(39, 39, 39, 1);
-    width: 100%;
-    padding-right: 50px;
-    margin-right: -30px;
-    padding-left: 180%;
-    transition: 0.3s;
+    width: 100vw;
   }
 
   .nav-menu .tombol {
@@ -212,12 +208,12 @@ body {
     flex-direction: column;
     align-items: flex-end;
     top: 60px;
-    right: 10px;
-    margin-right: 5px;
-    padding-left: 5px;
+    right: 0px;
     padding-top: 5px;
+    padding-right: 35px;
     padding-bottom: 5px;
     letter-spacing: 1.5px;
+    width: 100vw;
   }
 
   .nav-menu .active,
