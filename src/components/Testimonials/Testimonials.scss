@@ -1,0 +1,59 @@
+.testimonials-container {
+  background: linear-gradient(
+      0deg,
+      rgba(35, 35, 35, 0.9) 0%,
+      rgba(35, 35, 35, 0.9) 100%
+    ),
+    url("src/assets/testimonials-bg.png"), lightgray 50%;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 525px;
+}
+
+.testi-title {
+  color: #f2c476;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+// .carousel {
+//   display: flex;
+//   overflow: hidden;
+//   width: 100%;
+// }
+
+// .carousel-inner {
+//   transform: translateX(calc(-var(--currentSlide) * 100%));
+//   transition: transform 0.5s ease-in-out;
+// }
+
+// .carousel-item {
+//   flex: 0 0 100%;
+//   box-sizing: border-box;
+// }
+
+// .leftButton,
+// .rightButton {
+//   cursor: pointer;
+// }
+
+// .leftButton {
+//   transform: translateX(-50px);
+// }
+
+// .rightButton {
+//   transform: translateX(50px);
+// }
+/* Add this to your Testimonials.scss file */
+
+@media screen and (max-width: 320px) {
+  .buttonLeftRight {
+    max-width: 0px;
+  }
+}
