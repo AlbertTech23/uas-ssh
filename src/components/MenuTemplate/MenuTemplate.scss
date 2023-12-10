@@ -12,6 +12,10 @@
   background-position: center;
 }
 
+.menuTemplate {
+  backdrop-filter: blur(2px);
+}
+
 .menuHeader span {
   color: #f2c476;
   text-align: center;
