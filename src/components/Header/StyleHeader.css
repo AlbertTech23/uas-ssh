@@ -68,6 +68,7 @@
   padding: 10px 25px;
   color: #674817;
   transition: 0.8s;
+  border: 1px solid #F2C476;
 }
 
 .nav-menu .reserva:hover {
@@ -84,6 +85,7 @@
   font-weight: 600;
   margin-left: 40px;
   position: relative;
+  cursor: pointer;
 }
 
 .nav-menu .common:after {
@@ -147,6 +149,7 @@
 .subListMenu {
   margin-bottom: 9px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .subListMenu:hover {
@@ -220,6 +223,7 @@
     padding-bottom: 5px;
     letter-spacing: 1.5px;
     width: 100vw;
+    cursor: pointer;
   }
 
   .nav-menu .active,

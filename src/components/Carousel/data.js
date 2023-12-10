@@ -1,6 +1,6 @@
-import interiorrestohero from '../../assets/gambar/interiorrestohero-1.png'
-import keluarga_after from '../../assets/gambar/makan-keluarga_after-1.png'
-import makanan1 from '../../assets/gambar/makanan-1.png'
+import interiorrestohero from '../../assets/gambar/interiorrestohero-1.svg'
+import keluarga_after from '../../assets/gambar/makan-keluarga_after-1.svg'
+import makanan1 from '../../assets/gambar/makanan-1.svg'
 
 export const image = [
     {
