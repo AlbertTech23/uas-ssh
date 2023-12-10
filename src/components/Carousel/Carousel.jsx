@@ -54,8 +54,8 @@ function Carousel() {
                         <div className={idImage === indx ? arah === 0 ? "text slide-r" : "text slide-l" : "text hidden"}>
                             <h1>{val.nama}</h1>
                             <span className="coba-para">{val.desk}</span>
-                            <button type="button" className="button btn1">
-                                <span>OUR MENU</span>
+                            <button type="button" className="btn1hero">
+                                <span>{val.btnName}</span>
                             </button>
                         </div>
                     </div>
