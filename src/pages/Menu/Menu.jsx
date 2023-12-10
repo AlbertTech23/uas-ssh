@@ -1,7 +1,11 @@
 import "./Menu.scss";
-
+import { MenuTemplate } from "../../components";
 const Menu = () => {
-  return <div className="MenuBigContainer">OUR MENU</div>;
+  return (
+    <div className="MenuBigContainer">
+      <MenuTemplate />
+    </div>
+  );
 };
 
 export default Menu;

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@400;600&display=swap");
+
+.menuHeader span {
+  color: #f2c476;
+  text-align: center;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+  font-family: Forum;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu-desc {
+  max-width: 315px;
+}
+
+.menu-desc-title {
+  color: #f2c476;
+  font-family: poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.menu-desc-description {
+  color: #737373;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu-desc-price {
+  color: #f2c476;
+  text-align: center;
+  font-family: Forum;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 5px;
+  background: #2d2d2d;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.menuCategories {
+  color: #fff;
+  text-align: center;
+  font-family: Forum;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menuCategories button:hover {
+  color: #f2c476;
+  border-bottom: 2px solid #f2c476;
+}

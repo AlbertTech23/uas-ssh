@@ -11,6 +11,7 @@ import { WhoWeAre } from "./WhoWeAre";
 import { AboutUsHeader } from "./AboutUsHeader";
 import { TestiCard } from "./TestiCard";
 import { OurMenu } from "./OurMenu";
+import { MenuTemplate } from "./MenuTemplate";
 
 export {
   AboutComponent,
@@ -26,4 +27,5 @@ export {
   TestiCard,
   OurMenu,
   AboutUsHeader,
+  MenuTemplate,
 };
