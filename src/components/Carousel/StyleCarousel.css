@@ -6,6 +6,7 @@
     justify-content: center;
     position: relative;
     flex-wrap: wrap;
+    overflow-x: hidden;
 }
 
 .bg-image {
@@ -15,6 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow-x: hidden;
 }
 
 .text {
@@ -107,18 +109,22 @@
 @keyframes slider {
     0% {
         opacity: 0.25;
+
     }
 
     100% {
         opacity: 1;
+
     }
 
     from {
         transform: translateX(100%);
+
     }
 
     to {
         transform: translateX(0);
+
     }
 }
 
@@ -133,10 +139,12 @@
 
     from {
         transform: translateX(-100%);
+
     }
 
     to {
         transform: translateX(0);
+
     }
 }
 
