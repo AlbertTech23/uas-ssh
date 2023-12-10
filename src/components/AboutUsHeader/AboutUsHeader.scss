@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-#headingHero {
+#masterHeading {
   color: white;
   font-size: 60px;
   font-family: "Poppins", sans-serif;
@@ -8,13 +8,13 @@
   font-weight: bold;
 }
 
-#subheadingHero {
+#masterSubheading {
   color: #dcb472;
   font-family: "Forum", sans-serif;
   font-size: 50px;
 }
 
-#pHero {
+#masterP {
   color: white;
   font-family: "Poppins", sans-serif;
   padding-left: 10rem;
@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 768px) {
-  #headingHero {
+  #masterHeading {
     color: white;
     font-size: 200%;
     font-family: "Poppins", sans-serif;
@@ -31,13 +31,13 @@
     font-weight: bold;
   }
 
-  #subheadingHero {
+  #masterSubheading {
     color: #dcb472;
     font-family: "Forum", sans-serif;
     font-size: 200%;
   }
 
-  #pHero {
+  #masterP {
     color: white;
     font-family: "Poppins", sans-serif;
     padding-left: 5rem;
@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 425px) {
-  #headingHero {
+  #masterHeading {
     color: white;
     font-size: 100%;
     font-family: "Poppins", sans-serif;
@@ -55,13 +55,13 @@
     font-weight: bold;
   }
 
-  #subheadingHero {
+  #masterSubheading {
     color: #dcb472;
     font-family: "Forum", sans-serif;
     font-size: 80%;
   }
 
-  #pHero {
+  #masterP {
     color: white;
     font-family: "Poppins", sans-serif;
     padding-left: 2rem;

@@ -8,15 +8,15 @@ function Header() {
   const [scroll, setScroll] = useState(false);
   const [activeButton, setActbttn] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [btnMenu, setBtnMenu] = useState(false)
+  const [btnMenu, setBtnMenu] = useState(false);
 
-  const menuRef = useRef()
+  const menuRef = useRef();
 
   useEffect(() => {
     const handleClickOutsideMenu = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setActbttn(false);
-        setBtnMenu(false)
+        setBtnMenu(false);
       }
     };
 
@@ -67,6 +67,7 @@ function Header() {
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>
+
               <a className={windowWidth >= 769 ? "common" : activeButton ? "active" : "unactive"}>
                 HOME
               </a>
@@ -95,8 +96,13 @@ function Header() {
               </button>
             </div>
             <div
-              className="tombol" onClick={() => { setActbttn(!activeButton) }}
-            ><RiMenu3Fill className="img-res-nav" /></div>
+              className="tombol"
+              onClick={() => {
+                setActbttn(!activeButton);
+              }}
+            >
+              <RiMenu3Fill className="img-res-nav" />
+            </div>
           </div>
         </div>
       </div>
