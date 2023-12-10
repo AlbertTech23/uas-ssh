@@ -84,7 +84,7 @@
 }
 
 .gambar {
-    filter: brightness(35%);
+    filter: blur(2px) brightness(35%);
 }
 
 .slide-r {

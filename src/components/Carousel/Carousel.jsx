@@ -47,7 +47,7 @@ function Carousel() {
         <div className="contain">
             {image.map((val, indx) => {
                 return (
-                    <div className="bg-image" style={arah === 0 ? styleBGR : styleBGL}>
+                    <div key={indx} className="bg-image" style={arah === 0 ? styleBGR : styleBGL}>
                         <div className={idImage === indx ? arah === 0 ? "gambar slide-r" : "gambar slide-l" : "gambar hidden"} key={indx}>
                             <img src={val.images} />
                         </div>
