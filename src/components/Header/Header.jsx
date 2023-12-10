@@ -30,6 +30,9 @@ function Header() {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
+      if (window.innerWidth >= 769) {
+        setBtnMenu(false)
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -87,9 +90,9 @@ function Header() {
                   <span>Drinks</span>
                 </a>
               </div>
-              <a className={windowWidth >= 769 ? "reserva" : activeButton ? "r-active" : "r-unactive"}>
+              <button className={windowWidth >= 769 ? "reserva" : activeButton ? "r-active" : "r-unactive"}>
                 <span>RESERVATION</span>
-              </a>
+              </button>
             </div>
             <div
               className="tombol" onClick={() => { setActbttn(!activeButton) }}

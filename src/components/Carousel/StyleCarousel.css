@@ -14,6 +14,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .text {
@@ -44,23 +45,24 @@
     font-weight: 400;
 }
 
-.button {
-    width: 180px;
+.btn1hero {
+    letter-spacing: 0.8px;
+    width: 240px;
     overflow: hidden;
     margin-top: 30px;
     background: none;
     color: #dcb472;
-    border: 3px solid #dcb472;
+    border: 2px solid #dcb472;
     padding: 11px 30px;
     border-radius: 10px;
     font-size: 20px;
     transition: 0.4s;
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-.btn1:hover {
-    color: white;
+.btn1hero:hover {
+    color: #232323;
     background: #dcb472;
     transition: 0.8s;
     border-radius: 10px;
@@ -180,7 +182,7 @@
         font-size: 15px;
     }
 
-    .button {
+    .btn1hero {
         padding: 7px 18px;
     }
 }
@@ -194,7 +196,7 @@
         font-size: 13px;
     }
 
-    .button {
+    .btn1hero {
         padding: 6px 15px;
     }
 }
@@ -225,13 +227,14 @@
 
     .text h1 {
         font-size: 23px;
+        margin-bottom: 5px;
     }
 
     .coba-para {
         font-size: 13px;
     }
 
-    .button {
+    .btn1hero {
         margin-top: 30px;
         background: none;
         color: #dcb472;
@@ -240,10 +243,10 @@
         border-radius: 10px;
         font-size: 14px;
         transition: 0.4s;
-        width: 130px;
+        width: 180px;
     }
 
-    .btn1:hover {
+    .btn1hero:hover {
         color: white;
         background: #dcb472;
         transition: 0.8s;

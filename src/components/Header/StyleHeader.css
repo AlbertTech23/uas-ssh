@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .hide {
   display: none;
 }
@@ -28,7 +23,7 @@ body {
   position: fixed;
   z-index: 5;
   padding: 10px;
-  background-color: rgba(39, 39, 39, 1);
+  background-color: #232323;
   transition: 0.6s;
 }
 
@@ -66,15 +61,20 @@ body {
 .nav-menu .reserva {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   margin-left: 40px;
   background-color: #f2c476;
   border-radius: 10px;
   padding: 10px 25px;
+  color: #674817;
+  transition: 0.8s;
 }
 
-.nav-menu .reserva span {
-  color: #674817;
+.nav-menu .reserva:hover {
+  background: rgba(242, 196, 118, 0.1);
+  border: 1px solid #F2C476;
+  color: #F2C476;
+  transition: 0.8s;
 }
 
 .nav-menu .common {
@@ -109,7 +109,7 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  font-weight: 100;
+  font-weight: 400;
   right: 316px;
   top: 76px;
   font-size: 14px;
@@ -119,23 +119,29 @@ body {
   margin-right: -20px;
   justify-content: center;
   transition: 0.5s ease-in-out;
+  background-color: #232323;
+  border-radius: 5px;
+  letter-spacing: 0.8px;
 }
 
 .listMenu-bg {
+  letter-spacing: 0.8px;
   position: absolute;
   display: flex;
   flex-direction: column;
-  font-weight: 100;
+  font-weight: 400;
   right: 316px;
   top: 76px;
   font-size: 14px;
   color: #ffffff;
-  background-color: rgba(39, 39, 39, 1);
+  background-color: #232323;
   width: 140px;
   height: 140px;
   margin-right: -20px;
   justify-content: center;
+  margin-top: 5px;
   transition: 0.6s;
+  border-radius: 5px;
 }
 
 .subListMenu {
@@ -181,7 +187,7 @@ body {
   }
 
   .header {
-    background-color: rgba(39, 39, 39, 1);
+    background-color: #232323;
   }
 
   .header-bg .res-nav,
@@ -235,7 +241,12 @@ body {
   }
 
   .listActive {
-    padding-bottom: 90px;
+    padding-bottom: 99px;
+  }
+
+  .active-ListMenu:hover {
+    color: #F2C476;
+    cursor: pointer;
   }
 
   .listMenu,
@@ -243,13 +254,17 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: 116px;
+    right: 110px;
     top: 56px;
     align-items: flex-end;
     width: 140px;
-    height: 80px;
+    height: 90px;
     margin-top: 30px;
+    background-color: #232323;
+    gap: 5px;
   }
+
+
 
   .unactive,
   .r-unactive {
