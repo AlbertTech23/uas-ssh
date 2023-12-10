@@ -26,7 +26,7 @@ const Chef = () => {
             best.”
           </span>
           <h1 className="chef-name mt-20">Ricky Jap</h1>
-          <span className="chef-title">Head Chef</span>
+          <span className="chef-title">Sous Chef</span>
         </div>
         <div className="chef-img w-1/2">
           <img

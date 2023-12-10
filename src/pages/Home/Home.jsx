@@ -7,7 +7,7 @@ import {
   Footer,
   Stats,
   BottomHome,
-  OurMenu
+  OurMenu,
 } from "../../components";
 
 import { useNavigate } from "react-router-dom";
@@ -27,13 +27,12 @@ const Home = () => {
       </button>
 
       <AboutComponent />
-          
+
       <TodaySpecial />
-          <OurMenu />
+      <OurMenu />
       <Stats />
       <BottomHome />
       <Footer />
-
     </div>
   );
 };

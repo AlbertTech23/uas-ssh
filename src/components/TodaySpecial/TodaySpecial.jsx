@@ -1,5 +1,5 @@
 import "./TodaySpecial.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const service = [
   {
@@ -25,10 +25,6 @@ const service = [
   },
 ];
 
-const media1024 = window.matchMedia("(max-width: 1024px)");
-const media768 = window.matchMedia("(max-width: 800px)");
-const media425 = window.matchMedia("(max-width: 450px)");
-
 const special = [
   {
     id: 1,
@@ -43,7 +39,7 @@ const special = [
     img: "src/components/TodaySpecial/Images/NasiKuning.png",
     title: "Nasi Kuning",
     description:
-      "Nasi Kuning, hidangan khas Indonesia yang terbuat dari beras yang dimasak dengan santan...",
+      "Nasi Kuning, hidangan khas Indonesia yang terbuat dari beras yang dimasak dengan santan.",
     rating: "4.5",
   },
   {
@@ -51,7 +47,7 @@ const special = [
     img: "src/components/TodaySpecial/Images/AddOns.png",
     title: "Add Ons",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Vey good...",
     rating: "4.7",
   },
 ];
@@ -82,38 +78,12 @@ function createServiceCard(service) {
 function SpecialCard(props) {
   const cardStyle = {
     backgroundImage: `url(${props.img})`,
-    backgroundSize: "cover",
-    backgroundPosition: "bottom",
-    borderRadius: "10px",
-    border: "4px solid #f6be61",
-    width: "400px",
   };
-
-  const menuStyle = {
-    display: "flex",
-    marginTop: "176px",
-  };
-
-  if (media1024.matches) {
-    cardStyle.width = "260px";
-    menuStyle.marginTop = "60px";
-  }
-
-  if (media768.matches) {
-    cardStyle.width = "280px";
-    menuStyle.marginTop = "60px";
-  }
-
-  if (media425.matches) {
-    cardStyle.width = "240px";
-    menuStyle.marginTop = "45px";
-    cardStyle.backgroundPosition = "bottom";
-  }
 
   return (
     <a href="#" className="specialContainer relative">
-      <div className="specialCard " style={cardStyle}>
-        <div className="menuDesc" style={menuStyle}>
+      <div className="specialCard" style={cardStyle}>
+        <div className="menuDesc flex">
           <div className="specialDesc">
             <div className="title">{props.title}</div>
             <div className="description">{props.description}</div>
@@ -125,6 +95,117 @@ function SpecialCard(props) {
         </div>
       </div>
     </a>
+  );
+}
+
+function Carousel() {
+  const [current, setCurrent] = useState(0);
+  const length = special.length;
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+
+    if (touchStartX.current && touchEndX.current) {
+      const deltaX = touchEndX.current - touchStartX.current;
+
+      if (current === 0 && deltaX > 0) {
+        touchEndX.current = touchStartX.current;
+      } else if (current === length - 1 && deltaX < 0) {
+        touchEndX.current = touchStartX.current;
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current && touchEndX.current) {
+      const deltaX = touchEndX.current - touchStartX.current;
+
+      if (deltaX > 50) {
+        prevSlide();
+      } else if (deltaX < -50) {
+        nextSlide();
+      }
+
+      touchStartX.current = null;
+      touchEndX.current = null;
+    }
+  };
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(special) || special.length <= 0) {
+    return null;
+  }
+
+  return (
+    <div
+      className="carouselContainer"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div className="carousel flex items-center justify-center py-4">
+        <button
+          className="leftArrow btn-circle left-5"
+          onClick={prevSlide}
+          style={{ display: current === 0 ? "none" : "block" }}
+        >
+          ❮
+        </button>
+        {special.map((special, index) => (
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+            style={{
+              transform: `translateX(${100 * (index - current)}%)`,
+              transition: "transform 0.5s ease",
+            }}
+          >
+            {index === current && (
+              <a href="#" className="specialContainer relative">
+                <div
+                  className="carouselCard"
+                  style={{ backgroundImage: `url(${special.img})` }}
+                >
+                  <div className="menuDesc flex">
+                    <div className="specialDesc">
+                      <div className="title">{special.title}</div>
+                      <div className="description">{special.description}</div>
+                    </div>
+                    <div className="rating">
+                      <div className="ratingNum">{special.rating}</div>
+                      <img
+                        src="src/components/TodaySpecial/Images/Star.svg"
+                        alt="Star"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            )}
+          </div>
+        ))}
+        <button
+          className="rightArrow btn-circle right-5"
+          onClick={nextSlide}
+          style={{ display: current === length - 1 ? "none" : "block" }}
+        >
+          ❯
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -145,42 +226,6 @@ function ServiceCard(props) {
   );
 }
 
-function Carousel() {
-  const totalSlides = special.length;
-  const [currentSlide, setCurrentSlide] = useState(1);
-
-  const goToSlide = (slideNumber) => {
-    setCurrentSlide(slideNumber);
-  };
-
-  const goToNextSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === totalSlides ? 1 : prevSlide + 1
-    );
-  };
-
-  const goToPrevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 1 ? totalSlides : prevSlide - 1
-    );
-  };
-
-  const renderCarouselItems = () => {
-    return special.map(createSpecialCard).map((item, index) => (
-      <div
-        key={`slide${index + 1}`}
-        className={`carousel-item relative w-350px m-5 ${
-          index + 1 === currentSlide ? "active" : ""
-        }`}
-      >
-        {item}
-      </div>
-    ));
-  };
-
-  return <div className="carousel relative">{renderCarouselItems()}</div>;
-}
-
 const TodaySpecial = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -197,38 +242,14 @@ const TodaySpecial = () => {
     };
   }, []);
 
-  const isMobile = windowWidth <= 800;
-
-  const specialStyle = {
-    marginTop: "190px",
-  };
-
-  if (media1024.matches) {
-    specialStyle.marginTop = "140px";
-  }
-
-  if (media768.matches) {
-    specialStyle.marginTop = "73.5px";
-    specialStyle.width = "415px";
-    specialStyle.marginRight = "20px";
-  }
-
-  if (media425.matches) {
-    specialStyle.marginTop = "35px";
-    specialStyle.width = "375px";
-  }
+  const isMobile = windowWidth <= 950;
 
   return (
     <div className="todaySpecial">
       <div className="top">
-        <div className="specialPosition absolute">
-          <div
-            className="special flex justify-evenly me-4"
-            style={specialStyle}
-          >
-            <button className="prev btn-circle">❮</button>
+        <div className="specialPosition absolute w-full">
+          <div className="special flex justify-evenly">
             {isMobile ? <Carousel /> : special.map(createSpecialCard)}
-            <button className="next btn-circle">❯</button>
           </div>
         </div>
         <img src="src/components/TodaySpecial/Images/TopImg.svg" alt="" />

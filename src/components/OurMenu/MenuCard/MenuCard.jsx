@@ -11,7 +11,9 @@ function MenuCard(props) {
             className="menu-image object-cover object-center"
             alt={props.name}
           />
+
           <button className="buttonOurMenu absolute flex items-center justify-center md:mb-4 mb-2">
+
             {props.name}
           </button>
         </div>

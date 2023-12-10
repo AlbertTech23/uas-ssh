@@ -1,4 +1,5 @@
 import "./BottomHome.scss";
+import { TestiCard } from "../TestiCard";
 
 const testiData = [
   {
@@ -20,40 +21,16 @@ const testiData = [
 const BottomHome = () => {
   return (
     <div className="imageContainer">
-      <div className="testi-container justify-center pt-28 flex flex-wrap">
+      <div className="testi-container justify-center pt-28 flex flex-wrap ">
         <div className="testi-left mb-6 mb-md-14 mb-lg-0">
           <span className="heading-left">What people</span>
           <span className="heading-left">are saying</span>
           <span className="heading-left">about us.</span>
           <button onClick={() => console.log("Clicked")}>Read More</button>
         </div>
-        <div className="testi-right flex flex-wrap justify-center">
+        <div className="testi-right flex flex-wrap justify-center md:ms-10">
           {testiData.map((testi, key) => (
-            <div
-              className="testi-card relative p-8 pt-14 flex flex-col justify-between md:m-5 md:ms-16 mt-16"
-              key={key}
-            >
-              <div className="commaAsset absolute top-[-35px] left-[35px]">
-                <img className="" src="src/assets/comma.svg" alt="" />
-              </div>
-              <div className="testi-card-body">{testi.review}</div>
-              <div className="testi-card-footer flex">
-                <img
-                  src={`src/assets/${testi.picture}`}
-                  alt="testi"
-                  className="testi-card-footer-img rounded-full w-12 me-5"
-                />
-                <div className="testi-card-header flex flex-col">
-                  <span className="testi-card-header-name">
-                    {testi.firstName}{" "}
-                    <span className="testi-card-header-lastname">
-                      {testi.lastName}
-                    </span>
-                  </span>
-                  <span className="testi-card-header-on">on {testi.on}</span>
-                </div>
-              </div>
-            </div>
+            <TestiCard key={key} {...testi} />
           ))}
         </div>
       </div>
@@ -64,7 +41,7 @@ const BottomHome = () => {
         </div>
         <div className="rightRes relative">
           <img
-            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[75px] lg:left-[-15px] top-[-75px] left-[150px]"
+            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[75px] lg:left-[-15px] md:top-[-75px] md:left-[150px]"
             src="src/assets/rectRes.png"
             alt="rectRes"
           />

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+  font-family: poppins;
+}
+
 .bottom {
     background-image: url("src/components/TodaySpecial/Images/BottomImg.jpeg");
     background-size: cover;
@@ -30,14 +36,15 @@
   
     .num {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 600;
       margin-bottom: 10px;
       color: rgb(220, 180, 114);
     }
   
     .title {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 600;
+      font-style: normal;
       margin-bottom: 10px;
       color: white;
     }
@@ -46,6 +53,8 @@
       font-size: 18px; 
       margin-bottom: 20px;
       color: white;
+      font-style: normal;
+      font-weight: 400;
     }
 
     .arrow{
@@ -54,32 +63,44 @@
   
 }
 
-.specialPosition {
-  width: 100%;
-}
-
-.specialContainer{
-  max-width: 390px;
-}
-
 .specialCard {
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 10px;
+  border: 3px solid #FFD082;
+  width: 400px;
   transition: transform 0.3s ease-in-out;
+  margin-top: 192px;
 }
 
 .specialCard:hover {
   transform: scale(1.05);
 }
 
-.special button{
-  display: none;
+.carouselCard{
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 10px;
+  border: 3px solid #f6be61;
+  width: 330px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carouselCard:hover{
+  transform: scale(1.05);
+}
+
+.carousel button{
+  color: #f6be61;
 }
 
 .menuDesc {
   backdrop-filter: blur(3px);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  border-bottom-left-radius: 4.5px;
-  border-bottom-right-radius: 4.5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: 160px;
 
   .rating{
   display: flex;
@@ -103,12 +124,27 @@
 
     .title{
     font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
     }
 
     .description
     {
       font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
     }  
+  }
+}
+
+@media(max-width: 1280px) {
+  .specialCard {
+    width: 350px;
+    margin-top: 170px;
+  }
+
+  .menuDesc{
+    margin-top: 120px;
   }
 }
   
@@ -157,41 +193,44 @@
         
       }
   }
-  .menuDesc {
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the desired darkness */
-    color: white;
-    border-bottom-left-radius: 4.5px;
-    border-bottom-right-radius: 4.5px;
-  
+
+  .specialCard {
+    width: 300px;
+    margin-top: 130px;
+  }
+
+  .menuDesc{
+    margin-top: 120px;
+
     .rating{
-    display: flex;
-    align-items: center;
-    margin-left: 2px;
-    }
-  
-    .ratingNum{
-    font-size: 15px;
-    }
-  
-    .rating img{
-    width: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
-    }
-  
-    .specialDesc{
-    width: 180px;
-  
-      .title{
-      font-size: 14px;
+      margin-left: 5px;
+      margin-right: 5px;
       }
-  
-      .description
-      {
-        font-size:10px;
-      }  
-    }
+
+      .specialDesc{
+        width: 220px;
+        margin: 5px 7px 5px 5px;
+      }
+  }
+}
+
+@media(max-width: 950px) {
+  .carousel{
+    margin-top: 72px;
+  }
+
+  .menuDesc{
+    margin-top: 120px;
+
+    .rating{
+      margin-left: 5px;
+      margin-right: 5px;
+      }
+
+      .specialDesc{
+        width: 240px;
+        margin: 5px 7px 5px 5px;
+      }
   }
 }
 
@@ -203,130 +242,82 @@
   .serviceCard{
     width: 200px;
   }
+}
 
-  .menuDesc {
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the desired darkness */
-    color: white;
-    border-bottom-left-radius: 4.5px;
-    border-bottom-right-radius: 4.5px;
-  
-    .rating{
-    display: flex;
-    align-items: center;
-    margin-left: 14px;
-    }
-  
-    .ratingNum{
-    font-size: 15px;
-    }
-  
-    .rating img{
-    width: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
-    }
-  
+@media (max-width: 768px){
+  .carousel{
+    margin-top: 65px;
+  }
+  .menuDesc{
+    margin-top: 100px;
+
+  }
+}
+
+@media (max-width: 600px){
+  .carousel{
+    margin-top: 50px;
+  }
+
+  .carouselCard{
+    width: 280px;
+  }
+
+  .menuDesc{
+    margin-top: 80px;
+
     .specialDesc{
-    width: 180px;
-  
       .title{
-      font-size: 14px;
+        font-size: 14px;
       }
-  
-      .description
-      {
-        font-size:10px;
-      }  
+
+      .description{
+        font-size: 10px;
+      }     
     }
-  }
 
-  .special{
-    margin-left: 185px;
-  }
-
-  .special button{
-    display: block;
-    margin-top: 10px;
-    width: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: rgb(246, 190, 97);
-  }
-
-  .prev{
-    margin-right: 10px;
-  }
-
-  .next{
-    margin-left: 15px;
-  }
-
-  .specialCard{
-    margin-left: 10px;
-  }
-}
-
-@media(max-width: 450px){
-  .special{
-    width: 250px;
-    margin-left: 95px;
-  }
-
-  .menuDesc {
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the desired darkness */
-    color: white;
-    border-bottom-left-radius: 4.5px;
-    border-bottom-right-radius: 4.5px;
-  
     .rating{
-    display: flex;
-    align-items: center;
-    margin-left: 2px;
-    margin-right: 7px;
+      margin-right: 10px;
     }
-  
     .ratingNum{
-    font-size: 15px;
+      font-size: 16px;
     }
-  
+
     .rating img{
-    width: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
+      width: 15px;
     }
-  
-    .specialDesc{
-    width: 180px;
-  
-      .title{
-      font-size: 12px;
-      }
-  
-      .description
-      {
-        font-size:9px;
-      }  
-    }
-  }
-
-  .special{
-    margin-left: 35px;
-  }
-
-}
-
-@media(max-width: 380px){
-  .special{
-    width: 200px;
-    margin-left: 10px;
   }
 }
 
-@media(max-width: 325px){
-  .special{
+@media (max-width: 450px){
+  .carousel{
+    margin-top: 30px;
+  }
+
+  .carouselCard{
     width: 250px;
-    margin-left: 0px;
+  }
+
+  .menuDesc{
+    margin-top: 60px;
+
+    .rating{
+      margin-right: 15px;
+    }
+  }
+
+}
+
+@media (max-width: 400px){
+  .carousel{
+    margin-top: 30px;
+  }
+
+  .carouselCard{
+    width: 230px;
+  }
+
+  .menuDesc{
+    margin-top: 40px;
   }
 }
