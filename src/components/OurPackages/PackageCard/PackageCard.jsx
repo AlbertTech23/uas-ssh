@@ -7,13 +7,13 @@ function PackageCard(props) {
 
     return (
         <div className="flex-container">
-            <div className="card card-bordered rounded-lg xl:my-8 my-2 mx-2 relative">
+            <div className="card card-bordered rounded-lg xl:my-8 my-2 mx-2  relative">
                 <div
                     className="packageCard flex items-end justify-center card-image relative overflow-hidden rounded-lg"
                     onMouseEnter={() => setIsShown(true)}>
                     <img 
                         src={props.img}
-                        className="menu-image object-cover object-center brightness-down"
+                        className="menu-image w-[507px] h-[302px] rounded-[10px] object-cover object-center brightness-down"
                         alt={props.name}
                     />
 
@@ -21,14 +21,14 @@ function PackageCard(props) {
                         {props.name}
                     </h1>
 
-                    <div className={`cardHover absolute ${isShown ? 'visible' : 'hidden'}`}>
+                    <div className={`cardHover absolute w-[507px] h-[302px] rounded-[10px] ${isShown ? 'visible' : 'hidden'}`}>
                         <button onClick={() => setIsShown(false)}>
-                            <img className="closeButton mt-[9px] ml-[11px] h-[26px] w-[26px] md:h-[20px] md:w-[20px] sm:h-[18px] sm:w-[18px]" src={closeHover} alt="Close" />
+                            <img className="closeButton mt-[9px] ml-[11px] h-[26px] w-[26px]" src={closeHover} alt="Close" />
                         </button>
                         <p className="packHeading">{props.name}</p>
                         <p className="packSubheading">PACKAGE</p>
 
-                        <div className="sm:mx-4 md:mx-5 md:mt-2 mx-8 mt-5 grid grid-cols-2 grid-rows-2 gap-4">
+                        <div className="mx-10 mt-5 grid grid-cols-2 grid-rows-2 gap-4">
                             <div>
                                 <div className="flex justify-start">
                                     <button className="packButton">Appetizers</button>
