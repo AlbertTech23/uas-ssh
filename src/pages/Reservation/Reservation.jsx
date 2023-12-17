@@ -1,9 +1,10 @@
 import "./Reservation.scss";
-import { OurPackages } from "../../components";
+import { OurPackages, ReservationHeader } from "../../components";
 
 const Reservation = () => {
   return <div className="ReservationContainer">
     Reservation
+    <ReservationHeader />
     <OurPackages />
     </div>;
 };

@@ -12,6 +12,7 @@ import { AboutUsHeader } from "./AboutUsHeader";
 import { TestiCard } from "./TestiCard";
 import { OurMenu } from "./OurMenu";
 import { OurPackages } from "./OurPackages";
+import { ReservationHeader } from "./ReservationHeader";
 
 export {
   AboutComponent,
@@ -28,4 +29,5 @@ export {
   OurMenu,
   AboutUsHeader,
   OurPackages,
+  ReservationHeader,
 };
