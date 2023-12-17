@@ -1,0 +1,137 @@
+.brightness-down {
+    filter: brightness(90%);
+}
+
+
+.packageLetter {
+    color: rgba(242, 196, 118, 0.60);
+    text-align: center;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+    font-family: Poppins;
+    font-size: 300px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    bottom: -25%;
+}
+
+.cardHover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    background: rgba(255, 211, 138, 1);
+}
+
+.closeButton:hover {
+    cursor: pointer;
+}
+
+.packHeading {
+    color: #232323;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -30px;
+}
+
+.packSubheading {
+    color: #232323;
+    text-align: center;
+    font-family: Forum;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.62px;
+    margin-top: -10px;
+}
+
+.packButton {
+    width: 110px;
+    height: 23px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 0.8px solid #000;
+    color: #232323;
+    text-align: center;
+    font-family: Forum;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.packAmount {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.packName {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (max-width: 1024px) {
+    .packButton {
+        font-size: 16px;
+    }
+
+    .packAmount, .packName {
+        font-size: 10px;
+    }
+}
+  
+@media (max-width: 768px) {
+    .packageLetter {
+        font-size: 200px;
+    }
+    .packHeading {
+        font-size: 28px;
+    }
+
+    .packSubheading {
+        font-size: 12px;
+    }
+
+    .packButton {
+        width: 68px;
+        height: 16px;
+        font-size: 10px;
+    }
+
+    .packAmount, .packName {
+        font-size: 7px;
+    }
+}
+  
+@media (max-width: 425px) {
+    .packageLetter {
+        font-size: 120px;
+        bottom: -10%;
+    }
+}
+
+@media (max-width: 375px) {
+}
+  
+@media (max-width: 320px) {
+    .packageLetter {
+        font-size: 100px;
+        bottom: -10%;
+    }
+}
+  
