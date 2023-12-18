@@ -7,13 +7,13 @@ function PackageCard(props) {
 
     return (
         <div className="flex-container">
-            <div className="card card-bordered rounded-lg xl:my-8 my-2 mx-2  relative">
+            <div className="card card-bordered rounded-lg xl:my-8 my-2 relative">
                 <div
                     className="packageCard flex items-end justify-center card-image relative overflow-hidden rounded-lg"
                     onMouseEnter={() => setIsShown(true)}>
                     <img 
                         src={props.img}
-                        className="menu-image w-[507px] h-[302px] rounded-[10px] object-cover object-center brightness-down"
+                        className="menu-image xl:w-[507px] xl:h-[302px] lg:w-[400px] lg:h-[234px] md:w-[330px] md:h-[196px] rounded-[10px] object-cover object-center brightness-down"
                         alt={props.name}
                     />
 
@@ -21,14 +21,14 @@ function PackageCard(props) {
                         {props.name}
                     </h1>
 
-                    <div className={`cardHover absolute w-[507px] h-[302px] rounded-[10px] ${isShown ? 'visible' : 'hidden'}`}>
+                    <div id="desktopPack" className={`cardHover absolute xl:w-[507px] xl:h-[302px] lg:w-[400px] lg:h-[234px] md:w-[330px] md:h-[196px] rounded-[10px] ${isShown ? 'visible' : 'hidden'}`}>
                         <button onClick={() => setIsShown(false)}>
-                            <img className="closeButton mt-[9px] ml-[11px] h-[26px] w-[26px]" src={closeHover} alt="Close" />
+                            <img className="closeButton mt-[9px] ml-[11px] md:h-[18px] md:w-[18px] h-[26px] w-[26px]" src={closeHover} alt="Close" />
                         </button>
                         <p className="packHeading">{props.name}</p>
                         <p className="packSubheading">PACKAGE</p>
 
-                        <div className="mx-10 mt-5 grid grid-cols-2 grid-rows-2 gap-4">
+                        <div className="lg:mx-8 md:mx-6 md:mt-2 mx-10 mt-5 grid grid-cols-2 grid-rows-2 gap-2">
                             <div>
                                 <div className="flex justify-start">
                                     <button className="packButton">Appetizers</button>

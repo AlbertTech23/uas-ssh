@@ -1,10 +1,12 @@
 import "./OurPackages.scss";
 import PackageCard from "./PackageCard";
+import PackageCardMobile from "./PackageCardMobile";
 import batikline from "../../assets/batik-line2.svg";
 import packageA from "./assets/packageA.png";
 import packageB from "./assets/packageB.png";
 import packageC from "./assets/packageC.png";
 import packageD from "./assets/packageD.png";
+import React, { useState, useEffect } from 'react';
 
 const OurPackages = () => {
     const PackageName = [
@@ -126,6 +128,22 @@ const OurPackages = () => {
         },
     ]
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 740);
+
+    useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 640);
+          setIsDesktop(window.innerWidth > 740);
+        };
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return <div className="flex-1 items-center container mx-auto mt-12 mb-12">
         <div className="flex flex-col items-center justify-center mt-7 mb-7">
             <p id="packageP">Buy a package, get your table</p>
@@ -133,38 +151,47 @@ const OurPackages = () => {
             <img id="batik" src={batikline} />
         </div>
 
-        <div className="mx-2 md:ml-20 md:mr-20 grid grid-cols-2 grid-rows-2 place-items-center">
-            {PackageName.map((packageInfo) => (
-            <div key={packageInfo.id}>
-                <PackageCard 
-                    img={packageInfo.img}
-                    name={packageInfo.name} 
-                    appA1={packageInfo.appA1}
-                    appN1={packageInfo.appN1}
-                    appA2={packageInfo.appA2}
-                    appN2={packageInfo.appN2}
-                    appA3={packageInfo.appA3}
-                    appN3={packageInfo.appN3}
-                    mainA1={packageInfo.mainA1}
-                    mainN1={packageInfo.mainN1}
-                    mainA2={packageInfo.mainA2}
-                    mainN2={packageInfo.mainN2}
-                    mainA3={packageInfo.mainA3}
-                    mainN3={packageInfo.mainN3}
-                    desA1={packageInfo.desA1}
-                    desN1={packageInfo.desN1}
-                    desA2={packageInfo.desA2}
-                    desN2={packageInfo.desN2}
-                    desA3={packageInfo.desA3}
-                    desN3={packageInfo.desN3}
-                    drinkA1={packageInfo.drinkA1}
-                    drinkN1={packageInfo.drinkN1}
-                    drinkA2={packageInfo.drinkA2}
-                    drinkN2={packageInfo.drinkN2}
-                    drinkA3={packageInfo.drinkA3}
-                    drinkN3={packageInfo.drinkN3}/>
-            </div>
-            ))}
+        <div>
+            {isMobile && (
+                <div>
+                    <PackageCardMobile />
+                </div>
+            )}
+            {isDesktop && (
+                <div className="mx-7 md:mx-6 grid grid-cols-2 grid-rows-2 place-items-center">
+                    {PackageName.map((packageInfo) => (
+                    <div key={packageInfo.id}>
+                        <PackageCard 
+                            img={packageInfo.img}
+                            name={packageInfo.name} 
+                            appA1={packageInfo.appA1}
+                            appN1={packageInfo.appN1}
+                            appA2={packageInfo.appA2}
+                            appN2={packageInfo.appN2}
+                            appA3={packageInfo.appA3}
+                            appN3={packageInfo.appN3}
+                            mainA1={packageInfo.mainA1}
+                            mainN1={packageInfo.mainN1}
+                            mainA2={packageInfo.mainA2}
+                            mainN2={packageInfo.mainN2}
+                            mainA3={packageInfo.mainA3}
+                            mainN3={packageInfo.mainN3}
+                            desA1={packageInfo.desA1}
+                            desN1={packageInfo.desN1}
+                            desA2={packageInfo.desA2}
+                            desN2={packageInfo.desN2}
+                            desA3={packageInfo.desA3}
+                            desN3={packageInfo.desN3}
+                            drinkA1={packageInfo.drinkA1}
+                            drinkN1={packageInfo.drinkN1}
+                            drinkA2={packageInfo.drinkA2}
+                            drinkN2={packageInfo.drinkN2}
+                            drinkA3={packageInfo.drinkA3}
+                            drinkN3={packageInfo.drinkN3}/>
+                    </div>
+                    ))}
+                </div>
+            )}
         </div>
     </div>;
 };

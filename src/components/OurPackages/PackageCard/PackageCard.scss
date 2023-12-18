@@ -86,8 +86,20 @@
 }
 
 @media (max-width: 1024px) {
+    .packageLetter {
+        font-size: 200px;
+        bottom: -16%;
+    }
+
+    .packHeading {
+        font-size: 34px;
+    }
+
     .packButton {
-        font-size: 16px;
+        border-radius: 4px;
+        width: 84px;
+        height: 20px;
+        font-size: 14px;
     }
 
     .packAmount, .packName {
@@ -97,33 +109,35 @@
   
 @media (max-width: 768px) {
     .packageLetter {
-        font-size: 200px;
+        font-size: 180px;
+        bottom: -20%;
     }
+
     .packHeading {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .packSubheading {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .packButton {
         width: 68px;
-        height: 16px;
-        font-size: 10px;
+        height: 14px;
+        font-size: 12px;
     }
 
     .packAmount, .packName {
-        font-size: 7px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 640px) {
+    #desktopPack {
+        display: none;
     }
 }
   
 @media (max-width: 425px) {
-}
-
-@media (max-width: 375px) {
-}
-  
-@media (max-width: 320px) {
 }
   
