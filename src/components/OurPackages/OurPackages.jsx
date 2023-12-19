@@ -153,7 +153,7 @@ const OurPackages = () => {
 
         <div>
             {isMobile && (
-                <div>
+                <div className="flex justify-center">
                     <PackageCardMobile />
                 </div>
             )}

@@ -8,7 +8,7 @@ const ReservationHeader = () => {
     image: reservationheader,
     subheading: "- Reservation -",
     heading: "BOOK YOUR TABLE",
-    paragraph: "Secure Your Culinary Experience. Book your table at Sumatran Sizzle House and indulge in the art of fine dining..",
+    paragraph: "Secure Your Culinary Experience. Book your table at Sumatran Sizzle House and indulge in the art of fine dining.",
   };
 
   return (
