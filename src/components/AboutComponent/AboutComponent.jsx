@@ -1,12 +1,27 @@
+import React, { useState } from 'react';
 import "./AboutComponent.scss";
 import thumbnail from "./assets/about-us.png";
 import strip from "./assets/about-us-strip.png";
-import brand1 from "./assets/brand1.png";
-import brand2 from "./assets/brand2.png";
-import brand3 from "./assets/brand3.png";
+import brand1 from "./assets/brand1.svg";
+import brand2 from "./assets/brand2.svg";
+import brand3 from "./assets/brand3.svg";
+import hoverbrand1 from "./assets/hoverbrand1.svg";
+import hoverbrand2 from "./assets/hoverbrand2.svg";
+import hoverbrand3 from "./assets/hoverbrand3.svg";
 import "./fonts/Forum-Regular.ttf";
 
+
 const AboutComponent = () => {
+  const [isBrandsHovered, setIsBrandsHovered] = useState(false);
+
+  const handleBrandsMouseEnter = () => {
+    setIsBrandsHovered(true);
+  };
+
+  const handleBrandsMouseLeave = () => {
+    setIsBrandsHovered(false);
+  };
+
   return (
     <div>
       {/* <div className="container mx-auto mt-12 mb-12 px-20 grid grid-cols-2 gap-4"> */}
@@ -39,10 +54,15 @@ const AboutComponent = () => {
           </a>
         </div>
       </div>
-      <div id="brands" className="flex flex-wrap container gap-4 mt-5 mb-5">
-        <img src={brand1} alt="GoFood" />
-        <img src={brand2} alt="Indofood" />
-        <img src={brand3} alt="ShopeeFood" />
+      <div
+        id="brands"
+        className={`flex flex-wrap container gap-4 mt-5 mb-5 ${isBrandsHovered ? 'brands-hovered' : ''}`}
+        onMouseEnter={handleBrandsMouseEnter}
+        onMouseLeave={handleBrandsMouseLeave}
+      >
+        <img src={isBrandsHovered ? hoverbrand1 : brand1} alt="GoFood" />
+        <img src={isBrandsHovered ? hoverbrand2 : brand2} alt="Indofood" />
+        <img src={isBrandsHovered ? hoverbrand3 : brand3} alt="ShopeeFood" />
       </div>
     </div>
   );
