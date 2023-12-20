@@ -9,8 +9,10 @@ import hoverbrand1 from "./assets/hoverbrand1.svg";
 import hoverbrand2 from "./assets/hoverbrand2.svg";
 import hoverbrand3 from "./assets/hoverbrand3.svg";
 import "./fonts/Forum-Regular.ttf";
+import { useNavigate } from "react-router-dom";
 
 const AboutComponent = () => {
+  const navigate = useNavigate();
   const [isBrandsHovered1, setIsBrandsHovered1] = useState(false);
   const [isBrandsHovered2, setIsBrandsHovered2] = useState(false);
   const [isBrandsHovered3, setIsBrandsHovered3] = useState(false);
@@ -64,7 +66,9 @@ const AboutComponent = () => {
             an extraordinary epicurean experience for those who seek the
             pinnacle of refinement.
           </p>
-          <button className="btnStyle mt-5">READ MORE</button>
+          <button className="btnStyle mt-5" onClick={() => navigate("/about")}>
+            READ MORE
+          </button>
         </div>
       </div>
       <div id="brands" className="flex flex-wrap container gap-4 mt-5 mb-5">

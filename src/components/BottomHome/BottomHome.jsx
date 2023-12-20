@@ -2,6 +2,7 @@ import "./BottomHome.scss";
 import { TestiCard } from "../TestiCard";
 import cloud from "../../assets/cloud.png";
 import rectRest from "../../assets/rectRes.png";
+import { useNavigate } from "react-router-dom";
 
 const testiData = [
   {
@@ -21,6 +22,15 @@ const testiData = [
 ];
 
 const BottomHome = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  };
+
+  const navigate = useNavigate();
+
   return (
     <div className="imageContainer">
       <div className="testi-container justify-center pt-28 flex flex-wrap ">
@@ -28,7 +38,14 @@ const BottomHome = () => {
           <span className="heading-left">What people</span>
           <span className="heading-left">are saying</span>
           <span className="heading-left">about us.</span>
-          <button onClick={() => console.log("Clicked")}>Read More</button>
+          <button
+            onClick={() => {
+              navigate("/about");
+              scrollToTop();
+            }}
+          >
+            Read More
+          </button>
         </div>
         <div className="testi-right flex flex-wrap justify-center md:ms-10">
           {testiData.map((testi, key) => (
@@ -55,7 +72,15 @@ const BottomHome = () => {
                 FOR <span className="popBold">YOU</span>
               </span>
             </div>
-            <button className="buttonReservation">BOOK A TABLE</button>
+            <button
+              className="buttonReservation"
+              onClick={() => {
+                navigate("/reservation");
+                scrollToTop();
+              }}
+            >
+              BOOK A TABLE
+            </button>
             <img className="cloud absolute" src={cloud} alt="awan" />
           </div>
         </div>
