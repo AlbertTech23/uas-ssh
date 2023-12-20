@@ -13,6 +13,14 @@ import { TestiCard } from "./TestiCard";
 import { OurMenu } from "./OurMenu";
 import { BottomAboutUs } from "./BottomAboutUs";
 
+import { MenuTemplate } from "./MenuTemplate";
+
+import { ScrollToTop } from "./ScrollToTop";
+import { OurPackages } from "./OurPackages";
+import { ReservationHeader } from "./ReservationHeader";
+
+
+
 export {
   AboutComponent,
   TodaySpecial,
@@ -28,4 +36,8 @@ export {
   OurMenu,
   AboutUsHeader,
   BottomAboutUs,
+  MenuTemplate,
+  ScrollToTop,
+  OurPackages,
+  ReservationHeader,
 };

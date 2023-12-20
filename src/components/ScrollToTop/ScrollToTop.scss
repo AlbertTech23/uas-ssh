@@ -1,0 +1,19 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.topBtn {
+  position: absolute;
+  right: 0;
+  margin-top: -3rem;
+  padding: 1rem;
+  transition: transform 0.4s;
+}
+
+.topBtn img {
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
+}
+
+.topBtn:hover {
+  transform: translateY(-5px);
+}
