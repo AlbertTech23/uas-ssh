@@ -1,7 +1,12 @@
 import "./Reservation.scss";
+import { ModalReservation } from "../../components";
 
 const Reservation = () => {
-  return <div className="ReservationContainer">Reservation</div>;
+  return (
+    <div className="ReservationContainer">
+      <ModalReservation />
+    </div>
+  );
 };
 
 export default Reservation;
