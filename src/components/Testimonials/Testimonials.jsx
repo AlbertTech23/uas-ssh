@@ -5,23 +5,23 @@ import { TestiCard } from "../TestiCard";
 const Testimonials = () => {
   const testiData = [
     {
-      picture: "MaleC1.png",
+      picture: "MaleC1",
       firstName: "John",
       lastName: "Doe",
       on: "rendang",
       review: "Makanannya membuat saya bergoyang.",
     },
     {
-      picture: "FemaleC1.png",
+      picture: "FemaleC1",
       firstName: "Jane",
       lastName: "Doe",
       on: "services",
       review: "Pelayanan yang sangat memuaskan.",
     },
     {
-      picture: "FemaleC1.png",
-      firstName: "Karen",
-      lastName: "Monica",
+      picture: "FemaleC2",
+      firstName: "Mei",
+      lastName: "Mei",
       on: "interior",
       review: "Cantik banget, nyaman pastinya!",
     },
