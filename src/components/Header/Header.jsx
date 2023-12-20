@@ -70,7 +70,7 @@ function Header() {
           }
         >
           <div className="logo">
-            <img src={logo} />
+            <img src={logo} onClick={() => navigate("/")} />
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>
