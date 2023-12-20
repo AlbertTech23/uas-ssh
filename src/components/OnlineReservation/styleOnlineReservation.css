@@ -132,6 +132,7 @@
     top: 2px;
     background-color: transparent;
     text-align: center;
+    outline: none;
 }
 
 .box-date input {
@@ -152,6 +153,10 @@ input[type="date"] {
     border: none;
     outline: none;
     text-transform: uppercase;
+    background: url('../../assets/gambar/kalender.svg');
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: 95.4%;
 }
 
 .time-picker {
@@ -160,7 +165,12 @@ input[type="date"] {
 }
 
 .box-time {
-    font-size: large;
+    padding-top: 3px;
+    font-size: 16px;
+}
+
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
 }
 
 .box-box {
@@ -168,6 +178,7 @@ input[type="date"] {
 }
 
 .time-picker-select {
+    outline: none;
     text-align: center;
     margin: 1px;
     background-color: transparent;
@@ -177,7 +188,6 @@ input[type="date"] {
 
 .time-picker-select option {
     background-color: #3D3933;
-    font-family: Poppins;
 }
 
 .gambar-jam {
@@ -219,6 +229,7 @@ input[type="date"] {
     right: 0;
     z-index: 2;
     text-align: center;
+    outline: none;
 }
 
 .pilihan-tod {
@@ -392,6 +403,10 @@ input[type="date"] {
 }
 
 @media (max-width: 1140px) {
+    .container-onlnreserva {
+        height: 1500px;
+    }
+
     .content-onlnreserva {
         align-items: center;
         justify-content: center;
@@ -413,6 +428,9 @@ input[type="date"] {
 }
 
 @media (max-width: 760px) {
+    .container-onlnreserva {
+        height: 1700px;
+    }
 
     .form-onlreserva,
     .diskon-reserva {
@@ -478,7 +496,7 @@ input[type="date"] {
     .opsi,
     .opsi-package {
         left: 15%;
-        width: 255px;
+        width: 340px;
     }
 }
 
@@ -538,7 +556,8 @@ input[type="date"] {
 
     .opsi,
     .opsi-package {
-        left: 10%;
+        left: 20%;
+        width: 240px;
     }
 }
 
