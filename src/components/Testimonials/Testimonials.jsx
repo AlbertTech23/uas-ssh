@@ -67,7 +67,7 @@ const Testimonials = () => {
 
       {!isWideScreen && (
         <div className="carousel w-full relative flex justify-center">
-          <div className="leftButton flex justify-center items-center m-5 pt-16">
+          <div className="leftButton flex justify-center items-center ms-[6px] me-3 pt-16">
             <a
               href="#"
               className="buttonLeftRight"
@@ -91,7 +91,7 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
-          <div className="rightButton flex justify-center items-center m-5 pt-16">
+          <div className="rightButton flex justify-center items-center ms-1 me-2 pt-16">
             {" "}
             <a
               href="#"

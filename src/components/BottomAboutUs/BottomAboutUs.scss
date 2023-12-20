@@ -65,9 +65,94 @@
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 600;
   line-height: normal;
   border-radius: 10px;
   background: rgba(242, 196, 118, 0.9);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.generatingQuote {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1024px) {
+  .bottomQuotesContainer {
+    min-width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bottomQuotesContainer {
+    min-width: 75%;
+    min-height: 350px;
+  }
+
+  .quotes {
+    font-size: 20px;
+  }
+
+  .author {
+    font-size: 14px;
+  }
+
+  .quotesContainer {
+    max-width: 400px;
+  }
+
+  .buttonQuotes {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .bottomQuotesContainer {
+    min-width: 75%;
+    min-height: 350px;
+  }
+
+  .quotes {
+    font-size: 20px;
+  }
+
+  .author {
+    font-size: 14px;
+  }
+
+  .quotesContainer {
+    max-width: 250px;
+  }
+
+  .buttonQuotes {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .bottomQuotesContainer {
+    min-width: 75%;
+    min-height: 350px;
+  }
+
+  .quotes {
+    font-size: 20px;
+  }
+
+  .author {
+    font-size: 14px;
+  }
+
+  .quotesContainer {
+    max-width: 250px;
+  }
+
+  .buttonQuotes {
+    font-size: 14px;
+  }
 }
