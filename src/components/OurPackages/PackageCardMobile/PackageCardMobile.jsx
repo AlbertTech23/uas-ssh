@@ -263,7 +263,6 @@ function PackageCardMobile(props) {
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/4 left-10 right-2 top-1/2">
           <a
-            href="#slide3"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}
@@ -271,7 +270,6 @@ function PackageCardMobile(props) {
             ❮
           </a>
           <a
-            href="#slide1"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}
@@ -408,7 +406,6 @@ function PackageCardMobile(props) {
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/4 left-10 right-2 top-1/2">
           <a
-            href="#slide3"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}
@@ -416,7 +413,6 @@ function PackageCardMobile(props) {
             ❮
           </a>
           <a
-            href="#slide1"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}
@@ -553,7 +549,6 @@ function PackageCardMobile(props) {
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/4 left-10 right-2 top-1/2">
           <a
-            href="#slide3"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}
@@ -561,7 +556,6 @@ function PackageCardMobile(props) {
             ❮
           </a>
           <a
-            href="#slide1"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}
@@ -698,7 +692,6 @@ function PackageCardMobile(props) {
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/4 left-10 right-2 top-1/2">
           <a
-            href="#slide3"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}
@@ -706,7 +699,6 @@ function PackageCardMobile(props) {
             ❮
           </a>
           <a
-            href="#slide1"
             className={`slideBtn btn-circle ${
               isShown ? "btn-primary" : "text-white"
             }`}

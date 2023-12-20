@@ -2,6 +2,35 @@
   filter: brightness(90%);
 }
 
+.mobileCar {
+  .slideBtn {
+    opacity: 0.5;
+
+    @keyframes bounceOpacityAnimation {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    &:nth-child(2) {
+      animation: bounceOpacityAnimation 1s ease-in-out,
+        bounceAnimation 1s ease-in-out;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+    }
+  }
+}
+
 .mobileLetter {
   color: rgba(242, 196, 118, 0.6);
   text-align: center;
@@ -87,8 +116,8 @@
   margin-top: -12px;
 }
 
-.carousel button {
-  color: #232323;
+.carousel .mobileButt {
+  color: #232323 !important;
 }
 
 @media (max-width: 425px) {
