@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@300;500;600;700&display=swap');
+
+.contain-mitrs {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(49, 49, 49, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.content-isi {
+    position: relative;
+    width: 445px;
+    height: 692px;
+    border-radius: 30px;
+    border: 5px solid #F2C476;
+    background: #232323;
+}
+
+.logo-midtrans {
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.ini-cancel {
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    width: 240px;
+    cursor: pointer;
+}
+
+.logo-midtrans img {
+    width: 17%;
+    height: 17%;
+}
+
+.ingfo-pckg {
+    width: 435px;
+    height: 582px;
+    border-radius: 24px;
+    border: 5px solid #F2C476;
+    background: #F2C476;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-pckg {
+    position: relative;
+    border-radius: 30px;
+    border: 2px solid #000;
+    background: #FFD080;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 130px;
+    width: 408px;
+    margin: 6px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.si-harganya {
+    display: flex;
+    flex-direction: column;
+}
+
+.barulah-harganya {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.si-text-total {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.tiang-hitam {
+    width: 1px;
+    height: 90px;
+    background: #000;
+    margin-right: -25px;
+    margin-left: 25px;
+}
+
+.si-package {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.si-text-package {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.barulah-package {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 65px;
+    height: 65px;
+    margin-top: -20px;
+    margin-right: -16px;
+    margin-bottom: 10px;
+}
+
+.img-gktahu {
+    margin: 15px;
+}
+
+.gopay-menit {
+    width: 415px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 8px;
+    font-family: Poppins;
+}
+
+.text-gopay {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.simenit {
+    color: #232323;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.keris-img {
+    padding-top: 35px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.keris-img img {
+    border-radius: 11px;
+    width: 215px;
+}
+
+.cancel-text {
+    color: rgba(0, 0, 0, 0.39);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+.tmbl-bayar {
+    border-radius: 20px;
+    background: #232323;
+    width: 410px;
+    height: 55px;
+    color: #F2C476;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@media (max-width: 500px) {
+    .content-isi {
+        width: 305px;
+        height: 670px;
+    }
+
+    .logo-midtrans img {
+        width: 17%;
+    }
+
+    .ingfo-pckg {
+        width: 295px;
+    }
+
+    .total-pckg {
+        width: 268px;
+    }
+
+    .barulah-harganya {
+        font-size: 20px;
+    }
+
+    .si-text-package {
+        font-size: 13px;
+        margin-bottom: 10px;
+        margin-top: 19px;
+    }
+
+    .barulah-package {
+        font-size: 45px;
+    }
+
+    .tiang-hitam {
+        margin-left: -3px;
+        margin-right: 3px;
+    }
+
+    .gopay-menit {
+        width: 288px;
+    }
+
+    .keris-img img {
+        width: 220px;
+    }
+
+    .tmbl-bayar {
+        width: 268px;
+    }
+
+    .ini-cancel {
+        width: 200px;
+    }
+
+    .cancel-text {
+        font-size: 18px;
+    }
+}

@@ -9,11 +9,11 @@ function Carousel() {
     const [arah, setArah] = useState(0)
 
     const styleBGR = {
-        backgroundImage: `url(${image[idImage === 0 ? 0 : idImage - 1].images})`
+        backgroundImage: `url(${image[idImage === 0 ? 0 : idImage - 1].images})`,
     }
 
     const styleBGL = {
-        backgroundImage: `url(${image[idImage === image.length - 1 ? image.length - 1 : idImage + 1].images})`
+        backgroundImage: `url(${image[idImage === image.length - 1 ? image.length - 1 : idImage + 1].images})`,
     }
 
     const setL = () => {
@@ -44,10 +44,10 @@ function Carousel() {
     }
 
     return (
-        <div className="contain">
+        <div className="contain" style={arah === 0 ? styleBGR : styleBGL}>
             {image.map((val, indx) => {
                 return (
-                    <div className="bg-image" style={arah === 0 ? styleBGR : styleBGL}>
+                    <div className="bg-image" >
                         <div className={idImage === indx ? arah === 0 ? "gambar slide-r" : "gambar slide-l" : "gambar hidden"} key={indx}>
                             <img src={val.images} />
                         </div>

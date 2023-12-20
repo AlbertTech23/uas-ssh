@@ -1,4 +1,7 @@
 import "./Home.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import {
   AboutComponent,
@@ -8,33 +11,35 @@ import {
   Stats,
   BottomHome,
   OurMenu,
-  ScrollToTop,
 } from "../../components";
 
-import { useNavigate } from "react-router-dom";
-
 const Home = () => {
-  const navigate = useNavigate();
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="home-page">
       <Header />
-      <button
-        className="sementara absolute"
-        onClick={() => {
-          navigate("about");
-        }}
-      >
-        GO TO ABOUT PAGE
-      </button>
-
-      <AboutComponent />
-
-      <TodaySpecial />
-      <OurMenu />
-      <Stats />
-      <BottomHome />
+      <div data-aos="fade-up">
+        <AboutComponent />
+      </div>
+      <div data-aos="fade-up">
+        <TodaySpecial />
+      </div>
+      <div data-aos="fade-up">
+        <OurMenu />
+      </div>
+      <div data-aos="fade-up">
+        <Stats />
+      </div>
+      <div data-aos="fade-up">
+        <BottomHome />
+      </div>
       <Footer />
-      <ScrollToTop />
     </div>
   );
 };
