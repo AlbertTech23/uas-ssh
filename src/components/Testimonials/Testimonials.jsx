@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Testimonials.scss";
 import { TestiCard } from "../TestiCard";
+import batikline2 from "../../assets/batik-line2.svg";
 
 const Testimonials = () => {
   const testiData = [
@@ -59,11 +60,7 @@ const Testimonials = () => {
   return (
     <div className="testimonials-container flex flex-col items-center">
       <div className="testi-title pt-10 pb-3">Testimonials</div>
-      <img
-        className="batik-pattern"
-        src="src/assets/batik-line2.svg"
-        alt="batik-line"
-      />
+      <img className="batik-pattern" src={batikline2} alt="batik-line" />
 
       {!isWideScreen && (
         <div className="carousel w-full relative flex justify-center">

@@ -35,7 +35,7 @@ function Header() {
       setWindowWidth(window.innerWidth);
       if (window.innerWidth >= 769) {
         setBtnMenu(false);
-      }
+      } else setBtnMenu(true);
     };
 
     window.addEventListener("resize", handleResize);
@@ -47,7 +47,7 @@ function Header() {
 
   useEffect(() => {
     const setScrollPosition = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 500) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -70,7 +70,11 @@ function Header() {
           }
         >
           <div className="logo">
-            <img src={logo} />
+            <img
+              src={logo}
+              onClick={() => navigate("/")}
+              className="cursor-pointer"
+            />
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>
@@ -115,7 +119,15 @@ function Header() {
               </a>
               <div
                 className={
-                  btnMenu ? (scroll ? "listMenu-bg" : "listMenu") : "hide"
+                  windowWidth >= 769
+                    ? btnMenu
+                      ? "listMenu"
+                      : "hide"
+                    : activeButton
+                    ? btnMenu
+                      ? "listMenu"
+                      : ""
+                    : ""
                 }
               >
                 <a

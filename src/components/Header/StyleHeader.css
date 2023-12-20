@@ -24,7 +24,7 @@
   z-index: 5;
   padding: 10px;
   background-color: #232323;
-  transition: 0.6s;
+  transition: 0.25s;
 }
 
 .header-bg img {
@@ -120,7 +120,7 @@
   height: 140px;
   margin-right: -20px;
   justify-content: center;
-  transition: 0.5s ease-in-out;
+  /* transition: 0.5s ease-in-out; */
   background-color: #232323;
   border-radius: 5px;
   letter-spacing: 0.8px;
@@ -253,8 +253,7 @@
     cursor: pointer;
   }
 
-  .listMenu,
-  .listMenu-bg {
+  .listMenu {
     position: absolute;
     display: flex;
     flex-direction: column;

@@ -198,9 +198,17 @@
   }
 }
 
+@media screen and (max-width: 552px) {
+  .cloud {
+    width: 175px;
+    top: 50px;
+    right: -15px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .cloud {
-    width: 100px;
+    width: 80px;
     top: 50px;
     right: -25px;
   }
