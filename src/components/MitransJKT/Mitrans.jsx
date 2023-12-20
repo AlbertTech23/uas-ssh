@@ -65,7 +65,31 @@ function Mitrans(pstop) {
                         </div>
                     </div>
                     <div className="gwudh-bayar">
-                        <button className="tmbl-bayar"><span>Saya sudah bayar</span></button>
+                        <button className="tmbl-bayar" onClick={() => document.getElementById('my_modal_5').showModal()}><span>Saya sudah bayar</span></button>
+                        <div className="bxuhy">
+                            <dialog id="my_modal_5" className="modal">
+                                <div className="kotak-modal">
+                                    <div className="judulnya-modalmid">
+                                        <span>Reservation Successful!</span>
+                                    </div>
+                                    <div className="paragraf-modalmid">
+                                        <span>Thank you for your reservation! We look forward to welcoming you for an extraordinary culinary experience. See you soon at our restaurant!</span>
+                                    </div>
+                                    <div className="petunjuk-modalmid">
+                                        <span>Press click the button below to close or back to home</span>
+                                    </div>
+                                    <div className="box-yahtmbl">
+                                        <form>
+                                            <button className="tmbh-btoh">Back to home</button>
+                                        </form>
+                                        <form method="dialog" className="close-abgt">
+                                            <button className="cls-butnnn" onClick={() => pstop.fungsi(false)}>Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </div>
+
                     </div>
                 </div>
             </div>
