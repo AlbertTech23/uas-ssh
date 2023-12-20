@@ -11,7 +11,7 @@ const MenuTemplate = ({ teaserText, menuDataSets, menuImageSets }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "auto",
+      behavior: "instant",
     });
   };
 
