@@ -1,16 +1,19 @@
 import "./BottomHome.scss";
 import { TestiCard } from "../TestiCard";
+import cloud from "../../assets/cloud.png";
+import rectRest from "../../assets/rectRes.png";
+import { useNavigate } from "react-router-dom";
 
 const testiData = [
   {
-    picture: "MaleC1.png",
+    picture: "MaleC1",
     firstName: "John",
     lastName: "Doe",
     on: "rendang",
     review: "Makanannya membuat saya bergoyang.",
   },
   {
-    picture: "FemaleC1.png",
+    picture: "FemaleC1",
     firstName: "Jane",
     lastName: "Doe",
     on: "services",
@@ -19,6 +22,15 @@ const testiData = [
 ];
 
 const BottomHome = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  };
+
+  const navigate = useNavigate();
+
   return (
     <div className="imageContainer">
       <div className="testi-container justify-center pt-28 flex flex-wrap ">
@@ -26,7 +38,14 @@ const BottomHome = () => {
           <span className="heading-left">What people</span>
           <span className="heading-left">are saying</span>
           <span className="heading-left">about us.</span>
-          <button onClick={() => console.log("Clicked")}>Read More</button>
+          <button
+            onClick={() => {
+              navigate("/about");
+              scrollToTop();
+            }}
+          >
+            Read More
+          </button>
         </div>
         <div className="testi-right flex flex-wrap justify-center md:ms-10">
           {testiData.map((testi, key) => (
@@ -41,11 +60,11 @@ const BottomHome = () => {
         </div>
         <div className="rightRes relative">
           <img
-            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[75px] lg:left-[-15px] md:top-[-75px] md:left-[150px]"
-            src="src/assets/rectRes.png"
+            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[-75px] lg:left-[150px] md:top-[-75px] md:left-[150px] top-[-75px] left-[100px]"
+            src={rectRest}
             alt="rectRes"
           />
-          <div className="rightContent ms-14 mt-14">
+          <div className="rightContent ms-14 md:mt-14 mt-6">
             <div className="resText flex flex-col pb-5">
               <span>WE ARE</span>
               <span>WATING</span>
@@ -53,12 +72,16 @@ const BottomHome = () => {
                 FOR <span className="popBold">YOU</span>
               </span>
             </div>
-            <button className="buttonReservation">BOOK A TABLE</button>
-            <img
-              className="cloud absolute top-[50px] right-[-75px] w-[200px] xl:w-max lg:w-max"
-              src="src/assets/cloud.png"
-              alt="awan"
-            />
+            <button
+              className="buttonReservation"
+              onClick={() => {
+                navigate("/reservation");
+                scrollToTop();
+              }}
+            >
+              BOOK A TABLE
+            </button>
+            <img className="cloud absolute" src={cloud} alt="awan" />
           </div>
         </div>
       </div>

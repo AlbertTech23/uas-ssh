@@ -1,109 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@400;600&display=swap");
 
-.chef-desc{
-    color: #F2C476;
-    .chef-quote{
-        text-align: center;
-        font-family: Forum;
-        font-size: 45px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        width: 460px;
-        text-align: center;
-        margin-top: 90px;
+.chef-desc {
+  color: #f2c476;
+  .chef-quote {
+    text-align: center;
+    font-family: Forum;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 460px;
+    text-align: center;
+    margin-top: 90px;
 
-        @media (max-width : 1280px){
-            font-size: 35px;
-            width: 400px;
-        }
-
-        @media (max-width : 1024px){
-            margin-top: 60px;
-        }
-
-        @media (max-width : 768px){
-            font-size: 27px;
-            margin-top: 50px;
-            width: 330px;
-        }
-
-        @media (max-width : 450px){
-            font-size: 15px;
-            margin-top: 30px;
-            width: 170px;
-        }
-
-        @media (max-width : 390px){
-            font-size: 12px;
-            margin-top: 20px;
-            width: 135px;
-        }
+    @media (max-width: 1280px) {
+      font-size: 35px;
+      width: 400px;
     }
 
-    .chef-name{
-        text-align: center;
-        font-family: Poppins;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-
-        @media (max-width : 1280px){
-            font-size: 35px;
-        }
-
-        @media (max-width : 1024px){
-            font-size: 35px;
-            margin-top: 80px;
-        }
-
-        @media (max-width : 768px){
-            font-size: 20px;
-            margin-top: 50px;
-        }
-
-        @media (max-width : 450px){
-            font-size: 10px;
-            margin-top: 25px;
-        }
-
-        @media (max-width : 350px){
-            font-size: 8px;
-            margin-top: 18px;
-        }
+    @media (max-width: 1024px) {
+      margin-top: 60px;
     }
 
-    .chef-title{
-        text-align: center;
-        font-family: Poppins;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-top: 10px;
-
-        @media (max-width : 1280px){
-            font-size: 18px;
-        }
-
-        @media (max-width : 1024px){
-            margin-bottom: 20px;
-        }
-
-        @media (max-width : 768px){
-            font-size: 15px;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width : 450px){
-            font-size: 10px;
-            margin-top: 2px;
-            margin-bottom: 5px;
-        }
-
-        @media (max-width : 350px){
-            font-size: 7px;
-        }
+    @media (max-width: 768px) {
+      font-size: 27px;
+      margin-top: 50px;
+      width: 330px;
     }
+
+    @media (max-width: 450px) {
+      font-size: 15px;
+      margin-top: 30px;
+      width: 170px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 12px;
+      margin-top: 20px;
+      width: 135px;
+    }
+  }
+
+  .chef-name {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @media (max-width: 1280px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 35px;
+      margin-top: 70px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 10px;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 8px;
+      margin-top: 18px;
+    }
+  }
+
+  .chef-title {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+
+    @media (max-width: 1280px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 10px;
+      margin-top: 2px;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 7px;
+    }
+  }
 }

@@ -1,197 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-body{
+body {
   font-family: poppins;
 }
 
 .bottom {
-    background-image: url("src/components/TodaySpecial/Images/BottomImg.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgba($color: #000000, $alpha: 0.65);
-    background-blend-mode: darken;
+  background-image: url("src/components/TodaySpecial/Images/BottomImg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba($color: #000000, $alpha: 0.65);
+  background-blend-mode: darken;
 }
 
 .top img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-position: center;
 }
 
-.service{
-    display: flex;
-    flex-wrap: wrap;
+.service {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .serviceCard {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    width: 100%;
-    max-width: 320px; 
-    padding: 20px;
-    margin: 180px 60px 50px;    
-        
-  
-    .num {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: rgb(220, 180, 114);
-    }
-  
-    .title {
-      font-size: 20px;
-      font-weight: 600;
-      font-style: normal;
-      margin-bottom: 10px;
-      color: white;
-    }
-  
-    .description {
-      font-size: 18px; 
-      margin-bottom: 20px;
-      color: white;
-      font-style: normal;
-      font-weight: 400;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  margin: 180px 60px 50px;
 
-    .arrow{
-      width: 30px;
+  .num {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgb(220, 180, 114);
   }
-  
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .arrow {
+    width: 30px;
+  }
 }
 
 .specialCard {
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   border-radius: 10px;
-  border: 3px solid #FFD082;
+  border: 3px solid #ffd082;
   width: 400px;
   transition: transform 0.3s ease-in-out;
   margin-top: 192px;
+  cursor: pointer;
 }
 
 .specialCard:hover {
   transform: scale(1.05);
 }
 
-.carouselCard{
+.carouselCard {
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   border-radius: 10px;
   border: 3px solid #f6be61;
   width: 330px;
   transition: transform 0.3s ease-in-out;
 }
 
-.carouselCard:hover{
+.carouselCard:hover {
   transform: scale(1.05);
 }
 
-.carousel button{
-  color: #f6be61;
+.carousel button {
+  color: #f6be61 !important;
 }
 
 .menuDesc {
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-top: 160px;
+  height: 90px;
 
-  .rating{
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
   }
 
-  .ratingNum{
-  font-size: 20px;
+  .ratingNum {
+    font-size: 20px;
   }
 
-  .rating img{
-  width: 20px;
-  margin-right: 5px;
-  margin-left: 5px;
+  .rating img {
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 
-  .specialDesc{
-  width: 270px;
-  margin: 5px 10px 10px 10px;
+  .specialDesc {
+    width: 270px;
+    margin: 5px 10px 10px 10px;
 
-    .title{
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
+    .title {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
     }
 
-    .description
-    {
+    .description {
       font-size: 10px;
       font-style: normal;
       font-weight: 400;
-    }  
+      margin-top: 2px;
+    }
   }
 }
 
-@media(max-width: 1280px) {
+@media (max-width: 1280px) {
   .specialCard {
     width: 350px;
     margin-top: 170px;
   }
 
-  .menuDesc{
+  .menuDesc {
     margin-top: 120px;
   }
 }
-  
-@media(max-width: 1024px) {
 
+@media (max-width: 1024px) {
   .service {
-      display: flex;
-      flex-wrap: wrap; /* Ensure the items are in a single row */
-      width: 100%; /* Set a specific width */
-      justify-content: center;
-      margin-top: 120px;
-      margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure the items are in a single row */
+    width: 100%; /* Set a specific width */
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 30px;
   }
 
   .serviceCard {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: left; /* Center the content horizontally */
-      max-width: 250px;
-      padding: 0px;
-      margin: 24px; /* Add margin for spacing between cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left; /* Center the content horizontally */
+    max-width: 250px;
+    padding: 0px;
+    margin: 24px; /* Add margin for spacing between cards */
 
-      .num {
-          font-size: 14px; /* Adjust the font size */
-          font-weight: bold;
-          margin-bottom: 5px; /* Adjust the margin */
-          color: rgb(220, 180, 114);
-      }
+    .num {
+      font-size: 14px; /* Adjust the font size */
+      font-weight: bold;
+      margin-bottom: 5px; /* Adjust the margin */
+      color: rgb(220, 180, 114);
+    }
 
-      .title {
-          font-size: 16px; /* Adjust the font size */
-          font-weight: bold;
-          margin-bottom: 5px; /* Adjust the margin */
-          color: white;
-      }
+    .title {
+      font-size: 16px; /* Adjust the font size */
+      font-weight: bold;
+      margin-bottom: 5px; /* Adjust the margin */
+      color: white;
+    }
 
-      .description {
-          font-size: 10px; /* Adjust the font size */
-          margin-bottom: 10px; /* Adjust the margin */
-          color: white;
-      }
+    .description {
+      font-size: 10px; /* Adjust the font size */
+      margin-bottom: 10px; /* Adjust the margin */
+      color: white;
+    }
 
-      .arrow {
-          width: 20px; /* Adjust the arrow size */
-        
-      }
+    .arrow {
+      width: 20px; /* Adjust the arrow size */
+    }
   }
 
   .specialCard {
@@ -199,125 +197,160 @@ body{
     margin-top: 130px;
   }
 
-  .menuDesc{
+  .menuDesc {
     margin-top: 120px;
 
-    .rating{
+    .rating {
       margin-left: 5px;
       margin-right: 5px;
-      }
+    }
 
-      .specialDesc{
-        width: 220px;
-        margin: 5px 7px 5px 5px;
-      }
+    .specialDesc {
+      width: 220px;
+      margin: 5px 7px 5px 5px;
+    }
   }
 }
 
-@media(max-width: 950px) {
-  .carousel{
+@media (max-width: 950px) {
+  .carousel {
     margin-top: 72px;
   }
 
-  .menuDesc{
+  .menuDesc {
     margin-top: 120px;
 
-    .rating{
+    .rating {
       margin-left: 5px;
       margin-right: 5px;
-      }
+    }
 
-      .specialDesc{
-        width: 240px;
-        margin: 5px 7px 5px 5px;
-      }
+    .specialDesc {
+      width: 240px;
+      margin: 5px 7px 5px 5px;
+    }
   }
 }
 
 @media (max-width: 800px) {
-  .service{
+  .service {
     margin-left: 20px;
   }
 
-  .serviceCard{
+  .serviceCard {
     width: 200px;
   }
 }
 
-@media (max-width: 768px){
-  .carousel{
+@media (max-width: 768px) {
+  .carousel {
     margin-top: 65px;
   }
-  .menuDesc{
+  .menuDesc {
     margin-top: 100px;
+    height: 75px;
 
-  }
-}
-
-@media (max-width: 600px){
-  .carousel{
-    margin-top: 50px;
-  }
-
-  .carouselCard{
-    width: 280px;
-  }
-
-  .menuDesc{
-    margin-top: 80px;
-
-    .specialDesc{
-      .title{
+    .specialDesc {
+      .title {
         font-size: 14px;
       }
 
-      .description{
+      .description {
         font-size: 10px;
-      }     
+      }
     }
 
-    .rating{
-      margin-right: 10px;
-    }
-    .ratingNum{
+    .ratingNum {
       font-size: 16px;
     }
 
-    .rating img{
+    .rating img {
       width: 15px;
     }
   }
 }
 
-@media (max-width: 450px){
-  .carousel{
+@media (max-width: 600px) {
+  .carousel {
+    margin-top: 50px;
+  }
+
+  .carouselCard {
+    width: 280px;
+  }
+
+  .menuDesc {
+    margin-top: 80px;
+
+    .specialDesc {
+      .title {
+        font-size: 14px;
+      }
+
+      .description {
+        font-size: 10px;
+      }
+    }
+
+    .rating {
+      margin-right: 10px;
+    }
+    .ratingNum {
+      font-size: 16px;
+    }
+
+    .rating img {
+      width: 15px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .carousel {
     margin-top: 30px;
   }
 
-  .carouselCard{
+  .carouselCard {
     width: 250px;
   }
 
-  .menuDesc{
-    margin-top: 60px;
+  .menuDesc {
+    margin-top: 75px;
+    height: 68px;
 
-    .rating{
+    .specialDesc {
+      .title {
+        font-size: 14px;
+      }
+
+      .description {
+        font-size: 8px;
+      }
+    }
+
+    .rating {
       margin-right: 15px;
     }
-  }
+    .ratingNum {
+      font-size: 12px;
+    }
 
+    .rating img {
+      width: 10px;
+    }
+  }
 }
 
-@media (max-width: 400px){
-  .carousel{
+@media (max-width: 400px) {
+  .carousel {
     margin-top: 30px;
   }
 
-  .carouselCard{
+  .carouselCard {
     width: 230px;
   }
 
-  .menuDesc{
-    margin-top: 40px;
+  .menuDesc {
+    margin-top: 65px;
   }
 }

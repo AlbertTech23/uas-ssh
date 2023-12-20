@@ -1,5 +1,9 @@
 import "./TodaySpecial.scss";
 import { useState, useEffect, useRef } from "react";
+import rendang from "../../assets/RendangSpecial.svg";
+import ambon from "../../assets/AmbonSpecial.svg";
+import pempek from "../../assets/PempekSpecial.svg";
+import { useNavigate } from "react-router-dom";
 
 const service = [
   {
@@ -28,29 +32,38 @@ const service = [
 const special = [
   {
     id: 1,
-    img: "src/components/TodaySpecial/Images/SatePadang.png",
-    title: "Sate Padang",
+    img: rendang,
+    title: "Rendang",
     description:
-      "Sate Padang, hidangan yang memikat selera dengan potongan daging sapi yang empuk...",
+      "A slow-cooked, aromatic masterpiece with tender beef, coconut milk, lemongrass, and exotic spices.",
     rating: "4.9",
+    routing: "/maincourse",
   },
   {
     id: 2,
-    img: "src/components/TodaySpecial/Images/NasiKuning.png",
-    title: "Nasi Kuning",
-    description:
-      "Nasi Kuning, hidangan khas Indonesia yang terbuat dari beras yang dimasak dengan santan.",
-    rating: "4.5",
+    img: pempek,
+    title: "Pempek Kapal Selam",
+    description: "Savory fish cake, a delectable Indonesian delicacy.",
+    rating: "4.7",
+    routing: "/appetizers",
   },
   {
     id: 3,
-    img: "src/components/TodaySpecial/Images/AddOns.png",
-    title: "Add Ons",
+    img: ambon,
+    title: "Bika Ambon",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Vey good...",
-    rating: "4.7",
+      "A sweet and fluffy Indonesian cake, known for its honeycomb texture and rich pandan or coconut flavor.",
+    rating: "4.6",
+    routing: "/desserts",
   },
 ];
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "instant",
+  });
+};
 
 function createSpecialCard(special) {
   return (
@@ -60,6 +73,7 @@ function createSpecialCard(special) {
       title={special.title}
       description={special.description}
       rating={special.rating}
+      routing={special.routing}
     />
   );
 }
@@ -76,12 +90,20 @@ function createServiceCard(service) {
 }
 
 function SpecialCard(props) {
+  const navigate = useNavigate();
+
   const cardStyle = {
     backgroundImage: `url(${props.img})`,
   };
 
   return (
-    <a href="#" className="specialContainer relative">
+    <a
+      onClick={() => {
+        navigate(`${props.routing}`);
+        scrollToTop();
+      }}
+      className="specialContainer relative"
+    >
       <div className="specialCard" style={cardStyle}>
         <div className="menuDesc flex">
           <div className="specialDesc">
@@ -210,6 +232,7 @@ function Carousel() {
 }
 
 function ServiceCard(props) {
+  const navigate = useNavigate();
   return (
     <div className="cardContainer">
       <div className="evenly">
@@ -217,7 +240,13 @@ function ServiceCard(props) {
           <div className="num">{props.num}</div>
           <div className="title">{props.title}</div>
           <div className="description">{props.description}</div>
-          <button className="arrow">
+          <button
+            className="arrow"
+            onClick={() => {
+              navigate("/about");
+              scrollToTop();
+            }}
+          >
             <img src="src/components/TodaySpecial/Images/Arrow.png" alt="" />
           </button>
         </div>
