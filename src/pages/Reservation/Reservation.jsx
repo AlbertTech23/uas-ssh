@@ -12,7 +12,6 @@ const Reservation = () => {
       <OurPackages />
       <OnlineReservation />
     </div>
-
   );
 };
 
