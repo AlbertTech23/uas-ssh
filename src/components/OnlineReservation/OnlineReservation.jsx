@@ -77,7 +77,7 @@ function OnlineReservation() {
 
     return (
         <div className='contain'>
-            <Mitrans cekk={tmblAfa} packageVal={valPac} />
+            <Mitrans cekk={tmblAfa} packageVal={valPac} fungsi={setTmblAfa} />
             <div className='container-onlnreserva'>
                 <div className='content-onlnreserva'>
                     <div className='form-onlreserva'>
@@ -99,17 +99,17 @@ function OnlineReservation() {
                                     <div className="gambar-grpsdk">
                                         <img src={inputGarpu} />
                                     </div>
-                                    <div className={actvTextPac ? "text-sdkgrp" : "hide"}>
+                                    {/* <div className={actvTextPac ? "text-sdkgrp" : "text-sdkgrp hide"}>
                                         <span>Package</span>
-                                    </div>
+                                    </div> */}
                                     <div className="dropdown-tod-adu">
                                         <img src={logoDropDown} />
                                     </div>
                                     <select className='opsi-package' onChange={ubahHaha}>
-                                        <option onClick={() => setTextPac(true)} value="" className='pilihan-tod'></option>
+                                        <option value="" className='pilihan-tod' disabled selected hidden>Package</option>
                                         {packageOrder.map((val, indx) => {
                                             return (
-                                                <option onClick={() => setTextPac(false)} className='pilihan-tod' key={indx} value={val.label}>{val.label}</option>
+                                                <option className='pilihan-tod' key={indx} value={val.label}>Package {val.label}</option>
                                             )
                                         })}
                                     </select>
@@ -141,17 +141,17 @@ function OnlineReservation() {
                                     <div className="gambar-tod">
                                         <img src={inputLogoBaby} />
                                     </div>
-                                    <div className={actvTextTod ? "text-tod" : "hide"}>
+                                    {/* <div className={actvTextTod ? "text-tod" : "hide"}>
                                         <span>Number of Toddlers</span>
-                                    </div>
+                                    </div> */}
                                     <div className="dropdown-tod-adu">
                                         <img src={logoDropDown} />
                                     </div>
                                     <select className='opsi'>
-                                        <option onClick={() => setTextTod(true)} value="0" className='pilihan-tod'></option>
+                                        <option value="" className='pilihan-tod' disabled selected hidden>Number of Toddlers</option>
                                         {numToddlers.map((val, key) => {
                                             return (
-                                                <option onClick={() => setTextTod(false)} className='pilihan-tod' key={key}>{val.label}</option>
+                                                <option className='pilihan-tod' key={key}>{val.label} Toddler(s)</option>
                                             )
                                         })}
                                     </select>
@@ -160,17 +160,17 @@ function OnlineReservation() {
                                     <div className="gambar-adu">
                                         <img src={inputAdultNum} />
                                     </div>
-                                    <div className={actvTextAdu ? "text-adu" : "hide"}>
+                                    {/* <div className={actvTextAdu ? "text-adu" : "hide"}>
                                         <span>Number of Adults</span>
-                                    </div>
+                                    </div> */}
                                     <div className="dropdown-tod-adu">
                                         <img src={logoDropDown} />
                                     </div>
                                     <select className='opsi'>
-                                        <option onClick={() => setTextAdu(true)} value="0" className='pilihan-tod'></option>
+                                        <option value="" className='pilihan-tod' disabled selected hidden>Number of Adults</option>
                                         {numAdults.map((val, key) => {
                                             return (
-                                                <option onClick={() => setTextAdu(false)} className='pilihan-tod' key={key}>{val.label}</option>
+                                                <option className='pilihan-tod' key={key}>{val.label} Adult(s)</option>
                                             )
                                         })}
                                     </select>

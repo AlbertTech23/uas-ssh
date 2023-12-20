@@ -27,7 +27,7 @@ function Mitrans(pstop) {
 
                 <div className="logo-midtrans">
                     <div className="ini-cancel">
-                        <img src={cancelButn} />
+                        <img src={cancelButn} onClick={() => pstop.fungsi(false)} />
                     </div>
                     <img src={logoSSHgw} />
                 </div>
