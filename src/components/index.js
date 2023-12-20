@@ -37,13 +37,9 @@ export {
   ScrollToTop,
   OurPackages,
   ReservationHeader,
-  WhoWeAre,
   ModalReservation,
   HeaderMaster,
   BottomAboutUs,
   MenuTemplate,
-  ScrollToTop,
-  OurPackages,
-  ReservationHeader,
   Carousel,
 };

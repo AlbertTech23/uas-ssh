@@ -1,13 +1,19 @@
 import "./About.scss";
-
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import {
   OurStrength,
+  Header,
+  BottomAboutUs,
   Chef,
   Testimonials,
   AboutUsHeader,
   WhoWeAre,
   Stats,
+  Footer,
 } from "../../components";
 
 const About = () => {
@@ -21,12 +27,12 @@ const About = () => {
     <div className="about-page">
       <Header />
       <AboutUsHeader />
-          <div data-aos="fade-up">
-      <WhoWeAre />
-            </div>
-<div data-aos="fade-up">
-      <Stats />
-  </div>
+      <div data-aos="fade-up">
+        <WhoWeAre />
+      </div>
+      <div data-aos="fade-up">
+        <Stats />
+      </div>
       <div data-aos="fade-up">
         <OurStrength />
       </div>

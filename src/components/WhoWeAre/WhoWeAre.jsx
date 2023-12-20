@@ -51,7 +51,7 @@ const WhoWeAre = () => {
         dining destination; it's a celebration of refined opulence, where every
         detail reflects our commitment to an extraordinary culinary experience.
       </p>
-      <img className="mb-16" src={whoweare} />
+      <img className="mb-16 gambarWhoWeAre" src={whoweare} />
       <div id="brands" className="flex flex-wrap container gap-4 mt-5 mb-5">
         <img
           id="brand1"

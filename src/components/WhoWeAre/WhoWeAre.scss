@@ -45,9 +45,24 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .whoP {
+    font-size: 12px;
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .gambarWhoWeAre {
+    width: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .whoP {
+    font-size: 10px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .gambarWhoWeAre {
+    width: 300px;
   }
 }
