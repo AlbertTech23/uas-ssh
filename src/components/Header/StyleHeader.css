@@ -68,13 +68,13 @@
   padding: 10px 25px;
   color: #674817;
   transition: 0.8s;
-  border: 1px solid #F2C476;
+  border: 1px solid #f2c476;
 }
 
 .nav-menu .reserva:hover {
   background: rgba(242, 196, 118, 0.1);
-  border: 1px solid #F2C476;
-  color: #F2C476;
+  border: 1px solid #f2c476;
+  color: #f2c476;
   transition: 0.8s;
 }
 
@@ -190,7 +190,7 @@
   }
 
   .header {
-    background-color: #232323;
+    /* background-color: #232323; */
   }
 
   .header-bg .res-nav,
@@ -249,7 +249,7 @@
   }
 
   .active-ListMenu:hover {
-    color: #F2C476;
+    color: #f2c476;
     cursor: pointer;
   }
 
@@ -267,8 +267,6 @@
     background-color: #232323;
     gap: 5px;
   }
-
-
 
   .unactive,
   .r-unactive {
