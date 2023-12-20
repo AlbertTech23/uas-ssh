@@ -1,15 +1,13 @@
 import "./Chef.scss";
+import chef1 from "./Images/Chef1.svg";
+import chef2 from "./Images/Chef2.svg";
 
 const Chef = () => {
   return (
     <div className="chef-container">
       <div className="chef1 flex ">
         <div className="chef-img w-1/2">
-          <img
-            src="src/components/Chef/Images/Chef1.svg"
-            alt=""
-            className="w-full"
-          />
+          <img src={chef1} className="w-full" />
         </div>
         <div className="chef-desc flex flex-col items-center w-1/2">
           <span className="chef-quote">
@@ -29,11 +27,7 @@ const Chef = () => {
           <span className="chef-title">Sous Chef</span>
         </div>
         <div className="chef-img w-1/2">
-          <img
-            src="src/components/Chef/Images/Chef2.svg"
-            alt=""
-            className="w-full"
-          />
+          <img src={chef2} className="w-full" />
         </div>
       </div>
     </div>

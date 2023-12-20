@@ -1,8 +1,9 @@
 import "./Drinks.scss";
-import { MenuTemplate } from "../../components";
+import { MenuTemplate, HeaderMaster } from "../../components";
 import elixir from "../../assets/Elixir.svg";
 import pandan from "../../assets/Pandan.svg";
 import avocado from "../../assets/Avocado.svg";
+import heroDrinks from "../../assets/HeroDrinks.svg";
 
 const menu1 = [
   {
@@ -92,8 +93,22 @@ const Drinks = () => {
   const menuDataSets = [menu1, menu2, menu3];
   const menuImageSets = [elixir, pandan, avocado];
 
+  const DrinksInfo = {
+    image: heroDrinks,
+    subheading: "-Our Menu-",
+    heading: "Drinks",
+    paragraph:
+      "Savor the symphony of flavors with our eclectic DRINKS collection at Sumatra Sizzle House’s special. From exotic mocktails to artisanal concoctions, each sip is a journey into liquid perfection.",
+  };
+
   return (
     <div className="MenuBigContainer">
+      <HeaderMaster
+        imgSrc={DrinksInfo.image}
+        subheading={DrinksInfo.subheading}
+        heading={DrinksInfo.heading}
+        paragraph={DrinksInfo.paragraph}
+      />
       <MenuTemplate
         teaserText={teaserText}
         menuDataSets={menuDataSets}

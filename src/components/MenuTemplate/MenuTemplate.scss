@@ -35,6 +35,12 @@
   }
 }
 
+.menuHeader img {
+  @media (max-width: 400px) {
+    width: 250px;
+  }
+}
+
 .menu-desc {
   width: 315px;
 }

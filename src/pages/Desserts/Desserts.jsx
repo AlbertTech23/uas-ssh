@@ -1,8 +1,9 @@
 import "./Desserts.scss";
-import { MenuTemplate } from "../../components";
+import { MenuTemplate, HeaderMaster } from "../../components";
 import redBean from "../../assets/RedBean.svg";
 import ambon from "../../assets/BikaAmbon.svg";
 import durian from "../../assets/Durian.svg";
+import heroDesserts from "../../assets/HeroDessert.svg";
 
 const menu1 = [
   {
@@ -91,8 +92,22 @@ const Desserts = () => {
   const menuDataSets = [menu1, menu2, menu3];
   const menuImageSets = [redBean, ambon, durian];
 
+  const DessertsInfo = {
+    image: heroDesserts,
+    subheading: "-Our Menu-",
+    heading: "Desserts",
+    paragraph:
+      "Conclude your meal on a sweet note with our meticulously crafted DESSERTS, each presenting a symphony of flavors, textures, and artful presentations that elevate the dining experience to a crescendo of indulgence.",
+  };
+
   return (
     <div className="MenuBigContainer">
+      <HeaderMaster
+        imgSrc={DessertsInfo.image}
+        subheading={DessertsInfo.subheading}
+        heading={DessertsInfo.heading}
+        paragraph={DessertsInfo.paragraph}
+      />
       <MenuTemplate
         teaserText={teaserText}
         menuDataSets={menuDataSets}

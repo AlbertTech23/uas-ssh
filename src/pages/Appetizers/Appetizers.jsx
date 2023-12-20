@@ -1,8 +1,9 @@
 import "./Appetizers.scss";
-import { MenuTemplate } from "../../components";
+import { MenuTemplate, HeaderMaster } from "../../components";
 import pempek from "../../assets/PempekKapalSelam.svg";
 import lumpia from "../../assets/Lumpia.svg";
 import tofu from "../../assets/Tofu.svg";
+import heroAppetizers from "../../assets/HeroAppetizers.svg";
 
 const menu1 = [
   {
@@ -90,8 +91,22 @@ const Appetizers = () => {
   const menuDataSets = [menu1, menu2, menu3];
   const menuImageSets = [pempek, lumpia, tofu];
 
+  const AppetizersInfo = {
+    image: heroAppetizers,
+    subheading: "-Our Menu-",
+    heading: "Appetizers",
+    paragraph:
+      "Embark on your culinary adventure with our APPETIZERS, meticulously crafted to tantalize your taste buds. Each bite is a crescendo of taste, blending diverse ingredients in perfect harmony.",
+  };
+
   return (
     <div className="MenuBigContainer">
+      <HeaderMaster
+        imgSrc={AppetizersInfo.image}
+        subheading={AppetizersInfo.subheading}
+        heading={AppetizersInfo.heading}
+        paragraph={AppetizersInfo.paragraph}
+      />
       <MenuTemplate
         teaserText={teaserText}
         menuDataSets={menuDataSets}
