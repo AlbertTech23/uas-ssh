@@ -270,6 +270,12 @@
 }
 
 @media screen and (max-width: 320px) {
+  .cloud {
+    width: 60px;
+    top: 50px;
+    right: -25px;
+  }
+
   .reservationContainer {
     flex-direction: column;
     justify-content: center;

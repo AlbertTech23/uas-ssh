@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Male1 from "../../assets/MaleC1.png";
 import Female1 from "../../assets/FemaleC1.png";
 import Female2 from "../../assets/FemaleC2.png";
+import comma from "../../assets/comma.svg";
 
 const imageMap = {
   MaleC1: Male1,
@@ -16,7 +17,7 @@ const TestiCard = ({ picture, firstName, lastName, on, review }) => {
   return (
     <div className="testi-card relative p-8 pt-14 flex flex-col justify-between md:m-5 mt-16">
       <div className="commaAsset absolute top-[-35px] left-[35px]">
-        <img className="" src="src/assets/comma.svg" alt="" />
+        <img className="" src={comma} alt="" />
       </div>
       <div className="testi-card-body">{review}</div>
       <div className="testi-card-footer flex">
