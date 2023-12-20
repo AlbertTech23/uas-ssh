@@ -199,6 +199,93 @@
     line-height: normal;
 }
 
+.kotak-modal {
+    border-radius: 10px;
+    border: 3px solid #BC944F;
+    background: rgba(242, 196, 118);
+    width: 660px;
+    height: 302px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 30px;
+}
+
+.judulnya-modalmid {
+    color: #232323;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.paragraf-modalmid {
+    color: #232323;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.petunjuk-modalmid {
+    color: #232323;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.box-yahtmbl {
+    display: flex;
+    padding-left: 60%;
+}
+
+.tmbh-btoh {
+    border-radius: 5px;
+    border: 1px solid #000;
+    width: 133px;
+    height: 32px;
+    color: #232323;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.close-abgt {
+    padding-left: 16px;
+}
+
+.cls-butnnn {
+    border-radius: 5px;
+    background: #232323;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    width: 78px;
+    height: 32px;
+    flex-shrink: 0;
+    color: #F2C476;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* .ahdashd {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+} */
+
 @media (max-width: 500px) {
     .content-isi {
         width: 305px;
@@ -254,5 +341,54 @@
 
     .cancel-text {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 690px) {
+    .kotak-modal {
+        width: 430px;
+        padding-left: 20px;
+    }
+
+    .box-yahtmbl {
+        padding-left: 26%;
+    }
+
+    .judulnya-modalmid {
+        font-size: 18px;
+    }
+
+    .paragraf-modalmid {
+        font-size: 14px;
+    }
+
+    .petunjuk-modalmid {
+        font-size: 12px;
+    }
+
+    .tmbh-btoh {
+        width: 100px;
+        font-size: 13px;
+    }
+
+    .cls-butnnn {
+        width: 60px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 645px) {
+    .kotak-modal {
+        width: 390px;
+    }
+}
+
+@media (max-width: 420px) {
+    .kotak-modal {
+        width: 300px;
+    }
+
+    .box-yahtmbl {
+        padding-left: 14%;
     }
 }
