@@ -24,7 +24,7 @@
   z-index: 5;
   padding: 10px;
   background-color: #232323;
-  transition: 0.6s;
+  transition: 0.25s;
 }
 
 .header-bg img {
@@ -190,7 +190,7 @@
   }
 
   .header {
-    background-color: #232323;
+    /* background-color: #232323; */
   }
 
   .header-bg .res-nav,

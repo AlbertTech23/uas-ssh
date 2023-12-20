@@ -124,6 +124,8 @@ function SpecialCard(props) {
 }
 
 function Carousel() {
+  const navigate = useNavigate();
+
   const [current, setCurrent] = useState(0);
   const length = special.length;
   const touchStartX = useRef(null);
@@ -199,7 +201,13 @@ function Carousel() {
             }}
           >
             {index === current && (
-              <a href="#" className="specialContainer relative">
+              <a
+                onClick={() => {
+                  navigate(`${special.routing}`);
+                  scrollToTop();
+                }}
+                className="specialContainer relative"
+              >
                 <div
                   className="carouselCard"
                   style={{ backgroundImage: `url(${special.img})` }}

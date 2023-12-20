@@ -64,7 +64,11 @@ function Header() {
   return (
     <div className="">
       <div className="kepala" ref={menuRef}>
-        <div className={scroll ? "header-bg" : "header"}>
+        <div
+          className={
+            scroll ? "header-bg" : activeButton ? "header-bg" : "header"
+          }
+        >
           <div className="logo">
             <img src={logo} />
           </div>
