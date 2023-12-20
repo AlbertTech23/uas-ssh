@@ -1,10 +1,23 @@
-.ReservationContainer {
-    width: 100vw;
-    height: 100vh;
+@media (max-width: 425px) {
+  #masterHeading {
+    color: white;
+    font-size: 100%;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 8px;
+    font-weight: bold;
+  }
 
-    // background-color: #8b8b8b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+  #masterSubheading {
+    color: #dcb472;
+    font-family: "Forum", sans-serif;
+    font-size: 80%;
+  }
+
+  #masterP {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 10px;
+  }
 }
