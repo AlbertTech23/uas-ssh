@@ -4,14 +4,16 @@ import "./MenuCard.scss";
 function MenuCard(props) {
   return (
     <div className="flex-container">
-      <div className="card card-bordered rounded-lg mb-4 relative">
+      <div className="card card-bordered rounded-lg xl:my-8 my-2 mx-2 mrelative">
         <div className="flex items-end justify-center card-image relative overflow-hidden rounded-lg">
           <img
             src={props.image}
             className="menu-image object-cover object-center"
             alt={props.name}
           />
-          <button className="buttonMenu absolute flex items-center justify-center mb-4">
+
+          <button className="buttonOurMenu absolute flex items-center justify-center md:mb-4 mb-2">
+
             {props.name}
           </button>
         </div>

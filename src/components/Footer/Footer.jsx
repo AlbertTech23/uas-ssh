@@ -60,7 +60,7 @@ function Footer() {
               <li className="atas">Sat - Sun</li>
             </div>
             <div className="time">
-              <li className="atas">10.00 - 23.00</li>
+              <li className="atas">09.30 - 23.00</li>
               <li className="atas">09.00 - 23.00</li>
               <li className="atas">08.00 - 23.00</li>
             </div>

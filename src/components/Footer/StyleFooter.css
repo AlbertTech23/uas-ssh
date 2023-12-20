@@ -22,7 +22,7 @@
 }
 
 .text-1 {
-    width: 80%;
+    width: 100%;
     font-weight: bold;
 }
 
@@ -119,13 +119,68 @@
     margin: 6px 0px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
+    .foot-3 h4 {
+        font-size: 13px;
+    }
+
+    .text-3 {
+        font-size: 13px;
+    }
+
+    .text-1 p {
+        font-size: 14px;
+    }
+
+    .lis {
+        font-size: 12px;
+    }
+
+    .foot2 {
+        font-size: 13px;
+    }
+
+    .footer {
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .foot-3 h4 {
+        font-size: 16px;
+    }
+
+    .text-3 {
+        font-size: 16px;
+    }
+
+    .text-1 p {
+        font-size: 17px;
+    }
+
+    .lis {
+        font-size: 15px;
+    }
+
+    .foot2 {
+        font-size: 16px;
+    }
+
     .foot-1 {
-        margin-left: 56px;
+        margin-left: 50px;
+    }
+
+    .text-1 p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .lis {
+        justify-content: center;
     }
 
     .foot-3 {
-        margin-left: 74px;
+        margin-left: 77px;
     }
 
     .footer {

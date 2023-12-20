@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import {
   Home,
   About,
@@ -11,6 +12,10 @@ import {
   Drinks,
   Reservation,
 } from "./pages";
+
+import { Home, About, PageNotFound, Menu, Reservation } from "./pages";
+import { ScrollToTop } from "./components/ScrollToTop";
+
 
 function App() {
   return (
@@ -27,6 +32,7 @@ function App() {
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </Router>
+      <ScrollToTop />
     </div>
   );
 }
