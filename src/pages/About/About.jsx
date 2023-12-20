@@ -1,6 +1,11 @@
 import "./About.scss";
 import { useNavigate } from "react-router-dom";
-import { OurStrength, Chef, Testimonials, AboutUsHeader } from "../../components";
+import {
+  OurStrength,
+  Chef,
+  BottomAboutUs,
+  AboutUsHeader,
+} from "../../components";
 
 const About = () => {
   const navigate = useNavigate();
@@ -11,7 +16,7 @@ const About = () => {
       <AboutUsHeader />
       <OurStrength />
       <Chef />
-      <Testimonials />
+      <BottomAboutUs />
       <button
         className="sementara"
         onClick={() => {

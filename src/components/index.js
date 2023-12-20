@@ -11,6 +11,7 @@ import { WhoWeAre } from "./WhoWeAre";
 import { AboutUsHeader } from "./AboutUsHeader";
 import { TestiCard } from "./TestiCard";
 import { OurMenu } from "./OurMenu";
+import { BottomAboutUs } from "./BottomAboutUs";
 
 import { MenuTemplate } from "./MenuTemplate";
 
@@ -34,14 +35,9 @@ export {
   TestiCard,
   OurMenu,
   AboutUsHeader,
-
+  BottomAboutUs,
   MenuTemplate,
-
-
   ScrollToTop,
-
   OurPackages,
   ReservationHeader,
-
-
 };
