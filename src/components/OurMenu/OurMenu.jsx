@@ -1,7 +1,10 @@
 import "./OurMenu.scss";
 import MenuCard from "./MenuCard";
 import ourmenu from "./assets/ourmenu.png";
-import menu3 from "./assets/menu3.png";
+import appetizers from "./assets/appetizers.svg";
+import desserts from "./assets/desserts.svg";
+import maincourse from "./assets/maincourse.svg";
+import drinks from "./assets/drinks.svg";
 // import "./fonts/Forum-Regular.ttf";
 
 const OurMenu = () => {
@@ -9,22 +12,22 @@ const OurMenu = () => {
     {
       id: 1,
       name: "Appetizers",
-      image: menu3,
+      image: appetizers,
     },
     {
       id: 2,
       name: "Desserts",
-      image: menu3,
+      image: desserts,
     },
     {
       id: 3,
-      name: "Main Dishes",
-      image: menu3,
+      name: "Main Course",
+      image: maincourse,
     },
     {
       id: 4,
       name: "Drinks",
-      image: menu3,
+      image: drinks,
     },
   ];
 
