@@ -4,6 +4,9 @@ import MenuSection2 from "./MenuSection2";
 import garis from "./Images/Garis.svg";
 import "./MenuTemplate.scss";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const MenuTemplate = ({ teaserText, menuDataSets, menuImageSets }) => {
   const navigate = useNavigate();
@@ -15,29 +18,45 @@ const MenuTemplate = ({ teaserText, menuDataSets, menuImageSets }) => {
     });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="menuBackground">
       <div className="menuTemplate xl:p-0 lg:px-16">
         <div className="menuHeader flex flex-wrap flex-col items-center mb-10">
-          <span className="pt-10 pb-5">{teaserText}</span>
-          <img src={garis} alt="Garis" />
+          <span className="pt-10 pb-5" data-aos="fade-up">
+            {teaserText}
+          </span>
+          <img src={garis} alt="Garis" data-aos="fade-up" />
         </div>
         {menuDataSets.map((menuData, index) => (
           <div key={index}>
             {index % 2 === 0 ? (
-              <MenuSection
-                menuData={menuData}
-                menuImage={menuImageSets[index]}
-              />
+              <div data-aos="fade-up">
+                <MenuSection
+                  menuData={menuData}
+                  menuImage={menuImageSets[index]}
+                />
+              </div>
             ) : (
-              <MenuSection2
-                menuData={menuData}
-                menuImage={menuImageSets[index]}
-              />
+              <div data-aos="fade-up">
+                <MenuSection2
+                  menuData={menuData}
+                  menuImage={menuImageSets[index]}
+                />
+              </div>
             )}
           </div>
         ))}
-        <div className="menuCategories flex justify-center items-center mt-5 pb-10">
+        <div
+          className="menuCategories flex justify-center items-center mt-5 pb-10"
+          data-aos="fade-up"
+        >
           <button
             onClick={() => {
               navigate("/appetizers");

@@ -1,4 +1,7 @@
 import "./Home.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import {
   AboutComponent,
@@ -11,14 +14,31 @@ import {
 } from "../../components";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="home-page">
       <Header />
-      <AboutComponent />
-      <TodaySpecial />
-      <OurMenu />
-      <Stats />
-      <BottomHome />
+      <div data-aos="fade-up">
+        <AboutComponent />
+      </div>
+      <div data-aos="fade-up">
+        <TodaySpecial />
+      </div>
+      <div data-aos="fade-up">
+        <OurMenu />
+      </div>
+      <div data-aos="fade-up">
+        <Stats />
+      </div>
+      <div data-aos="fade-up">
+        <BottomHome />
+      </div>
       <Footer />
     </div>
   );
