@@ -1,8 +1,9 @@
 import "./MainCourse.scss";
-import { MenuTemplate } from "../../components";
+import { MenuTemplate, HeaderMaster } from "../../components";
 import rendang from "../../assets/Rendang.svg";
 import naniura from "../../assets/Naniura.svg";
 import satpad from "../../assets/SatePadang.svg";
+import heroMC from "../../assets/HeroMC.svg";
 
 const menu1 = [
   {
@@ -90,8 +91,22 @@ const MainCourse = () => {
   const menuDataSets = [menu1, menu2, menu3];
   const menuImageSets = [rendang, naniura, satpad];
 
+  const MainCourseInfo = {
+    image: heroMC,
+    subheading: "-Our Menu-",
+    heading: "MAIN COURSE",
+    paragraph:
+      "Embark on a culinary odyssey as you step into the spotlight with our MAIN COURSE selections. Immerse yourself from our rich traditional classics to contemporary delights.",
+  };
+
   return (
     <div className="MenuBigContainer">
+      <HeaderMaster
+        imgSrc={MainCourseInfo.image}
+        subheading={MainCourseInfo.subheading}
+        heading={MainCourseInfo.heading}
+        paragraph={MainCourseInfo.paragraph}
+      />
       <MenuTemplate
         teaserText={teaserText}
         menuDataSets={menuDataSets}

@@ -1,5 +1,8 @@
 import "./TodaySpecial.scss";
 import { useState, useEffect, useRef } from "react";
+import rendang from "../../assets/RendangSpecial.svg";
+import ambon from "../../assets/AmbonSpecial.svg";
+import pempek from "../../assets/PempekSpecial.svg";
 
 const service = [
   {
@@ -28,27 +31,26 @@ const service = [
 const special = [
   {
     id: 1,
-    img: "src/components/TodaySpecial/Images/SatePadang.png",
-    title: "Sate Padang",
+    img: rendang,
+    title: "Rendang",
     description:
-      "Sate Padang, hidangan yang memikat selera dengan potongan daging sapi yang empuk...",
+      "A slow-cooked, aromatic masterpiece with tender beef, coconut milk, lemongrass, and exotic spices.",
     rating: "4.9",
   },
   {
     id: 2,
-    img: "src/components/TodaySpecial/Images/NasiKuning.png",
-    title: "Nasi Kuning",
-    description:
-      "Nasi Kuning, hidangan khas Indonesia yang terbuat dari beras yang dimasak dengan santan.",
-    rating: "4.5",
+    img: pempek,
+    title: "Pempek Kapal Selam",
+    description: "Savory fish cake, a delectable Indonesian delicacy.",
+    rating: "4.7",
   },
   {
     id: 3,
-    img: "src/components/TodaySpecial/Images/AddOns.png",
-    title: "Add Ons",
+    img: ambon,
+    title: "Bika Ambon",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Vey good...",
-    rating: "4.7",
+      "A sweet and fluffy Indonesian cake, known for its honeycomb texture and rich pandan or coconut flavor.",
+    rating: "4.6",
   },
 ];
 
