@@ -8,6 +8,7 @@ import {
   Stats,
   BottomHome,
   OurMenu,
+  ScrollToTop,
 } from "../../components";
 
 import { useNavigate } from "react-router-dom";
@@ -33,6 +34,7 @@ const Home = () => {
       <Stats />
       <BottomHome />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
