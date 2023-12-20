@@ -104,6 +104,12 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+.cloud {
+  width: max-content;
+  top: 50px;
+  right: -75px;
+}
+
 .buttonReservation {
   color: #ffd38a;
   font-family: Poppins;
@@ -147,6 +153,12 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .cloud {
+    width: 200px;
+    top: 50px;
+    right: -75px;
+  }
+
   .reservationContainer {
     flex-direction: column;
     justify-content: center;
@@ -179,6 +191,127 @@
 
   .rectRes {
     rotate: 90deg;
+  }
+
+  .buttonReservation {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cloud {
+    width: 100px;
+    top: 50px;
+    right: -25px;
+  }
+
+  .reservationContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftRes {
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    img {
+      border-radius: 10px 10px 0px 0px;
+      width: 300px;
+      min-width: 300px;
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  .rightRes {
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(
+      180deg,
+      #ffd38a 0%,
+      rgba(210, 160, 77, 0.5) 100%
+    );
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+  .resText {
+    font-size: 48px;
+    .popBold {
+      font-size: 45px;
+    }
+  }
+
+  .rectRes {
+    rotate: 90deg;
+  }
+
+  .buttonReservation {
+    color: #ffd38a;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 10px;
+    background: #423e37;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    height: 50px;
+  }
+
+  .buttonReservation {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .reservationContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftRes {
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    img {
+      border-radius: 10px 10px 0px 0px;
+      width: 250px;
+      min-width: 250px;
+      max-width: 250px;
+      height: auto;
+    }
+  }
+  .rightRes {
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(
+      180deg,
+      #ffd38a 0%,
+      rgba(210, 160, 77, 0.5) 100%
+    );
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+  .resText {
+    padding-top: 5px;
+    font-size: 36px;
+    .popBold {
+      font-size: 33px;
+    }
+  }
+
+  .rectRes {
+    rotate: 90deg;
+  }
+
+  .buttonReservation {
+    color: #ffd38a;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 10px;
+    background: #423e37;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 150px;
+    height: 50px;
   }
 
   .buttonReservation {

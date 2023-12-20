@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@400;600&display=swap");
+
+.menuBackground {
+  background: linear-gradient(
+      0deg,
+      rgba(35, 35, 35, 0.96) 0%,
+      rgba(35, 35, 35, 0.96) 100%
+    ),
+    url(../../assets/MenuBg.svg), lightgray 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menuTemplate {
+  backdrop-filter: blur(2px);
+}
+
+.menuHeader span {
+  color: #f2c476;
+  text-align: center;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+  font-family: Forum;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 340px) {
+    font-size: 25px;
+  }
+}
+
+.menuHeader img {
+  @media (max-width: 400px) {
+    width: 250px;
+  }
+}
+
+.menu-desc {
+  width: 315px;
+}
+
+.menu-desc-title {
+  color: #f2c476;
+  font-family: poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.menu-desc-description {
+  color: #737373;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu-desc-price {
+  color: #f2c476;
+  text-align: center;
+  font-family: Forum;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 5px;
+  background: #2d2d2d;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 450px) {
+    width: 100px;
+  }
+}
+
+.menuCategories {
+  color: #fff;
+  text-align: center;
+  font-family: Forum;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+}
+
+.menuCategories button {
+  padding-bottom: 10px;
+  color: #ffffff;
+  position: relative;
+
+  @media (max-width: 340px) {
+    font-size: 12px;
+  }
+}
+
+.menuCategories button::after {
+  content: "";
+  position: absolute;
+  background-color: #f2c476;
+  height: 3px;
+  width: 0;
+  left: 25%;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.menuCategories button:hover {
+  color: #f2c476;
+}
+
+.menuCategories button:hover::after {
+  width: 50%;
+}
+
+@media (max-width: 450px) {
+  .menu-card-container {
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+
+  .menuCategories {
+    font-size: 15px;
+  }
+
+  .menu-desc {
+    max-width: 250px;
+  }
+
+  .menu-desc-title {
+    font-size: 15px;
+  }
+
+  .menu-desc-description {
+    font-size: 10px;
+  }
+
+  .menu-desc-price {
+    font-size: 15px;
+  }
+}
