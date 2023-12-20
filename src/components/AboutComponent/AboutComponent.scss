@@ -16,18 +16,20 @@
   padding-right: 12rem;
 }
 
-#buttonAbt {
-  color: #dcb472;
+.btnStyle {
   font-weight: bold;
   border: 2px solid #dcb472;
+  background: none;
   border-radius: 0.7rem;
   padding: 0.7rem 2rem;
   font-size: 1.2rem;
-  display: inline-block;
-  transition: 0.4s;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  color: #dcb472;
 }
 
-#buttonAbt:hover {
+.btnStyle:hover {
   background-color: #dcb472;
   color: #674817;
 }
@@ -41,7 +43,19 @@
   padding: 10px;
   width: 1200px;
   margin: 0 auto;
-  transition: 0.4s;
+}
+
+#brand1,
+#brand2,
+#brand3 {
+  opacity: 0.55;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#brand1:hover,
+#brand2:hover,
+#brand3:hover {
+  opacity: 1;
 }
 
 #brands img {

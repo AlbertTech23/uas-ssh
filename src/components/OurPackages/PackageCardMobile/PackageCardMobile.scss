@@ -1,46 +1,119 @@
 .brightness-down {
-    filter: brightness(90%);
+  filter: brightness(90%);
 }
 
 .mobileLetter {
-    color: rgba(242, 196, 118, 0.60);
-    text-align: center;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
-    font-family: Poppins;
-    font-size: 300px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  color: rgba(242, 196, 118, 0.6);
+  text-align: center;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+  font-family: Poppins;
+  font-size: 300px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .mobileHeading {
-    color: #232323;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: -30px;
+  color: #232323;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -30px;
 }
 
 .mobileSubheading {
-    color: #232323;
-    text-align: center;
-    font-family: Forum;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.62px;
-    margin-top: -10px;
+  color: #232323;
+  text-align: center;
+  font-family: Forum;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.62px;
+  margin-top: -10px;
 }
 
 .mobileButt {
+  width: 219px;
+  height: 26px;
+  border-radius: 5px;
+  border: 0.8px solid #000;
+  color: #232323;
+  text-align: center;
+  font-family: Forum;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.mobileButts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropContent {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0.8px solid #000;
+  border-radius: 4px;
+  color: #ffd38a;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dropContent p {
+  margin-left: 12px;
+  transform: translate(0%, 35%);
+}
+
+.dropdownButt {
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  margin-left: 200px;
+  margin-top: -12px;
+}
+
+.carousel button {
+  color: #232323;
+}
+
+@media (max-width: 425px) {
+  .cardHover,
+  .carousel .carousel-item .cardImage {
+    width: 370px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .mobileLetter {
+    font-size: 200px;
+    top: 37%;
+  }
+
+  .mobileHeading {
+    font-size: 30px;
+    margin-top: -40px;
+  }
+
+  .mobileSubheading {
+    font-size: 14px;
+  }
+
+  .mobileButt {
     width: 219px;
     height: 26px;
     border-radius: 5px;
@@ -48,45 +121,22 @@
     color: #232323;
     text-align: center;
     font-family: Forum;
-    font-size: 18px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 10px;
-}
+    margin-top: 1px;
+  }
 
-.mobileButts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.dropContent {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 0.8px solid #000;
-    border-radius: 4px;
-    color: #FFD38A;
-    font-family: Poppins;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.dropContent p {
-    margin-left: 12px;
-    transform: translate(0%, 35%);
-}
-
-.dropdownButt {
+  .dropdownButt {
     width: 9px;
     height: 5px;
     position: absolute;
     margin-left: 200px;
-    margin-top: -12px;
-}
-
-.carousel button {
-    color: #232323;
+    margin-top: -10px;
   }
+
+  .slideBtn {
+    margin-top: -40px;
+  }
+}

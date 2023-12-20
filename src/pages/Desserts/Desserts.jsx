@@ -1,5 +1,5 @@
 import "./Desserts.scss";
-import { MenuTemplate, HeaderMaster } from "../../components";
+import { MenuTemplate, HeaderMaster, Header, Footer } from "../../components";
 import redBean from "../../assets/RedBean.svg";
 import ambon from "../../assets/BikaAmbon.svg";
 import durian from "../../assets/Durian.svg";
@@ -101,18 +101,22 @@ const Desserts = () => {
   };
 
   return (
-    <div className="MenuBigContainer">
-      <HeaderMaster
-        imgSrc={DessertsInfo.image}
-        subheading={DessertsInfo.subheading}
-        heading={DessertsInfo.heading}
-        paragraph={DessertsInfo.paragraph}
-      />
-      <MenuTemplate
-        teaserText={teaserText}
-        menuDataSets={menuDataSets}
-        menuImageSets={menuImageSets}
-      />
+    <div>
+      <Header />
+      <div className="MenuBigContainer">
+        <HeaderMaster
+          imgSrc={DessertsInfo.image}
+          subheading={DessertsInfo.subheading}
+          heading={DessertsInfo.heading}
+          paragraph={DessertsInfo.paragraph}
+        />
+        <MenuTemplate
+          teaserText={teaserText}
+          menuDataSets={menuDataSets}
+          menuImageSets={menuImageSets}
+        />
+      </div>
+      <Footer />
     </div>
   );
 };

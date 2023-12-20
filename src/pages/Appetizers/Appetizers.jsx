@@ -1,5 +1,5 @@
 import "./Appetizers.scss";
-import { MenuTemplate, HeaderMaster } from "../../components";
+import { MenuTemplate, HeaderMaster, Header, Footer } from "../../components";
 import pempek from "../../assets/PempekKapalSelam.svg";
 import lumpia from "../../assets/Lumpia.svg";
 import tofu from "../../assets/Tofu.svg";
@@ -100,18 +100,22 @@ const Appetizers = () => {
   };
 
   return (
-    <div className="MenuBigContainer">
-      <HeaderMaster
-        imgSrc={AppetizersInfo.image}
-        subheading={AppetizersInfo.subheading}
-        heading={AppetizersInfo.heading}
-        paragraph={AppetizersInfo.paragraph}
-      />
-      <MenuTemplate
-        teaserText={teaserText}
-        menuDataSets={menuDataSets}
-        menuImageSets={menuImageSets}
-      />
+    <div>
+      <Header />
+      <div className="MenuBigContainer">
+        <HeaderMaster
+          imgSrc={AppetizersInfo.image}
+          subheading={AppetizersInfo.subheading}
+          heading={AppetizersInfo.heading}
+          paragraph={AppetizersInfo.paragraph}
+        />
+        <MenuTemplate
+          teaserText={teaserText}
+          menuDataSets={menuDataSets}
+          menuImageSets={menuImageSets}
+        />
+      </div>
+      <Footer />
     </div>
   );
 };

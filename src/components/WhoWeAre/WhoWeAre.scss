@@ -1,0 +1,68 @@
+.whoHeading {
+  color: #f2c476;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.whoP {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.batikImg {
+  width: 190px;
+  height: 50%;
+}
+
+#brand1,
+#brand2,
+#brand3 {
+  opacity: 0.55;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#brand1:hover,
+#brand2:hover,
+#brand3:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .whoP {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whoP {
+    font-size: 12px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .gambarWhoWeAre {
+    width: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .whoP {
+    font-size: 10px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .gambarWhoWeAre {
+    width: 300px;
+  }
+}

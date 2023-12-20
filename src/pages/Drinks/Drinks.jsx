@@ -1,5 +1,5 @@
 import "./Drinks.scss";
-import { MenuTemplate, HeaderMaster } from "../../components";
+import { MenuTemplate, HeaderMaster, Header, Footer } from "../../components";
 import elixir from "../../assets/Elixir.svg";
 import pandan from "../../assets/Pandan.svg";
 import avocado from "../../assets/Avocado.svg";
@@ -102,18 +102,22 @@ const Drinks = () => {
   };
 
   return (
-    <div className="MenuBigContainer">
-      <HeaderMaster
-        imgSrc={DrinksInfo.image}
-        subheading={DrinksInfo.subheading}
-        heading={DrinksInfo.heading}
-        paragraph={DrinksInfo.paragraph}
-      />
-      <MenuTemplate
-        teaserText={teaserText}
-        menuDataSets={menuDataSets}
-        menuImageSets={menuImageSets}
-      />
+    <div>
+      <Header />
+      <div className="MenuBigContainer">
+        <HeaderMaster
+          imgSrc={DrinksInfo.image}
+          subheading={DrinksInfo.subheading}
+          heading={DrinksInfo.heading}
+          paragraph={DrinksInfo.paragraph}
+        />
+        <MenuTemplate
+          teaserText={teaserText}
+          menuDataSets={menuDataSets}
+          menuImageSets={menuImageSets}
+        />
+      </div>
+      <Footer />
     </div>
   );
 };
