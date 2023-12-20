@@ -70,7 +70,11 @@ function Header() {
           }
         >
           <div className="logo">
-            <img src={logo} onClick={() => navigate("/")} />
+            <img
+              src={logo}
+              onClick={() => navigate("/")}
+              className="cursor-pointer"
+            />
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>
@@ -113,11 +117,7 @@ function Header() {
               >
                 MENU
               </a>
-              <div
-                className={
-                  btnMenu ? (scroll ? "listMenu-bg" : "listMenu") : "hide"
-                }
-              >
+              <div className={btnMenu ? "listMenu" : "listMenu hide"}>
                 <a
                   className={
                     windowWidth >= 769

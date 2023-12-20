@@ -1,7 +1,5 @@
 import "./App.css";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Home,
   About,
@@ -12,7 +10,6 @@ import {
   Drinks,
   Reservation,
 } from "./pages";
-
 import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {

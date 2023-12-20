@@ -253,8 +253,7 @@
     cursor: pointer;
   }
 
-  .listMenu,
-  .listMenu-bg {
+  .listMenu {
     position: absolute;
     display: flex;
     flex-direction: column;
