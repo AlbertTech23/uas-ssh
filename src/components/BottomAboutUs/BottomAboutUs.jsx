@@ -33,7 +33,7 @@ const BottomAboutUs = () => {
           const newQuote = response.data[0].quote;
           const wordCount = newQuote.split(" ").length;
 
-          if (wordCount <= 30) {
+          if (wordCount <= 17) {
             setQuotesData(response.data);
             setQuote(newQuote);
             setAuthor(response.data[0].author);
@@ -68,7 +68,7 @@ const BottomAboutUs = () => {
           {loading ? (
             <div className="generatingQuote">Generating new quote...</div>
           ) : (
-            <div className="flex flex-col">
+            <div className="maxQuotes flex flex-col">
               <span className="quotes mb-5">"{quote}"</span>
               <span className="author">-{author}-</span>
             </div>

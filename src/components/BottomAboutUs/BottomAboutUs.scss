@@ -111,10 +111,14 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
   .bottomQuotesContainer {
     min-width: 75%;
     min-height: 350px;
+  }
+
+  .maxQuotes {
+    padding: 0 20px;
   }
 
   .quotes {
@@ -153,6 +157,6 @@
   }
 
   .buttonQuotes {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
