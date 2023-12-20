@@ -33,8 +33,6 @@ function Footer() {
         </div>
       </div>
 
-
-
       <div className='box-foot-2'>
         <div className="foot2">
           <div>
