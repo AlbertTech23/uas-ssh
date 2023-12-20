@@ -6,7 +6,7 @@
 
 .notfoundtitle {
   color: #f2c476;
-  text-align: center;
+  text-align: left;
   font-family: Poppins;
   font-size: 35px;
   font-style: normal;
@@ -17,32 +17,129 @@
 
 .notfoundsubtitle {
   color: #8f8f8f;
-  text-align: center;
+  text-align: left;
   font-family: Poppins;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  max-width: 500px;
 }
 
-.buttonNotFound {
-  color: #232323;
-  text-align: center;
+.buttonNotFoundContainer {
+  display: flex;
+  align-items: center;
+  color: #f2c476;
+  text-align: left;
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2px;
-  width: 245px;
-  height: 60px;
+
+  .arrowRightButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+
+    img {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    &:active img {
+      transform: scale(1.5);
+    }
+
+    &:first-child {
+      animation: bounceAnimation 1s ease-in-out;
+    }
+  }
+}
+
+@keyframes bounceAnimation {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.notFoundQuoteWord {
+  color: #fff;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 700px;
+}
+
+.notFoundQuoteAuthor {
+  color: #f2c476;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.wordNotFound {
+  color: #8f8f8f;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.quotesButtonNFContainer {
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: end;
+}
+
+.quotesButtonNF {
+  color: #2d2d2d;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+  width: 150px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 10px;
   background: #f2c476;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 0px 20px 5px rgba(242, 196, 118, 0.25);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-// footer
 .footer-comingsoon {
   position: fixed;
   display: flex;
@@ -66,6 +163,51 @@
     font-size: 18px;
     font-weight: 700;
     line-height: normal;
+  }
+}
+
+.imageNotFound {
+  width: 65%;
+}
+
+@media screen and (max-width: 1024px) {
+  .imageNotFound {
+    width: 50%;
+  }
+
+  .notfoundtitle {
+    font-size: 26px;
+  }
+
+  .notfoundsubtitle {
+    font-size: 16px;
+    max-width: 350px;
+  }
+
+  .buttonNotFoundContainer {
+    font-size: 16px;
+  }
+
+  .notFoundQuoteWord {
+    font-size: 20px;
+  }
+
+  .notFoundQuoteAuthor {
+    font-size: 16px;
+  }
+
+  .wordNotFound {
+    font-size: 14px;
+  }
+
+  .quotesButtonNFContainer {
+    grid-template-columns: repeat(3, 120px);
+  }
+
+  .quotesButtonNF {
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
   }
 }
 
@@ -95,6 +237,201 @@
 }
 
 @media screen and (max-width: 480px) {
+  .NotFoundContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+  }
+
+  .imageNotFound {
+    width: 50%;
+  }
+
+  .notfoundtitle {
+    font-size: 26px;
+  }
+
+  .notfoundsubtitle {
+    font-size: 16px;
+    max-width: 350px;
+  }
+
+  .buttonNotFoundContainer {
+    font-size: 16px;
+  }
+
+  .notFoundQuoteWord {
+    font-size: 16px;
+  }
+
+  .notFoundQuoteAuthor {
+    font-size: 12px;
+  }
+
+  .wordNotFound {
+    font-size: 10px;
+  }
+
+  .quotesButtonNFContainer {
+    grid-template-columns: repeat(3, 80px);
+  }
+
+  .quotesButtonNF {
+    font-size: 10px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .footer-comingsoon {
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .footer-comingsoon .footer-bold {
+    font-size: 10px;
+  }
+
+  .notfoundtitle {
+    font-size: 20px;
+  }
+
+  .notfoundsubtitle {
+    font-size: 12px;
+  }
+
+  .buttonNotFound {
+    font-size: 10px;
+    width: 135px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .NotFoundContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+  }
+
+  .imageNotFound {
+    width: 50%;
+  }
+
+  .notfoundtitle {
+    font-size: 26px;
+  }
+
+  .notfoundsubtitle {
+    font-size: 16px;
+    max-width: 300px;
+  }
+
+  .buttonNotFoundContainer {
+    font-size: 10px;
+  }
+
+  .arrowRightButton {
+    width: 20px;
+  }
+
+  .notFoundQuoteWord {
+    font-size: 16px;
+    max-width: 250px;
+  }
+
+  .notFoundQuoteAuthor {
+    font-size: 12px;
+  }
+
+  .wordNotFound {
+    font-size: 10px;
+  }
+
+  .quotesButtonNFContainer {
+    grid-template-columns: repeat(3, 80px);
+  }
+
+  .quotesButtonNF {
+    font-size: 10px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .footer-comingsoon {
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .footer-comingsoon .footer-bold {
+    font-size: 10px;
+  }
+
+  .notfoundtitle {
+    font-size: 20px;
+  }
+
+  .notfoundsubtitle {
+    font-size: 12px;
+  }
+
+  .buttonNotFound {
+    font-size: 10px;
+    width: 135px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .NotFoundContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+  }
+
+  .imageNotFound {
+    width: 50%;
+  }
+
+  .notfoundtitle {
+    font-size: 26px;
+  }
+
+  .notfoundsubtitle {
+    font-size: 16px;
+    max-width: 300px;
+  }
+
+  .buttonNotFoundContainer {
+    font-size: 10px;
+  }
+
+  .arrowRightButton {
+    width: 20px;
+  }
+
+  .notFoundQuoteWord {
+    font-size: 16px;
+    max-width: 250px;
+  }
+
+  .notFoundQuoteAuthor {
+    font-size: 12px;
+  }
+
+  .wordNotFound {
+    font-size: 10px;
+  }
+
+  .quotesButtonNFContainer {
+    grid-template-columns: repeat(3, 75px);
+  }
+
+  .quotesButtonNF {
+    font-size: 10px;
+    width: 75px;
+    height: 30px;
+  }
+
   .footer-comingsoon {
     height: 30px;
     font-size: 10px;
