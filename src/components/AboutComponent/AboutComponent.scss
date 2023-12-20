@@ -48,7 +48,14 @@
 #brand1,
 #brand2,
 #brand3 {
-  transition: 0.4s;
+  opacity: 0.55;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#brand1:hover,
+#brand2:hover,
+#brand3:hover {
+  opacity: 1;
 }
 
 #brands img {
