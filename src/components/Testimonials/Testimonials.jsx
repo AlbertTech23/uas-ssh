@@ -70,7 +70,7 @@ const Testimonials = () => {
           <div className="leftButton flex justify-center items-center ms-[6px] me-3 pt-16">
             <a
               href="#"
-              className="buttonLeftRight"
+              className="buttonLeftRight me-2"
               onClick={(e) => {
                 e.preventDefault();
                 prevSlide();
@@ -95,7 +95,7 @@ const Testimonials = () => {
             {" "}
             <a
               href="#"
-              className=" buttonLeftRight"
+              className=" buttonLeftRight ms-2"
               onClick={(e) => {
                 e.preventDefault();
                 nextSlide();
