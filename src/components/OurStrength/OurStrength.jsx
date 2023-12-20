@@ -3,6 +3,7 @@ import str1 from "../../assets/str1.svg";
 import str2 from "../../assets/str2.svg";
 import str3 from "../../assets/str3.svg";
 import str4 from "../../assets/str4.svg";
+import batiklinestr from "../../assets/batik-line.svg";
 
 const OurStrength = () => {
   const data = [
@@ -36,7 +37,7 @@ const OurStrength = () => {
         <span className="main-title m-3">OUR STRENGTH</span>
         <img
           className="batik-pattern m-5"
-          src="/src/assets/batik-line.svg"
+          src={batiklinestr}
           alt="batik-cosmetics"
         ></img>
       </div>
