@@ -35,7 +35,7 @@ function Header() {
       setWindowWidth(window.innerWidth);
       if (window.innerWidth >= 769) {
         setBtnMenu(false);
-      }
+      } else setBtnMenu(true);
     };
 
     window.addEventListener("resize", handleResize);
@@ -64,17 +64,9 @@ function Header() {
   return (
     <div className="">
       <div className="kepala" ref={menuRef}>
-        <div
-          className={
-            scroll ? "header-bg" : !activeButton ? "header-bg" : "header"
-          }
-        >
+        <div className={scroll ? "header-bg" : "header"}>
           <div className="logo">
-            <img
-              src={logo}
-              onClick={() => navigate("/")}
-              className="cursor-pointer"
-            />
+            <img src={logo} />
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>
@@ -117,7 +109,19 @@ function Header() {
               >
                 MENU
               </a>
-              <div className={btnMenu ? "listMenu" : "listMenu hide"}>
+              <div
+                className={
+                  windowWidth >= 769
+                    ? btnMenu
+                      ? "listMenu"
+                      : "hide"
+                    : activeButton
+                    ? btnMenu
+                      ? "listMenu"
+                      : ""
+                    : ""
+                }
+              >
                 <a
                   className={
                     windowWidth >= 769
