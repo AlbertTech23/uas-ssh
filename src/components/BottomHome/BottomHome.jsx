@@ -1,16 +1,18 @@
 import "./BottomHome.scss";
 import { TestiCard } from "../TestiCard";
+import cloud from "../../assets/cloud.png";
+import rectRest from "../../assets/rectRes.png";
 
 const testiData = [
   {
-    picture: "MaleC1.png",
+    picture: "MaleC1",
     firstName: "John",
     lastName: "Doe",
     on: "rendang",
     review: "Makanannya membuat saya bergoyang.",
   },
   {
-    picture: "FemaleC1.png",
+    picture: "FemaleC1",
     firstName: "Jane",
     lastName: "Doe",
     on: "services",
@@ -41,11 +43,11 @@ const BottomHome = () => {
         </div>
         <div className="rightRes relative">
           <img
-            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[75px] lg:left-[-15px] md:top-[-75px] md:left-[150px]"
-            src="src/assets/rectRes.png"
+            className="rectRes xl:top-[75px] xl:left-[-15px] lg:top-[-75px] lg:left-[150px] md:top-[-75px] md:left-[150px] top-[-75px] left-[100px]"
+            src={rectRest}
             alt="rectRes"
           />
-          <div className="rightContent ms-14 mt-14">
+          <div className="rightContent ms-14 md:mt-14 mt-6">
             <div className="resText flex flex-col pb-5">
               <span>WE ARE</span>
               <span>WATING</span>
@@ -54,11 +56,7 @@ const BottomHome = () => {
               </span>
             </div>
             <button className="buttonReservation">BOOK A TABLE</button>
-            <img
-              className="cloud absolute top-[50px] right-[-75px] w-[200px] xl:w-max lg:w-max"
-              src="src/assets/cloud.png"
-              alt="awan"
-            />
+            <img className="cloud absolute" src={cloud} alt="awan" />
           </div>
         </div>
       </div>
