@@ -33,12 +33,14 @@ function Footer() {
         </div>
       </div>
 
-      <div>
+
+
+      <div className='box-foot-2'>
         <div className="foot2">
           <div>
             <img className="image-2" src={logo} />
           </div>
-          <div>
+          <div className='text2-contain'>
             <p className="text-2">Whisper to us about your feelings, and we will prepare what you need.</p>
           </div>
           <div className='gambar2'>
@@ -50,7 +52,7 @@ function Footer() {
         </div>
       </div>
 
-      <div>
+      <div className='box-foot-3'>
         <div className="foot-3">
           <h4>Working Hours</h4>
           <div className="text-3">
