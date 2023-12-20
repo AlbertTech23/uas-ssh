@@ -30,7 +30,7 @@ function App() {
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </Router>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </div>
   );
 }
