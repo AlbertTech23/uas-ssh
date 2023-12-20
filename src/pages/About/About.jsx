@@ -7,6 +7,8 @@ import {
   Chef,
   BottomAboutUs,
   AboutUsHeader,
+  Header,
+  Footer,
 } from "../../components";
 
 const About = () => {
@@ -18,6 +20,7 @@ const About = () => {
   }, []);
   return (
     <div className="about-page">
+      <Header />
       <AboutUsHeader />
       <div data-aos="fade-up">
         <OurStrength />
@@ -28,6 +31,7 @@ const About = () => {
       <div data-aos="fade-up">
         <BottomAboutUs />
       </div>
+      <Footer />
     </div>
   );
 };

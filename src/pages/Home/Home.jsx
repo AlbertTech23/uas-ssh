@@ -11,6 +11,7 @@ import {
   Stats,
   BottomHome,
   OurMenu,
+  Carousel,
 } from "../../components";
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Header />
+      <Carousel />
       <div data-aos="fade-up">
         <AboutComponent />
       </div>

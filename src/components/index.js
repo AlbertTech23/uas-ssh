@@ -18,6 +18,7 @@ import { MenuTemplate } from "./MenuTemplate";
 import { ScrollToTop } from "./ScrollToTop";
 import { OurPackages } from "./OurPackages";
 import { ReservationHeader } from "./ReservationHeader";
+import { Carousel } from "./Carousel";
 
 export {
   AboutComponent,
@@ -40,4 +41,5 @@ export {
   ScrollToTop,
   OurPackages,
   ReservationHeader,
+  Carousel,
 };

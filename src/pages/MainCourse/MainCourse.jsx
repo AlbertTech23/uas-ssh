@@ -1,5 +1,5 @@
 import "./MainCourse.scss";
-import { MenuTemplate, HeaderMaster } from "../../components";
+import { MenuTemplate, HeaderMaster, Header, Footer } from "../../components";
 import rendang from "../../assets/Rendang.svg";
 import naniura from "../../assets/Naniura.svg";
 import satpad from "../../assets/SatePadang.svg";
@@ -100,18 +100,22 @@ const MainCourse = () => {
   };
 
   return (
-    <div className="MenuBigContainer">
-      <HeaderMaster
-        imgSrc={MainCourseInfo.image}
-        subheading={MainCourseInfo.subheading}
-        heading={MainCourseInfo.heading}
-        paragraph={MainCourseInfo.paragraph}
-      />
-      <MenuTemplate
-        teaserText={teaserText}
-        menuDataSets={menuDataSets}
-        menuImageSets={menuImageSets}
-      />
+    <div>
+      <Header />
+      <div className="MenuBigContainer">
+        <HeaderMaster
+          imgSrc={MainCourseInfo.image}
+          subheading={MainCourseInfo.subheading}
+          heading={MainCourseInfo.heading}
+          paragraph={MainCourseInfo.paragraph}
+        />
+        <MenuTemplate
+          teaserText={teaserText}
+          menuDataSets={menuDataSets}
+          menuImageSets={menuImageSets}
+        />
+      </div>
+      <Footer />
     </div>
   );
 };

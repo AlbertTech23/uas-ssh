@@ -3,8 +3,11 @@ import logo from "../../assets/gambar/SSH_-_LOGO 1.png";
 import Carousel from "../Carousel/Carousel";
 import { useEffect, useRef, useState } from "react";
 import { RiMenu3Fill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
   const [scroll, setScroll] = useState(false);
   const [activeButton, setActbttn] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -31,7 +34,7 @@ function Header() {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
       if (window.innerWidth >= 769) {
-        setBtnMenu(false)
+        setBtnMenu(false);
       }
     };
 
@@ -67,31 +70,117 @@ function Header() {
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>
-
-              <a className={windowWidth >= 769 ? "common" : activeButton ? "active" : "unactive"}>
+              <a
+                className={
+                  windowWidth >= 769
+                    ? "common"
+                    : activeButton
+                    ? "active"
+                    : "unactive"
+                }
+                onClick={() => navigate("/")}
+              >
                 HOME
               </a>
-              <a className={windowWidth >= 769 ? "common" : activeButton ? "active" : "unactive"}>
+              <a
+                className={
+                  windowWidth >= 769
+                    ? "common"
+                    : activeButton
+                    ? "active"
+                    : "unactive"
+                }
+                onClick={() => navigate("/about")}
+              >
                 ABOUT
               </a>
-              <a role="button" onClick={() => setBtnMenu(!btnMenu)} className={windowWidth >= 769 ? "common" : activeButton ? btnMenu ? "active listActive" : "active" : "unactive"}>
+              <a
+                role="button"
+                onClick={() => setBtnMenu(!btnMenu)}
+                className={
+                  windowWidth >= 769
+                    ? "common"
+                    : activeButton
+                    ? btnMenu
+                      ? "active listActive"
+                      : "active"
+                    : "unactive"
+                }
+              >
                 MENU
               </a>
-              <div className={btnMenu ? scroll ? "listMenu-bg" : "listMenu" : "hide"}>
-                <a className={windowWidth >= 769 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+              <div
+                className={
+                  btnMenu ? (scroll ? "listMenu-bg" : "listMenu") : "hide"
+                }
+              >
+                <a
+                  className={
+                    windowWidth >= 769
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                  onClick={() => navigate("/appetizers")}
+                >
                   <span>Appetizers</span>
                 </a>
-                <a className={windowWidth >= 769 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+                <a
+                  className={
+                    windowWidth >= 769
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                  onClick={() => navigate("/maincourse")}
+                >
                   <span>Main Course</span>
                 </a>
-                <a className={windowWidth >= 769 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+                <a
+                  className={
+                    windowWidth >= 769
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                  onClick={() => navigate("/desserts")}
+                >
                   <span>Desserts</span>
                 </a>
-                <a className={windowWidth >= 769 ? "subListMenu" : activeButton ? btnMenu ? "active-ListMenu" : "unactive" : "hide"}>
+                <a
+                  className={
+                    windowWidth >= 769
+                      ? "subListMenu"
+                      : activeButton
+                      ? btnMenu
+                        ? "active-ListMenu"
+                        : "unactive"
+                      : "hide"
+                  }
+                  onClick={() => navigate("/drinks")}
+                >
                   <span>Drinks</span>
                 </a>
               </div>
-              <button className={windowWidth >= 769 ? "reserva" : activeButton ? "r-active" : "r-unactive"}>
+              <button
+                className={
+                  windowWidth >= 769
+                    ? "reserva"
+                    : activeButton
+                    ? "r-active"
+                    : "r-unactive"
+                }
+                onClick={() => navigate("/reservation")}
+              >
                 <span>RESERVATION</span>
               </button>
             </div>
@@ -106,7 +195,6 @@ function Header() {
           </div>
         </div>
       </div>
-      <Carousel />
     </div>
   );
 }
