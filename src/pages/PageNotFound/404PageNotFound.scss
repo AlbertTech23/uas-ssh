@@ -91,7 +91,7 @@
 
 .notFoundQuoteAuthor {
   color: #f2c476;
-  text-align: center;
+  text-align: right;
   font-family: Poppins;
   font-size: 25px;
   font-style: normal;
@@ -172,7 +172,7 @@
 
 @media screen and (max-width: 1024px) {
   .imageNotFound {
-    width: 50%;
+    width: 35%;
   }
 
   .notfoundtitle {
@@ -202,6 +202,7 @@
 
   .quotesButtonNFContainer {
     grid-template-columns: repeat(3, 120px);
+    margin-left: auto;
   }
 
   .quotesButtonNF {
