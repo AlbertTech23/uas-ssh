@@ -13,9 +13,7 @@ import {
   Reservation,
 } from "./pages";
 
-import { Home, About, PageNotFound, Menu, Reservation } from "./pages";
 import { ScrollToTop } from "./components/ScrollToTop";
-
 
 function App() {
   return (
