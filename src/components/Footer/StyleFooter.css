@@ -1,298 +1,299 @@
 .footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    position: absolute;
-    background-image: url(../../assets/gambar/imageFooter.png);
-    background-color: rgba(0, 0, 0, 0.95);
-    background-blend-mode: darken;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 99vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: absolute;
+  background-image: url(../../assets/gambar/imageFooter.png);
+  background-color: rgba(0, 0, 0, 0.95);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 99vw;
 }
 
 .foot-1 {
-    list-style: none;
-    display: flex;
-    font-size: large;
-    margin-top: 29px;
-    position: relative;
+  list-style: none;
+  display: flex;
+  font-size: large;
+  margin-top: 29px;
+  position: relative;
 }
 
 .text-1 {
-    width: 100%;
-    font-weight: bold;
+  width: 100%;
+  font-weight: bold;
 }
 
 .text-1 p {
-    font-size: 17px;
-    margin-left: 60px;
+  font-size: 17px;
+  margin-left: 60px;
 }
 
 .gambar-logo {
-    margin-right: 10px;
-    width: 7%;
-    height: 7%;
+  margin-right: 10px;
+  width: 7%;
+  height: 7%;
 }
 
 .lis {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 20px;
-    margin-top: 16px;
-    font-size: 15px;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+  margin-top: 16px;
+  font-size: 15px;
 }
 
 .foot2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 200px;
-    font-size: 16px;
-    position: relative;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  font-size: 16px;
+  position: relative;
+  justify-content: center;
 }
 
 .image-2 {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .gambar2 {
-    display: flex;
-    justify-content: center;
-    height: 20px;
-    width: 80%;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 80%;
 }
 
 .text2-contain {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .text-2 {
-    width: 60%;
-    text-align: center;
+  width: 60%;
+  text-align: center;
 }
 
 .gambar-logo-2 {
-    height: 20px;
-    width: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+  height: 20px;
+  width: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .foot-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 29px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 29px;
+  position: relative;
 }
 
 .foot-3 h4 {
-    font-weight: bold;
-    font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .text-3 {
-    font-size: 16px;
-    display: flex;
-    list-style: none;
+  font-size: 16px;
+  display: flex;
+  list-style: none;
 }
 
 .atas {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .day {
-    color: #dcb472;
-    text-align: right;
-    padding-right: 2px;
+  color: #dcb472;
+  text-align: right;
+  padding-right: 2px;
 }
 
 .time {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .box-foot-2 {
-    width: 98%;
+  width: 98%;
 }
 
 @media only screen and (max-width: 1090px) {
-    .foot-1 {
-        padding-left: 20px;
-    }
+  .foot-1 {
+    padding-left: 20px;
+  }
 
-    .box-foot-3 {
-        padding-right: 20px;
-    }
+  .box-foot-3 {
+    padding-right: 20px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .box-foot-3 h4 {
-        font-size: 13px;
-    }
+  .box-foot-3 h4 {
+    font-size: 13px;
+  }
 
-    .text-3 {
-        font-size: 13px;
-    }
+  .text-3 {
+    font-size: 13px;
+  }
 
-    .text-1 p {
-        font-size: 14px;
-    }
+  .text-1 p {
+    font-size: 14px;
+  }
 
-    .lis {
-        font-size: 12px;
-    }
+  .lis {
+    font-size: 12px;
+  }
 
-    .foot2 {
-        font-size: 13px;
-        padding-left: 50px;
-    }
+  .foot2 {
+    font-size: 13px;
+    padding-left: 50px;
+  }
 
-    .footer {
-        background-size: cover;
-    }
+  .footer {
+    background-size: cover;
+  }
 
-    .foot-1 {
-        padding-left: 23%;
-    }
+  .foot-1 {
+    padding-left: 23%;
+  }
 
-    .box-foot-3 {
-        padding-left: 37%;
-    }
+  .box-foot-3 {
+    padding-left: 37%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .box-foot-3 h4 {
-        font-size: 16px;
-    }
+  .box-foot-3 h4 {
+    font-size: 16px;
+  }
 
-    .text-3 {
-        font-size: 15px;
-    }
+  .text-3 {
+    font-size: 15px;
+  }
 
-    .text-1 p {
-        font-size: 17px;
-    }
+  .text-1 p {
+    font-size: 17px;
+  }
 
-    .lis {
-        font-size: 15px;
-    }
+  .lis {
+    font-size: 15px;
+  }
 
-    .foot2 {
-        font-size: 16px;
-    }
+  .foot2 {
+    font-size: 16px;
+  }
 
-    .foot-1 {
-        margin-left: 50px;
-    }
+  .foot-1 {
+    margin-left: 50px;
+  }
 
-    .text-1 p {
-        margin-left: 0;
-        text-align: center;
-    }
+  .text-1 p {
+    margin-left: 0;
+    text-align: center;
+  }
 
-    .lis {
-        justify-content: center;
-    }
+  .lis {
+    justify-content: center;
+  }
 
-    .footer {
-        background-size: cover;
-    }
+  .footer {
+    background-size: cover;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .box-foot-3 {
-        padding-left: 36%;
-    }
+  .box-foot-3 {
+    padding-left: 36%;
+  }
 
-    .foot-1 {
-        padding-left: 23%;
-    }
+  .foot-1 {
+    padding-left: 23%;
+  }
 }
 
 @media only screen and (max-width: 520px) {
-    .box-foot-3 {
-        padding-left: 34%;
-    }
+  .box-foot-3 {
+    padding-left: 34%;
+  }
 
-    .foot-1 {
-        padding-left: 19%;
-    }
+  .foot-1 {
+    padding-left: 19%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .box-foot-3 {
-        padding-left: 32%;
-    }
+  .box-foot-3 {
+    padding-left: 32%;
+  }
 
-    .foot2 {
-        padding-left: 0%;
-    }
+  .foot2 {
+    padding-left: 0%;
+  }
 
-    .foot-1 {
-        padding-left: 12%;
-    }
+  .foot-1 {
+    padding-left: 12%;
+  }
 }
 
 @media only screen and (max-width: 441px) {
-    .box-foot-3 {
-        padding-left: 30%;
-    }
+  .box-foot-3 {
+    padding-left: 30%;
+  }
 
-    .foot2 {
-        padding-left: 0%;
-    }
+  .foot2 {
+    padding-left: 0%;
+  }
 
-    .foot-1 {
-        padding-left: 9%;
-    }
+  .foot-1 {
+    padding-left: 9%;
+  }
 }
 
 @media only screen and (max-width: 372px) {
-    .box-foot-3 {
-        padding-left: 28%;
-    }
+  .box-foot-3 {
+    padding-left: 28%;
+  }
 
-    .foot-3 h4,
-    .text-3 {
-        font-size: 13px;
-    }
+  .foot-3 h4,
+  .text-3 {
+    font-size: 13px;
+  }
 
-    .foot2 {
-        padding-left: 3%;
-        font-size: 13px;
-    }
+  .foot2 {
+    padding-left: 3%;
+    font-size: 13px;
+  }
 
-    .foot-1 {
-        padding-left: 3%;
-    }
+  .foot-1 {
+    padding-left: 3%;
+  }
 
-    .text-1 p {
-        font-size: 14px;
-    }
+  .text-1 p {
+    font-size: 14px;
+  }
 
-    .lis {
-        font-size: 13px;
-    }
+  .lis {
+    font-size: 13px;
+  }
 }
 
 @media only screen and (max-width: 300px) {
-    .foot-1 {
-        padding-left: 0%;
-    }
+  .foot-1 {
+    padding-left: 0%;
+    margin-left: 20px;
+  }
 
-    .box-foot-3 {
-        padding-left: 0%;
-    }
+  .box-foot-3 {
+    padding-left: 22%;
+  }
 }
