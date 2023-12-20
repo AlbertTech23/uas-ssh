@@ -1,10 +1,16 @@
 import "./Reservation.scss";
-import { ModalReservation } from "../../components";
+import { OurPackages, ReservationHeader } from "../../components";
+
+import { OnlineReservation } from "../../components/OnlineReservation";
 
 const Reservation = () => {
+
+
   return (
     <div className="ReservationContainer">
-      <ModalReservation />
+      <ReservationHeader />
+      <OurPackages />
+      <OnlineReservation />
     </div>
   );
 };

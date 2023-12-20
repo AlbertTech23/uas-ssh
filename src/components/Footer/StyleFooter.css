@@ -1,6 +1,7 @@
 .footer {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     color: white;
     font-family: "Poppins", sans-serif;
     padding-top: 40px;
@@ -12,6 +13,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 99vw;
 }
 
 .foot-1 {
@@ -19,6 +21,7 @@
     display: flex;
     font-size: large;
     margin-top: 29px;
+    position: relative;
 }
 
 .text-1 {
@@ -50,8 +53,9 @@
     align-items: center;
     flex-direction: column;
     height: 200px;
-    width: 330px;
     font-size: 16px;
+    position: relative;
+    justify-content: center;
 }
 
 .image-2 {
@@ -63,12 +67,19 @@
     display: flex;
     justify-content: center;
     height: 20px;
+    width: 80%;
+}
+
+.text2-contain {
+    margin-top: 10px;
+    margin-bottom: 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .text-2 {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    width: 60%;
     text-align: center;
 }
 
@@ -84,6 +95,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 29px;
+    position: relative;
 }
 
 .foot-3 h4 {
@@ -111,15 +123,21 @@
     margin-left: 5px;
 }
 
-.copy {
-    background-color: #232323;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin: 6px 0px;
+.box-foot-2 {
+    width: 98%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1090px) {
+    .foot-1 {
+        padding-left: 20px;
+    }
+
+    .foot-3 {
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     .foot-3 h4 {
         font-size: 13px;
     }
@@ -138,10 +156,20 @@
 
     .foot2 {
         font-size: 13px;
+        padding-left: 50px;
     }
 
     .footer {
         background-size: cover;
+    }
+
+    .foot-1 {
+        padding-left: 23%;
+    }
+
+    .foot-3 {
+        padding-left: 120%;
+        width: max-content;
     }
 }
 
@@ -151,7 +179,7 @@
     }
 
     .text-3 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .text-1 p {
@@ -179,11 +207,69 @@
         justify-content: center;
     }
 
-    .foot-3 {
-        margin-left: 77px;
-    }
-
     .footer {
         background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .foot-3 {
+        padding-left: 115%;
+    }
+
+    .foot-1 {
+        padding-left: 23%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .foot-3 {
+        padding-left: 100%;
+    }
+
+    .foot-1 {
+        padding-left: 19%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .foot-3 {
+        padding-left: 80%;
+    }
+
+    .foot2 {
+        padding-left: 0%;
+    }
+
+    .foot-1 {
+        padding-left: 12%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .foot-3 {
+        padding-left: 60%;
+    }
+
+    .foot2 {
+        padding-left: 0%;
+    }
+
+    .foot-1 {
+        padding-left: 9%;
+    }
+}
+
+@media only screen and (max-width: 372px) {
+    .foot-3 {
+        padding-left: 50%;
+    }
+
+    .foot2 {
+        padding-left: 3%;
+    }
+
+    .foot-1 {
+        padding-left: 3%;
     }
 }
