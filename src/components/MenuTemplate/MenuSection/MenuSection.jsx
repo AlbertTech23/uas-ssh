@@ -2,7 +2,7 @@ import MenuMaker from "../MenuMaker";
 
 function MenuSection({ menuData, menuImage }) {
   return (
-    <div className="flex flex-wrap justify-center py-16">
+    <div className="flex flex-wrap justify-center xl:py-16 lg:py-16 md:py-16 py-2">
       <div className="menu-img">
         <img
           src={menuImage}

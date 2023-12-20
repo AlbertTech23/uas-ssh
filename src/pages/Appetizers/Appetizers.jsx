@@ -1,4 +1,4 @@
-import "./Menu.scss";
+import "./Appetizers.scss";
 import { MenuTemplate } from "../../components";
 import pempek from "../../assets/PempekKapalSelam.svg";
 import lumpia from "../../assets/Lumpia.svg";
@@ -85,7 +85,7 @@ const menu3 = [
   },
 ];
 
-const Menu = () => {
+const Appetizers = () => {
   const teaserText = "TANTALIZING TEASERS";
   const menuDataSets = [menu1, menu2, menu3];
   const menuImageSets = [pempek, lumpia, tofu];
@@ -101,4 +101,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default Appetizers;

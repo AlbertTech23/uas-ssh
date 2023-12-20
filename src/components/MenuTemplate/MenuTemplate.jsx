@@ -3,8 +3,18 @@ import MenuSection from "./MenuSection";
 import MenuSection2 from "./MenuSection2";
 import garis from "./Images/Garis.svg";
 import "./MenuTemplate.scss";
+import { useNavigate } from "react-router-dom";
 
 const MenuTemplate = ({ teaserText, menuDataSets, menuImageSets }) => {
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  };
+
   return (
     <div className="menuBackground">
       <div className="menuTemplate xl:p-0 lg:px-16">
@@ -28,10 +38,42 @@ const MenuTemplate = ({ teaserText, menuDataSets, menuImageSets }) => {
           </div>
         ))}
         <div className="menuCategories flex justify-center items-center mt-5 pb-10">
-          <button className="xl:px-14 lg:px-8 md:px-8 px-3">Appetizers</button>
-          <button className="xl:px-14 lg:px-8 md:px-8 px-3">Main Course</button>
-          <button className="xl:px-14 lg:px-8 md:px-8 px-3">Desserts</button>
-          <button className="xl:px-14 lg:px-8 md:px-8 px-3">Drinks</button>
+          <button
+            onClick={() => {
+              navigate("/appetizers");
+              scrollToTop();
+            }}
+            className="xl:px-14 lg:px-8 md:px-8 px-3"
+          >
+            Appetizers
+          </button>
+          <button
+            onClick={() => {
+              navigate("/maincourse");
+              scrollToTop();
+            }}
+            className="xl:px-14 lg:px-8 md:px-8 px-3"
+          >
+            Main Course
+          </button>
+          <button
+            onClick={() => {
+              navigate("/desserts");
+              scrollToTop();
+            }}
+            className="xl:px-14 lg:px-8 md:px-8 px-3"
+          >
+            Desserts
+          </button>
+          <button
+            onClick={() => {
+              navigate("/drinks");
+              scrollToTop();
+            }}
+            className="xl:px-14 lg:px-8 md:px-8 px-3"
+          >
+            Drinks
+          </button>
         </div>
       </div>
     </div>
