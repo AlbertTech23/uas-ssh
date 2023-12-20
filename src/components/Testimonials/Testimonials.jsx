@@ -5,23 +5,23 @@ import { TestiCard } from "../TestiCard";
 const Testimonials = () => {
   const testiData = [
     {
-      picture: "MaleC1.png",
+      picture: "MaleC1",
       firstName: "John",
       lastName: "Doe",
       on: "rendang",
       review: "Makanannya membuat saya bergoyang.",
     },
     {
-      picture: "FemaleC1.png",
+      picture: "FemaleC1",
       firstName: "Jane",
       lastName: "Doe",
       on: "services",
       review: "Pelayanan yang sangat memuaskan.",
     },
     {
-      picture: "FemaleC1.png",
-      firstName: "Karen",
-      lastName: "Monica",
+      picture: "FemaleC2",
+      firstName: "Mei",
+      lastName: "Mei",
       on: "interior",
       review: "Cantik banget, nyaman pastinya!",
     },
@@ -67,10 +67,10 @@ const Testimonials = () => {
 
       {!isWideScreen && (
         <div className="carousel w-full relative flex justify-center">
-          <div className="leftButton flex justify-center items-center m-5 pt-16">
+          <div className="leftButton flex justify-center items-center ms-[6px] me-3 pt-16">
             <a
               href="#"
-              className="buttonLeftRight"
+              className="buttonLeftRight me-2"
               onClick={(e) => {
                 e.preventDefault();
                 prevSlide();
@@ -91,11 +91,11 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
-          <div className="rightButton flex justify-center items-center m-5 pt-16">
+          <div className="rightButton flex justify-center items-center ms-1 me-2 pt-16">
             {" "}
             <a
               href="#"
-              className=" buttonLeftRight"
+              className=" buttonLeftRight ms-2"
               onClick={(e) => {
                 e.preventDefault();
                 nextSlide();
