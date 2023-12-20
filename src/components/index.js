@@ -15,7 +15,6 @@ import { ScrollToTop } from "./ScrollToTop";
 import { OurPackages } from "./OurPackages";
 import { ReservationHeader } from "./ReservationHeader";
 
-
 export {
   AboutComponent,
   TodaySpecial,
@@ -30,10 +29,8 @@ export {
   TestiCard,
   OurMenu,
   AboutUsHeader,
-
   ScrollToTop,
-
   OurPackages,
   ReservationHeader,
-
+  WhoWeAre,
 };

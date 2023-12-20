@@ -1,6 +1,13 @@
 import "./About.scss";
 import { useNavigate } from "react-router-dom";
-import { OurStrength, Chef, Testimonials, AboutUsHeader } from "../../components";
+import {
+  OurStrength,
+  Chef,
+  Testimonials,
+  AboutUsHeader,
+  WhoWeAre,
+  Stats,
+} from "../../components";
 
 const About = () => {
   const navigate = useNavigate();
@@ -9,6 +16,8 @@ const About = () => {
     <div className="about-page">
       <h1>About</h1>
       <AboutUsHeader />
+      <WhoWeAre />
+      <Stats />
       <OurStrength />
       <Chef />
       <Testimonials />
