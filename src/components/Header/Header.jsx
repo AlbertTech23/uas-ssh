@@ -47,7 +47,7 @@ function Header() {
 
   useEffect(() => {
     const setScrollPosition = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 500) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -66,11 +66,11 @@ function Header() {
       <div className="kepala" ref={menuRef}>
         <div
           className={
-            scroll ? "header-bg" : activeButton ? "header-bg" : "header"
+            scroll ? "header-bg" : !activeButton ? "header-bg" : "header"
           }
         >
           <div className="logo">
-            <img src={logo} />
+            <img src={logo} onClick={() => navigate("/")} />
           </div>
           <div className="nav-menu">
             <div className={activeButton ? "res-nav" : ""}>

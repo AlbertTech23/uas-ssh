@@ -3,6 +3,7 @@ import { TestiCard } from "../TestiCard";
 import cloud from "../../assets/cloud.png";
 import rectRest from "../../assets/rectRes.png";
 import { useNavigate } from "react-router-dom";
+import reservasi1 from "../../assets/fotoreservasi1.png";
 
 const testiData = [
   {
@@ -56,7 +57,7 @@ const BottomHome = () => {
 
       <div className="reservationContainer flex pb-24">
         <div className="leftRes relative">
-          <img src="src/assets/fotoreservasi1.png" alt="reserve" />
+          <img src={reservasi1} alt="reserve" />
         </div>
         <div className="rightRes relative">
           <img

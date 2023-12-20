@@ -3,6 +3,9 @@ import { useState, useEffect, useRef } from "react";
 import rendang from "../../assets/RendangSpecial.svg";
 import ambon from "../../assets/AmbonSpecial.svg";
 import pempek from "../../assets/PempekSpecial.svg";
+import star from "../TodaySpecial/Images/Star.svg";
+import arrowTS from "../TodaySpecial/Images/Arrow.png";
+import topImg from "../TodaySpecial/Images/TopImg.svg";
 import { useNavigate } from "react-router-dom";
 
 const service = [
@@ -112,7 +115,7 @@ function SpecialCard(props) {
           </div>
           <div className="rating">
             <div className="ratingNum">{props.rating}</div>
-            <img src="src/components/TodaySpecial/Images/Star.svg" alt="Star" />
+            <img src={star} alt="Star" />
           </div>
         </div>
       </div>
@@ -208,10 +211,7 @@ function Carousel() {
                     </div>
                     <div className="rating">
                       <div className="ratingNum">{special.rating}</div>
-                      <img
-                        src="src/components/TodaySpecial/Images/Star.svg"
-                        alt="Star"
-                      />
+                      <img src={star} alt="Star" />
                     </div>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ function ServiceCard(props) {
               scrollToTop();
             }}
           >
-            <img src="src/components/TodaySpecial/Images/Arrow.png" alt="" />
+            <img src={arrowTS} alt="" />
           </button>
         </div>
       </div>
@@ -281,7 +281,7 @@ const TodaySpecial = () => {
             {isMobile ? <Carousel /> : special.map(createSpecialCard)}
           </div>
         </div>
-        <img src="src/components/TodaySpecial/Images/TopImg.svg" alt="" />
+        <img src={topImg} alt="" />
       </div>
       <div className="bottom">
         <div className="serviceContainer flex flex-wrap justify-around pt-30  items-center">

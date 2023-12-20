@@ -27,10 +27,10 @@ function App() {
           <Route path="/desserts" element={<Desserts />} />
           <Route path="/drinks" element={<Drinks />} />
           <Route path="/reservation" element={<Reservation />} />
-          <Route path="/*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
     </div>
   );
 }

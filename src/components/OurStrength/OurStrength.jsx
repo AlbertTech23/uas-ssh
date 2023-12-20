@@ -1,4 +1,8 @@
 import "./OurStrength.scss";
+import str1 from "../../assets/str1.svg";
+import str2 from "../../assets/str2.svg";
+import str3 from "../../assets/str3.svg";
+import str4 from "../../assets/str4.svg";
 
 const OurStrength = () => {
   const data = [
@@ -6,22 +10,22 @@ const OurStrength = () => {
       title: "Hygienic Food",
       description:
         "We provide the best quality food with hygienic and clean environment.",
-      image: "/src/assets/str1.svg",
+      image: str1,
     },
     {
       title: "Skilled Chefs",
       description: "Our chefs are proven highly skilled and experienced.",
-      image: "/src/assets/str2.svg",
+      image: str2,
     },
     {
       title: "Fresh Environtment",
       description: "The best place to enjoy your meal with fresh air.",
-      image: "/src/assets/str3.svg",
+      image: str3,
     },
     {
       title: "Event & Party",
       description: "Celebrate your precious moments with us.",
-      image: "/src/assets/str4.svg",
+      image: str4,
     },
   ];
 
